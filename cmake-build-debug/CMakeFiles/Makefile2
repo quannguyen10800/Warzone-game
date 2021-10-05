@@ -54,16 +54,16 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3
+CMAKE_SOURCE_DIR = /Users/hoangtugio/CLionProjects/assignment1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/COMP345_Ass1_Part3.dir/all
+all: CMakeFiles/assignment1.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/COMP345_Ass1_Part3.dir/clean
+clean: CMakeFiles/assignment1.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/COMP345_Ass1_Part3.dir
+# Target rules for target CMakeFiles/assignment1.dir
 
 # All Build rule for target.
-CMakeFiles/COMP345_Ass1_Part3.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/COMP345_Ass1_Part3.dir/build.make CMakeFiles/COMP345_Ass1_Part3.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/COMP345_Ass1_Part3.dir/build.make CMakeFiles/COMP345_Ass1_Part3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target COMP345_Ass1_Part3"
-.PHONY : CMakeFiles/COMP345_Ass1_Part3.dir/all
+CMakeFiles/assignment1.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target assignment1"
+.PHONY : CMakeFiles/assignment1.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/COMP345_Ass1_Part3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/COMP345_Ass1_Part3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/COMP345_Ass1_Part3.dir/rule
+CMakeFiles/assignment1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/assignment1.dir/rule
 
 # Convenience name for target.
-COMP345_Ass1_Part3: CMakeFiles/COMP345_Ass1_Part3.dir/rule
-.PHONY : COMP345_Ass1_Part3
+assignment1: CMakeFiles/assignment1.dir/rule
+.PHONY : assignment1
 
 # clean rule for target.
-CMakeFiles/COMP345_Ass1_Part3.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/COMP345_Ass1_Part3.dir/build.make CMakeFiles/COMP345_Ass1_Part3.dir/clean
-.PHONY : CMakeFiles/COMP345_Ass1_Part3.dir/clean
+CMakeFiles/assignment1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/clean
+.PHONY : CMakeFiles/assignment1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

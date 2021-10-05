@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3
+CMAKE_SOURCE_DIR = /Users/hoangtugio/CLionProjects/assignment1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3/cmake-build-debug/CMakeFiles /Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/COMP345_Ass1_Part3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named COMP345_Ass1_Part3
+# Target rules for targets named assignment1
 
 # Build rule for target.
-COMP345_Ass1_Part3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 COMP345_Ass1_Part3
-.PHONY : COMP345_Ass1_Part3
+assignment1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment1
+.PHONY : assignment1
 
 # fast build rule for target.
-COMP345_Ass1_Part3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/COMP345_Ass1_Part3.dir/build.make CMakeFiles/COMP345_Ass1_Part3.dir/build
-.PHONY : COMP345_Ass1_Part3/fast
+assignment1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/build
+.PHONY : assignment1/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+library.o: library.cpp.o
+.PHONY : library.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/COMP345_Ass1_Part3.dir/build.make CMakeFiles/COMP345_Ass1_Part3.dir/main.cpp.o
-.PHONY : main.cpp.o
+library.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/library.cpp.o
+.PHONY : library.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+library.i: library.cpp.i
+.PHONY : library.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/COMP345_Ass1_Part3.dir/build.make CMakeFiles/COMP345_Ass1_Part3.dir/main.cpp.i
-.PHONY : main.cpp.i
+library.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/library.cpp.i
+.PHONY : library.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+library.s: library.cpp.s
+.PHONY : library.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/COMP345_Ass1_Part3.dir/build.make CMakeFiles/COMP345_Ass1_Part3.dir/main.cpp.s
-.PHONY : main.cpp.s
+library.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/library.cpp.s
+.PHONY : library.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... COMP345_Ass1_Part3"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... assignment1"
+	@echo "... library.o"
+	@echo "... library.i"
+	@echo "... library.s"
 .PHONY : help
 
 
