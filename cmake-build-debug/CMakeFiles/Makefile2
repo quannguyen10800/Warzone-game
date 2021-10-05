@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/OrdersDriver.dir/all
 all: CMakeFiles/assignment1.dir/all
 .PHONY : all
 
@@ -71,8 +72,35 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/OrdersDriver.dir/clean
 clean: CMakeFiles/assignment1.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/OrdersDriver.dir
+
+# All Build rule for target.
+CMakeFiles/OrdersDriver.dir/all: CMakeFiles/assignment1.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target OrdersDriver"
+.PHONY : CMakeFiles/OrdersDriver.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/OrdersDriver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OrdersDriver.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/OrdersDriver.dir/rule
+
+# Convenience name for target.
+OrdersDriver: CMakeFiles/OrdersDriver.dir/rule
+.PHONY : OrdersDriver
+
+# clean rule for target.
+CMakeFiles/OrdersDriver.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/clean
+.PHONY : CMakeFiles/OrdersDriver.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/assignment1.dir
@@ -81,7 +109,7 @@ clean: CMakeFiles/assignment1.dir/clean
 CMakeFiles/assignment1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target assignment1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target assignment1"
 .PHONY : CMakeFiles/assignment1.dir/all
 
 # Build rule for subdir invocation for target.

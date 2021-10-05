@@ -2,9 +2,9 @@
 // Created by Quan Nguyen on 2021-09-26.
 //
 
-#include "../game_engine/GameEngine.h"
+#include "../Map/Map.h"
 #include "Orders.h"
-
+//using namespace std;
 int main()
 {
     // Setup
@@ -15,9 +15,9 @@ int main()
     t2->addArmies(5);
     t3->addArmies(10);
 
-    Player* player = new Player("Bob");
-    Player* enemy = new Player("Alice");
-    player->addOwnedTerritory(t1);  //TODO wating for Player class
+    Players* player = new Players("Bob");
+    Players* enemy = new Players("Alice");
+    player->addOwnedTerritory(t1);  //TODO wating for Playerss class
     player->addOwnedTerritory(t2);
     enemy->addOwnedTerritory(t3);
 

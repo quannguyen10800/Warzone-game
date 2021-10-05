@@ -9,12 +9,12 @@
 
 #pragma once
 
-#include ""
-#include "../cmake-build-debug/Map/Map.h"
+#include "../Map/Map.h"
+#include "../Players/Players.h"
 #include <iostream>
 #include <vector>
 
-class Player;
+class Players;
 class Territory;
 
 enum OrderType : short
@@ -28,22 +28,22 @@ enum OrderType : short
 };
 
 
-class Order
+class Orders
 {
 public:
-    virtual ~Order();
+    virtual ~Orders();
     friend std::ostream &operator<<(std::ostream &output, const Order &order);
     void execute();
     int getPriority() const;
-    virtual Order* clone() const = 0;
+    virtual Orders* clone() const = 0;
     virtual bool validate() const = 0;
     virtual OrderType getType() const = 0;
 
 protected:
-    Player* issuer_;
-    Order();
-    Order(Player* issuer, int priority);
-    Order(const Order &order);
+    Players* issuer_;
+    Orders();
+    Orders(Players* issuer, int priority);
+    Orders(const Order &order);
     const Order &operator=(const Order &order);
     virtual std::ostream &print_(std::ostream &output) const = 0;
     virtual void execute_() = 0;
@@ -76,11 +76,11 @@ private:
 };
 
 
-class DeployOrder : public Order
+class DeployOrder : public Orders
 {
 public:
     DeployOrder();
-    DeployOrder(Player* issuer, int numberOfArmies, Territory* destination);
+    DeployOrder(Players* issuer, int numberOfArmies, Territory* destination);
     DeployOrder(const DeployOrder &order);
     const DeployOrder &operator=(const DeployOrder &order);
     Order* clone() const;
@@ -99,11 +99,11 @@ private:
 };
 
 
-class AdvanceOrder : public Order
+class AdvanceOrder : public Orders
 {
 public:
     AdvanceOrder();
-    AdvanceOrder(Player* issuer, int numberOfArmies, Territory* source, Territory* destination);
+    AdvanceOrder(Players* issuer, int numberOfArmies, Territory* source, Territory* destination);
     AdvanceOrder(const AdvanceOrder &order);
     const AdvanceOrder &operator=(const AdvanceOrder &order);
     Order* clone() const;
@@ -122,11 +122,11 @@ private:
 };
 
 
-class BombOrder : public Order
+class BombOrder : public Orders
 {
 public:
     BombOrder();
-    BombOrder(Player* issuer, Territory* target);
+    BombOrder(Players* issuer, Territory* target);
     BombOrder(const BombOrder &order);
     const BombOrder &operator=(const BombOrder &order);
     Order* clone() const;
@@ -142,11 +142,11 @@ private:
 };
 
 
-class BlockadeOrder : public Order
+class BlockadeOrder : public Orders
 {
 public:
     BlockadeOrder();
-    BlockadeOrder(Player* issuer, Territory* territory);
+    BlockadeOrder(Players* issuer, Territory* territory);
     BlockadeOrder(const BlockadeOrder &order);
     const BlockadeOrder &operator=(const BlockadeOrder &order);
     Order* clone() const;
@@ -162,11 +162,11 @@ private:
 };
 
 
-class AirliftOrder : public Order
+class AirliftOrder : public Orders
 {
 public:
     AirliftOrder();
-    AirliftOrder(Player* issuer, int numberOfArmies, Territory* source, Territory* destination);
+    AirliftOrder(Players* issuer, int numberOfArmies, Territory* source, Territory* destination);
     AirliftOrder(const AirliftOrder &order);
     const AirliftOrder &operator=(const AirliftOrder &order);
     Order* clone() const;
@@ -185,11 +185,11 @@ private:
 };
 
 
-class NegotiateOrder : public Order
+class NegotiateOrder : public Orders
 {
 public:
     NegotiateOrder();
-    NegotiateOrder(Player* issuer, Player* target);
+    NegotiateOrder(Players* issuer, Players* target);
     NegotiateOrder(const NegotiateOrder &order);
     const NegotiateOrder &operator=(const NegotiateOrder &order);
     Order* clone() const;
@@ -201,5 +201,5 @@ protected:
     std::ostream &print_(std::ostream &output) const;
 
 private:
-    Player* target_;
+    Players* target_;
 };

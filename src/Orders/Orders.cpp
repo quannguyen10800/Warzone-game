@@ -23,7 +23,7 @@ namespace
     bool attackValidation(Player* attacker, Territory* target)
     {
         Player* ownerOfTarget = GameEngine::getOwnerOf(target);    //TODO: waiting for Engine.class
-        std::vector<Player*> diplomaticRelations = attacker->getDiplomaticRelations();   //TODO: waiting for Player.class
+        std::vector<Player*> diplomaticRelations = attacker->getDiplomaticRelations();   //TODO: waiting for Players.class
         bool diplomacyWithOwnerOfTarget = find(diplomaticRelations.begin(), diplomaticRelations.end(), ownerOfTarget) != diplomaticRelations.end();
 
         if (diplomacyWithOwnerOfTarget)
@@ -290,7 +290,7 @@ bool DeployOrder::validate() const
         return false;
     }
 
-    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();  //TODO waiting for the getOwnedTerritories() in Player.cpp
+    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();  //TODO waiting for the getOwnedTerritories() in Players.cpp
     return find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), destination_) != currentPlayerTerritories.end();
 }
 
@@ -417,8 +417,8 @@ void AdvanceOrder::execute_()
             // Successful attack
         else
         {
-            issuer_->addOwnedTerritory(destination_);  //TODO waiting for Player class:
-            defender->removeOwnedTerritory(destination_);  //TODO waiting for Player class:
+            issuer_->addOwnedTerritory(destination_);  //TODO waiting for Players class:
+            defender->removeOwnedTerritory(destination_);  //TODO waiting for Players class:
             destination_->addArmies(survivingAttackers);
             std::cout << "Successful attack on " << destination_->getName() << ". " << survivingAttackers << " armies now occupy this territory." << std::endl;
         }
@@ -569,7 +569,7 @@ bool BlockadeOrder::validate() const
         return false;
     }
 
-    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();  //TODO waiting for Player class
+    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();  //TODO waiting for Players class
     return find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), territory_) != currentPlayerTerritories.end();
 }
 
@@ -642,7 +642,7 @@ bool AirliftOrder::validate() const
         return false;
     }
 
-    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();  //TODO waiting from Player class
+    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();  //TODO waiting from Players class
 
     bool validSourceTerritory = find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), source_) != currentPlayerTerritories.end();
     bool validDestinationTerritory = find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), destination_) != currentPlayerTerritories.end();
@@ -735,7 +735,7 @@ bool NegotiateOrder::validate() const
 // Executes the NegotiateOrder.
 void NegotiateOrder::execute_()
 {
-    issuer_->addDiplomaticRelation(target_);  //TODO waitng for Player class
+    issuer_->addDiplomaticRelation(target_);  //TODO waitng for Players class
     target_->addDiplomaticRelation(issuer_);
     std::cout << "Negotiated diplomacy between " << issuer_->getName() << " and " << target_->getName() << "." << std::endl;  //TODO waiting for Map class
 }

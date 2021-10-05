@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named OrdersDriver
+
+# Build rule for target.
+OrdersDriver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OrdersDriver
+.PHONY : OrdersDriver
+
+# fast build rule for target.
+OrdersDriver/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/build
+.PHONY : OrdersDriver/fast
+
+#=============================================================================
 # Target rules for targets named assignment1
 
 # Build rule for target.
@@ -153,6 +166,30 @@ library.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/library.cpp.s
 .PHONY : library.cpp.s
 
+src/Orders/OrdersDriver.o: src/Orders/OrdersDriver.cpp.o
+.PHONY : src/Orders/OrdersDriver.o
+
+# target to build an object file
+src/Orders/OrdersDriver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/src/Orders/OrdersDriver.cpp.o
+.PHONY : src/Orders/OrdersDriver.cpp.o
+
+src/Orders/OrdersDriver.i: src/Orders/OrdersDriver.cpp.i
+.PHONY : src/Orders/OrdersDriver.i
+
+# target to preprocess a source file
+src/Orders/OrdersDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/src/Orders/OrdersDriver.cpp.i
+.PHONY : src/Orders/OrdersDriver.cpp.i
+
+src/Orders/OrdersDriver.s: src/Orders/OrdersDriver.cpp.s
+.PHONY : src/Orders/OrdersDriver.s
+
+# target to generate assembly for a file
+src/Orders/OrdersDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/src/Orders/OrdersDriver.cpp.s
+.PHONY : src/Orders/OrdersDriver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... OrdersDriver"
 	@echo "... assignment1"
 	@echo "... library.o"
 	@echo "... library.i"
 	@echo "... library.s"
+	@echo "... src/Orders/OrdersDriver.o"
+	@echo "... src/Orders/OrdersDriver.i"
+	@echo "... src/Orders/OrdersDriver.s"
 .PHONY : help
 
 
