@@ -11,17 +11,17 @@ int main()
     Territory* t1 = new Territory("Quebec");
     Territory* t2 = new Territory("BC");
     Territory* t3 = new Territory("Ontario");
-    t1->addArmies(10);
+    t1->addArmies(10);  //TODO
     t2->addArmies(5);
     t3->addArmies(10);
 
     Player* player = new Player("Bob");
     Player* enemy = new Player("Alice");
-    player->addOwnedTerritory(t1);
+    player->addOwnedTerritory(t1);  //TODO wating for Player class
     player->addOwnedTerritory(t2);
     enemy->addOwnedTerritory(t3);
 
-    GameEngine::setPlayers({ player, enemy });
+    GameEngine::setPlayers({ player, enemy });  //TODO wating for GameEngine class
 
     OrdersList ordersList;
     ordersList.add(new DeployOrder(player, 5, t1));
@@ -62,7 +62,7 @@ int main()
     delete t1;
     delete t2;
     delete t3;
-    GameEngine::resetGameEngine();
+    GameEngine::resetGameEngine();    //TODO waiting for GameEngine class
 
     return 0;
 }

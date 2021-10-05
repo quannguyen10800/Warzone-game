@@ -9,8 +9,8 @@
 
 #pragma once
 
-#include "../map/Map.h"
-#include "../player/Player.h"
+#include ""
+#include "../cmake-build-debug/Map/Map.h"
 #include <iostream>
 #include <vector>
 
@@ -47,7 +47,7 @@ protected:
     const Order &operator=(const Order &order);
     virtual std::ostream &print_(std::ostream &output) const = 0;
     virtual void execute_() = 0;
-    virtual void undo_();
+    virtual void undo1();
 
 private:
     int priority_;
