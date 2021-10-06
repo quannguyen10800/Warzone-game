@@ -1,4 +1,4 @@
-    //
+//
 // Created by Quan Nguyen on 2021-09-26.
 //
 
@@ -271,7 +271,7 @@ std::ostream &DeployOrder::print_(std::ostream &output) const
 }
 
 // Return a pointer to a new instance of DeployOrder.
-Order* DeployOrder::clone() const
+Orders* DeployOrder::clone() const
 {
     return new DeployOrder(*this);
 }
