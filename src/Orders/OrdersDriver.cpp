@@ -8,15 +8,15 @@
 int main()
 {
     // Setup
-    Territory* t1 = new Territory("Quebec");
-    Territory* t2 = new Territory("BC");
-    Territory* t3 = new Territory("Ontario");
+    Territory* t1 = new Territory("Japan");
+    Territory* t2 = new Territory("US");
+    Territory* t3 = new Territory("UK");
     t1->addArmies(10);  //TODO
     t2->addArmies(5);
     t3->addArmies(10);
 
-    Players* player = new Players("Bob");
-    Players* enemy = new Players("Alice");
+    Players* player = new Players("Player1");
+    Players* enemy = new Players("Player2");
     player->addOwnedTerritory(t1);  //TODO wating for Playerss class
     player->addOwnedTerritory(t2);
     enemy->addOwnedTerritory(t3);
