@@ -1,3 +1,7 @@
+//
+// Created by Mehrsa Yazdani on 2021-10-04.
+//
+
 #include "Map.h"
 #include <iostream>
 #include <fstream>
@@ -35,6 +39,7 @@ Territory::Territory(const Territory& t1) {
     this->continent = new int(*(t1.continent));
 }
 
+
 Territory& Territory::operator=(const Territory& t1) {
     this->t_ID = new int(*(t1.t_ID));
     this->name = new string(*(t1.name));
@@ -43,15 +48,10 @@ Territory& Territory::operator=(const Territory& t1) {
     this->continent = new int(*(t1.continent));
 }
 
-std::ostream& operator<<(std::ostream& out, const Territory& t1) {
-    out << std::endl << "\tTerritory ID: " << t1.t_ID << std::endl;
-    out << "\tTerritory Name: " << t1.name;
-    out << "\tTerritory Number of Armies: " << t1.numberOfArmies;
-    out << "\tTerritory Owner: " << t1.owner;
-    out << "\tTerritory Continent: " << t1.continent;
-    return out;
-}
+vector<Territory*> Territory :: neighbours(Territory *t1){
 
+
+}
 
 
 
@@ -139,7 +139,7 @@ void MapLoader::readMap (const string& filename){
 
                 //read line until a space char and save the continent name to the cont string.
                 for(int i=0; i != ' '; i++)
-                        cont += str[i];
+                    cont += str[i];
 
                 //create continent graph objects and push them to the ContinentsList.
                 Map* continent = new Map();
@@ -235,4 +235,3 @@ void MapLoader::readMap (const string& filename){
     }
     input.close();
 }
-

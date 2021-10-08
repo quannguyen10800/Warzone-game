@@ -1,6 +1,9 @@
-#ifndef ASSIGNMENT1_MAP_H
-#define ASSIGNMENT1_MAP_H
+//
+// Created by Mehrsa Yazdani on 2021-10-03.
+//
 
+#ifndef UNTITLED19_MAP_H
+#define UNTITLED19_MAP_H
 #include <string>
 #include <vector>
 
@@ -30,6 +33,10 @@ public:
     void setNumberOfArmies(int n) { *numberOfArmies = n; }
     void setOwner(int n) { *owner = n; }
     void setContinent(int cont) {this->continent = &cont; }; //recheck!!!!
+    string  getName(){
+        return  name;
+    }
+    vector<Territory*> neighbours(Territory *t1);
 
     friend std::ostream& operator<<(std::ostream& out, const Territory& t);
 
@@ -57,35 +64,4 @@ public:
 
 };
 
-
-
-
-
-class MapLoader{
-
-public:
-    void readMap(const string& filename);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#endif //ASSIGNMENT1_MAP_H
+#endif //UNTITLED19_MAP_H
