@@ -9,8 +9,8 @@
 
 #pragma once
 
-#include "../Map/Map.h"
-#include "../Players/Players.h"
+//#include "../Map/Map.h"
+//#include "../Players/Players.h"
 #include <iostream>
 #include <vector>
 
@@ -32,7 +32,7 @@ class Orders
 {
 public:
     virtual ~Orders();
-    friend std::ostream &operator<<(std::ostream &output, const Order &order);
+    friend std::ostream &operator<<(std::ostream &output, const Orders &order);
     void execute();
     int getPriority() const;
     virtual Orders* clone() const = 0;
@@ -43,8 +43,8 @@ protected:
     Players* issuer_;
     Orders();
     Orders(Players* issuer, int priority);
-    Orders(const Order &order);
-    const Order &operator=(const Order &order);
+    Orders(const Orders &order);
+    const Orders &operator=(const Orders &order);
     virtual std::ostream &print_(std::ostream &output) const = 0;
     virtual void execute_() = 0;
     virtual void undo1();
@@ -62,17 +62,17 @@ public:
     ~OrdersList();
     const OrdersList &operator=(const OrdersList &orders);
     friend std::ostream &operator<<(std::ostream &output, const OrdersList &orders);
-    std::vector<Order*> getOrders() const;
-    void setOrders(std::vector<Order*> orders);
-    Order* displayTopOrder();
-    Order* displayTopOrderWithoutRemoving();
+    std::vector<Orders*> getOrders() const;
+    void setOrders(std::vector<Orders*> orders);
+    Orders* displayTopOrder();
+    Orders* displayTopOrderWithoutRemoving();
     int size() const;
-    void add(Order* order);
+    void add(Orders* order);
     void move(int source, int destination);
     void remove(int target);
 
 private:
-    std::vector<Order*> orders_;
+    std::vector<Orders*> orders_;
 };
 
 
@@ -83,14 +83,14 @@ public:
     DeployOrder(Players* issuer, int numberOfArmies, Territory* destination);
     DeployOrder(const DeployOrder &order);
     const DeployOrder &operator=(const DeployOrder &order);
-    Order* clone() const;
+    Orders* clone() const;
     void gatherArmy(int additional);
     bool validate() const;
     OrderType getType() const;
 
 protected:
     void execute_();
-    void undo_();
+    void undo1();
     std::ostream &print_(std::ostream &output) const;
 
 private:
@@ -106,7 +106,7 @@ public:
     AdvanceOrder(Players* issuer, int numberOfArmies, Territory* source, Territory* destination);
     AdvanceOrder(const AdvanceOrder &order);
     const AdvanceOrder &operator=(const AdvanceOrder &order);
-    Order* clone() const;
+    Orders* clone() const;
     bool validate() const;
     OrderType getType() const;
 
@@ -129,7 +129,7 @@ public:
     BombOrder(Players* issuer, Territory* target);
     BombOrder(const BombOrder &order);
     const BombOrder &operator=(const BombOrder &order);
-    Order* clone() const;
+    Orders* clone() const;
     bool validate() const;
     OrderType getType() const;
 
@@ -149,7 +149,7 @@ public:
     BlockadeOrder(Players* issuer, Territory* territory);
     BlockadeOrder(const BlockadeOrder &order);
     const BlockadeOrder &operator=(const BlockadeOrder &order);
-    Order* clone() const;
+    Orders* clone() const;
     bool validate() const;
     OrderType getType() const;
 
@@ -169,7 +169,7 @@ public:
     AirliftOrder(Players* issuer, int numberOfArmies, Territory* source, Territory* destination);
     AirliftOrder(const AirliftOrder &order);
     const AirliftOrder &operator=(const AirliftOrder &order);
-    Order* clone() const;
+    Orders* clone() const;
     bool validate() const;
     OrderType getType() const;
 
@@ -192,7 +192,7 @@ public:
     NegotiateOrder(Players* issuer, Players* target);
     NegotiateOrder(const NegotiateOrder &order);
     const NegotiateOrder &operator=(const NegotiateOrder &order);
-    Order* clone() const;
+    Orders* clone() const;
     bool validate() const;
     OrderType getType() const;
 

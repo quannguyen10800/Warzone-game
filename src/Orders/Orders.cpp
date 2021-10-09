@@ -11,9 +11,9 @@
 namespace
 {
     // Custom comparator to sort Orders by priority
-    bool ordersCompare(Order* order1, Order* order2)
+    bool ordersCompare(Orders* o1, Orders* o2)
     {
-        return order1->getPriority() < order2->getPriority();
+        return o1->getPriority() < o2->getPriority();
     }
 
     // Helper function to check whether a territory can be attacked by a specific player.
@@ -43,17 +43,17 @@ namespace
  */
 
 //// Constructors
-Order::Order(): issuer_(nullptr), priority_(4) {}
+Orders::Orders(): issuer_(nullptr), priority_(4) {}
 
-Order::Order(Player* issuer, int priority) : issuer_(issuer), priority_(priority) {}
+Orders::Orders(Player* issuer, int priority) : issuer_(issuer), priority_(priority) {}
 
-Order::Order(const Order &order) : issuer_(order.issuer_), priority_(order.priority_) {}
+Orders::Orders(const Orders &order) : issuer_(order.issuer_), priority_(order.priority_) {}
 
 //// Destructor
-Order::~Order() {}
+Orders::~Orders() {}
 
 //// Operator overloading
-const Order &Order::operator=(const Order &order)
+const Orders &Order::operator=(const Orders &order)
 {
     if (this != &order)
     {
@@ -63,13 +63,13 @@ const Order &Order::operator=(const Order &order)
     return *this;
 }
 
-std::ostream &operator<<(std::ostream &output, const Order &order)
+std::ostream &operator<<(std::ostream &output, const Orders &order)
 {
     return order.print_(output);
 }
 
 // Validate and execute the Order. Invalid orders will have no effect.
-void Order::execute()
+void Orders::execute()
 {
     if (validate())
     {
@@ -78,12 +78,12 @@ void Order::execute()
     else
     {
         std::cout << "Order invalidated. Skipping..." << std::endl;
-        undo_();
+        undo1();
     }
 }
 
 // Get order priority
-int Order::getPriority() const
+int Orders::getPriority() const
 {
     return priority_;
 }
@@ -91,7 +91,7 @@ int Order::getPriority() const
 // Reverse the pre-orders-execution game state back to before the order was created.
 // The default behavior is to do nothing if there is no meta-state to reset
 // (e.g. resetting pending incoming/outgoing armies from territories)
-void Order::undo1() {}
+void Orders::undo1() {}
 
 
 /*
