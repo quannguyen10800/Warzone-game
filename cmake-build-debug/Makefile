@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named PlayerDriver
+
+# Build rule for target.
+PlayerDriver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PlayerDriver
+.PHONY : PlayerDriver
+
+# fast build rule for target.
+PlayerDriver/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlayerDriver.dir/build.make CMakeFiles/PlayerDriver.dir/build
+.PHONY : PlayerDriver/fast
+
+#=============================================================================
 # Target rules for targets named OrdersDriver
 
 # Build rule for target.
@@ -130,41 +143,65 @@ OrdersDriver/fast:
 .PHONY : OrdersDriver/fast
 
 #=============================================================================
-# Target rules for targets named assignment1
+# Target rules for targets named AssignmentLib
 
 # Build rule for target.
-assignment1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment1
-.PHONY : assignment1
+AssignmentLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AssignmentLib
+.PHONY : AssignmentLib
 
 # fast build rule for target.
-assignment1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/build
-.PHONY : assignment1/fast
+AssignmentLib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/build
+.PHONY : AssignmentLib/fast
 
-library.o: library.cpp.o
-.PHONY : library.o
+src/Map/Map.o: src/Map/Map.cpp.o
+.PHONY : src/Map/Map.o
 
 # target to build an object file
-library.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/library.cpp.o
-.PHONY : library.cpp.o
+src/Map/Map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Map/Map.cpp.o
+.PHONY : src/Map/Map.cpp.o
 
-library.i: library.cpp.i
-.PHONY : library.i
+src/Map/Map.i: src/Map/Map.cpp.i
+.PHONY : src/Map/Map.i
 
 # target to preprocess a source file
-library.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/library.cpp.i
-.PHONY : library.cpp.i
+src/Map/Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Map/Map.cpp.i
+.PHONY : src/Map/Map.cpp.i
 
-library.s: library.cpp.s
-.PHONY : library.s
+src/Map/Map.s: src/Map/Map.cpp.s
+.PHONY : src/Map/Map.s
 
 # target to generate assembly for a file
-library.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/library.cpp.s
-.PHONY : library.cpp.s
+src/Map/Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Map/Map.cpp.s
+.PHONY : src/Map/Map.cpp.s
+
+src/Orders/Orders.o: src/Orders/Orders.cpp.o
+.PHONY : src/Orders/Orders.o
+
+# target to build an object file
+src/Orders/Orders.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Orders/Orders.cpp.o
+.PHONY : src/Orders/Orders.cpp.o
+
+src/Orders/Orders.i: src/Orders/Orders.cpp.i
+.PHONY : src/Orders/Orders.i
+
+# target to preprocess a source file
+src/Orders/Orders.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Orders/Orders.cpp.i
+.PHONY : src/Orders/Orders.cpp.i
+
+src/Orders/Orders.s: src/Orders/Orders.cpp.s
+.PHONY : src/Orders/Orders.s
+
+# target to generate assembly for a file
+src/Orders/Orders.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Orders/Orders.cpp.s
+.PHONY : src/Orders/Orders.cpp.s
 
 src/Orders/OrdersDriver.o: src/Orders/OrdersDriver.cpp.o
 .PHONY : src/Orders/OrdersDriver.o
@@ -190,6 +227,54 @@ src/Orders/OrdersDriver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/src/Orders/OrdersDriver.cpp.s
 .PHONY : src/Orders/OrdersDriver.cpp.s
 
+src/Player/PlayerDriver.o: src/Player/PlayerDriver.cpp.o
+.PHONY : src/Player/PlayerDriver.o
+
+# target to build an object file
+src/Player/PlayerDriver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlayerDriver.dir/build.make CMakeFiles/PlayerDriver.dir/src/Player/PlayerDriver.cpp.o
+.PHONY : src/Player/PlayerDriver.cpp.o
+
+src/Player/PlayerDriver.i: src/Player/PlayerDriver.cpp.i
+.PHONY : src/Player/PlayerDriver.i
+
+# target to preprocess a source file
+src/Player/PlayerDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlayerDriver.dir/build.make CMakeFiles/PlayerDriver.dir/src/Player/PlayerDriver.cpp.i
+.PHONY : src/Player/PlayerDriver.cpp.i
+
+src/Player/PlayerDriver.s: src/Player/PlayerDriver.cpp.s
+.PHONY : src/Player/PlayerDriver.s
+
+# target to generate assembly for a file
+src/Player/PlayerDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlayerDriver.dir/build.make CMakeFiles/PlayerDriver.dir/src/Player/PlayerDriver.cpp.s
+.PHONY : src/Player/PlayerDriver.cpp.s
+
+src/Player/Player_.o: src/Player/Player_.cpp.o
+.PHONY : src/Player/Player_.o
+
+# target to build an object file
+src/Player/Player_.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Player/Player_.cpp.o
+.PHONY : src/Player/Player_.cpp.o
+
+src/Player/Player_.i: src/Player/Player_.cpp.i
+.PHONY : src/Player/Player_.i
+
+# target to preprocess a source file
+src/Player/Player_.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Player/Player_.cpp.i
+.PHONY : src/Player/Player_.cpp.i
+
+src/Player/Player_.s: src/Player/Player_.cpp.s
+.PHONY : src/Player/Player_.s
+
+# target to generate assembly for a file
+src/Player/Player_.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Player/Player_.cpp.s
+.PHONY : src/Player/Player_.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,14 +283,24 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... AssignmentLib"
 	@echo "... OrdersDriver"
-	@echo "... assignment1"
-	@echo "... library.o"
-	@echo "... library.i"
-	@echo "... library.s"
+	@echo "... PlayerDriver"
+	@echo "... src/Map/Map.o"
+	@echo "... src/Map/Map.i"
+	@echo "... src/Map/Map.s"
+	@echo "... src/Orders/Orders.o"
+	@echo "... src/Orders/Orders.i"
+	@echo "... src/Orders/Orders.s"
 	@echo "... src/Orders/OrdersDriver.o"
 	@echo "... src/Orders/OrdersDriver.i"
 	@echo "... src/Orders/OrdersDriver.s"
+	@echo "... src/Player/PlayerDriver.o"
+	@echo "... src/Player/PlayerDriver.i"
+	@echo "... src/Player/PlayerDriver.s"
+	@echo "... src/Player/Player_.o"
+	@echo "... src/Player/Player_.i"
+	@echo "... src/Player/Player_.s"
 .PHONY : help
 
 
