@@ -7,7 +7,7 @@
 using namespace std;
 int main()
 {
-    // Setup
+    // Setup the territory and later I will remove
     Territory* t1 = new Territory("Japan");
     Territory* t2 = new Territory("US");
     Territory* t3 = new Territory("UK");

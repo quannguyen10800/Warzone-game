@@ -164,6 +164,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/resources/Canada.map">
+			<Option target="AssignmentLib"/>
+		</Unit>
 		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Map/Map.cpp">
 			<Option target="AssignmentLib"/>
 		</Unit>
