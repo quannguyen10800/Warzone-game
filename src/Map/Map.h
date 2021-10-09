@@ -1,67 +1,87 @@
-//
-// Created by Mehrsa Yazdani on 2021-10-03.
-//
+#pragma once
 
-#ifndef UNTITLED19_MAP_H
-#define UNTITLED19_MAP_H
-#include <string>
 #include <vector>
+#include <string>
 
 using namespace std;
+class Player;
+class Territory;
+
+class Continent{
+private:
+    int *army_bonus = nullptr;
+    string *name;
+    vector<Territory*> territories;
+
+public:
+    Continent(string& name, int army_bonus);
+    Continent(Continent &obj);
+    Continent();
+
+    string get_name();
+    int get_army_bonus();
+    vector<Territory*> get_territories();
+
+    void add_territory(Territory* territory);
+
+    Continent& operator=(const Continent &c);
+    friend ostream& operator<<(ostream&, const Continent&);
+
+};
 
 class Territory{
 private:
-
-
-    string *name{};
-    int *t_ID{};
-    int *numberOfArmies{};
-    int *continent{};
-    int *owner{};
+    int *id, *continent_id, *armies = nullptr;
+    string *name;
+    Continent* continent = nullptr;
+    Player* player = nullptr;
+    vector<Territory*> neighbours;
 
 public:
+    Territory(int id, string name, int continent);
+    Territory(Territory &obj);
     Territory();
-    Territory(int *id, string *n, int *cont);
-    Territory(const Territory &t);
-    Territory& operator=(const Territory& t);
     ~Territory();
 
-    int getID() {return *t_ID;}
-    int getNumberOfArmies() { return *numberOfArmies; }
-    int getOwner() { return *owner; }
-    int getContinent(){ return *continent; } //might error!!!!!!
-    void setNumberOfArmies(int n) { *numberOfArmies = n; }
-    void setOwner(int n) { *owner = n; }
-    void setContinent(int cont) {this->continent = &cont; }; //recheck!!!!
-    string  getName(){
-        return  name;
-    }
-    vector<Territory*> neighbours(Territory *t1);
+    int get_continent_id();
+    int get_id();
+    string get_name();
+    int get_armies();
+    void set_armies(int);
+    void setPlayer(Player* player);
+    Player* getPlayer();
+    vector<Territory*> get_bordering_territory();
+    Continent* get_continent();
+    void set_continent(Continent *continent);
 
-    friend std::ostream& operator<<(std::ostream& out, const Territory& t);
+    void add_neighbour(Territory *neighbour);
+
+    Territory& operator=(const Territory &c);
+    friend ostream& operator<<(ostream&, const Territory&);
 
 };
 
-
-class Map {
-private:
-    vector<Territory *> map[];
-    vector<Map*> continentsList;
-    string* name{};
-
+class Map{
 public:
+    vector<Continent*> continents;
+    vector<Territory*> territories;
+
     Map();
-    Map(string *name);
+    Map(const Map& map);
     ~Map();
 
-    void addEdge(Territory* t1, Territory* t2);
-    bool isConnected();
-    void DFS(int n, bool *visited);
-    bool validate();
+    vector<Territory*> get_territories();
+    vector<Continent*> get_continents();
 
-    friend class MapLoader;
+    void add_territory(Territory* new_territory);
+    void add_continent(Continent* new_continent);
+    bool validate(Map* map);
+    bool verify_map_connected_graph();
+    bool verify_continent_connected_subgraph();
+    bool verify_unique_continents();
 
+    Territory* random_territory(string continent_name);
 
+    Map& operator=(const Map& m);
+    friend ostream& operator<<(ostream&, const Map&);
 };
-
-#endif //UNTITLED19_MAP_H
