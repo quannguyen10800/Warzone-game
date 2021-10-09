@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="assignment1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlayerDriver">
+				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/PlayerDriver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlayerDriver"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlayerDriver/fast">
+				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/PlayerDriver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlayerDriver/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OrdersDriver">
+				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/OrdersDriver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 OrdersDriver"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OrdersDriver/fast">
+				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/OrdersDriver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 OrdersDriver/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AssignmentLib">
+				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/libAssignmentLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 AssignmentLib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AssignmentLib/fast">
+				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/libAssignmentLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 AssignmentLib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Map/Map.cpp">
+			<Option target="AssignmentLib"/>
+		</Unit>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Map/Map.h">
+			<Option target="AssignmentLib"/>
+		</Unit>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Orders/Orders.cpp">
+			<Option target="AssignmentLib"/>
+		</Unit>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Orders/Orders.h">
+			<Option target="AssignmentLib"/>
+		</Unit>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Orders/OrdersDriver.cpp">
+			<Option target="OrdersDriver"/>
+		</Unit>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Player/Player .cpp">
+			<Option target="AssignmentLib"/>
+		</Unit>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Player/Player.h">
+			<Option target="AssignmentLib"/>
+		</Unit>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Player/PlayerDriver.cpp">
+			<Option target="PlayerDriver"/>
+		</Unit>
+		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
