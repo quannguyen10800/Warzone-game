@@ -1,11 +1,13 @@
 //
 // Created by Mehrsa Yazdani on 2021-10-03.
 //
-#include "Player.h"
-#include "Map.h"
+
 #include <iostream>
 #include "string"
 #include "list"
+#include "Player.h"
+#include "../Map/Map.h"
+
 //initializing  the number to zerp
 int *Player::number = new int(0);
 
@@ -14,41 +16,41 @@ int *Player::number = new int(0);
 Player ::Player() {
     this->territories = vector<Territory *>();
     this->orders = new OrdersList();
-    this->hand = new Hand();
+   // this->hand = new Hand();
 
     *number=*number+1;
     this->Pname="";
     //function
-    this->initial;
+    // this->initial;
     territories.push_back(initial);
 
 }
 Player ::Player(string s) {
     this->territories = vector<Territory *>();
     this->orders = new OrdersList();
-    this->hand = new Hand();
+  //  this->hand = new Hand();
 
     *number=*number+1;
     this->Pname=s;
     //function
-    this->initial;
+   // this->initial;
     territories.push_back(initial);
 
 }
-
-Player  ::Player(string s,vector<Territory*> territories,HandsofCards *handofcard,OrdersList *orders) {
-
-    this->territories = territories;
-    this->orders = orders;
-    this->hand = handofcard;
-
-    *number=*number+1;
-    this->Pname=s;
-    //function
-    this->initial;
-    territories.push_back(initial);
-
-}
+//
+//Player ::Player(string s,vector<Territory*> territories, HandsofCards *handofcard,OrdersList *orders) {
+//
+//    this->territories = territories;
+//    this->orders = orders;
+//    this->hand = handofcard;
+//
+//    *number=*number+1;
+//    this->Pname=s;
+//    //function
+//    this->initial;
+//    territories.push_back(initial);
+//
+//}
 //copy constructor
 Player::Player(const Player &p){
     this->territories = p.territories;
@@ -56,7 +58,7 @@ Player::Player(const Player &p){
         this->territories.at(i) = p.territories.at(i);
     }
     this->orders = p.orders;
-    this->hand = p.hand;
+   // this->hand = p.hand;
     this->Pname = p.Pname;
 
 
@@ -66,7 +68,7 @@ Player& Player::operator=(const Player& p) {
 
     this->territories = p.territories;
     this->orders = p.orders;
-    this->hand = p.hand;
+   // this->hand = p.hand;
 
     return *this;
 
@@ -76,14 +78,14 @@ Player& Player::operator=(const Player& p) {
 Player ::~Player() {
 
     delete orders;
-    delete hand;
+   // delete hand;
 
     for (int i = 0; i < territories.size(); i++) {
         delete territories.at(i);
 
     }
     for (int i = 0; i < toDefend.size(); i++) {
-        delete toDefend.front()
+     //   delete toDefend.front()
 
     }
     for (int i = 0; i < toAttact.size(); i++) {
@@ -114,7 +116,7 @@ OrdersList* Player ::getOrdersList()  {
 
 }
 //add to otderlist
-void Player :: addOrder(Orders *order){
+void Player :: addOrder(Order *order){
     orders->add(order);
 }
 

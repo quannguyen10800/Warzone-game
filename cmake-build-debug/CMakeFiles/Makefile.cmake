@@ -50,7 +50,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/PlayerDriver.dir/DependInfo.cmake"
-  "CMakeFiles/OrdersDriver.dir/DependInfo.cmake"
-  "CMakeFiles/AssignmentLib.dir/DependInfo.cmake"
+  "CMakeFiles/assignment1.dir/DependInfo.cmake"
   )

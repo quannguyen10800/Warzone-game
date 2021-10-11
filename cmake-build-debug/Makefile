@@ -117,163 +117,161 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PlayerDriver
+# Target rules for targets named assignment1
 
 # Build rule for target.
-PlayerDriver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PlayerDriver
-.PHONY : PlayerDriver
+assignment1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment1
+.PHONY : assignment1
 
 # fast build rule for target.
-PlayerDriver/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlayerDriver.dir/build.make CMakeFiles/PlayerDriver.dir/build
-.PHONY : PlayerDriver/fast
+assignment1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/build
+.PHONY : assignment1/fast
 
-#=============================================================================
-# Target rules for targets named OrdersDriver
-
-# Build rule for target.
-OrdersDriver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OrdersDriver
-.PHONY : OrdersDriver
-
-# fast build rule for target.
-OrdersDriver/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/build
-.PHONY : OrdersDriver/fast
-
-#=============================================================================
-# Target rules for targets named AssignmentLib
-
-# Build rule for target.
-AssignmentLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AssignmentLib
-.PHONY : AssignmentLib
-
-# fast build rule for target.
-AssignmentLib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/build
-.PHONY : AssignmentLib/fast
-
-src/Map/Map.o: src/Map/Map.cpp.o
-.PHONY : src/Map/Map.o
+Map/Map.o: Map/Map.cpp.o
+.PHONY : Map/Map.o
 
 # target to build an object file
-src/Map/Map.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Map/Map.cpp.o
-.PHONY : src/Map/Map.cpp.o
+Map/Map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Map/Map.cpp.o
+.PHONY : Map/Map.cpp.o
 
-src/Map/Map.i: src/Map/Map.cpp.i
-.PHONY : src/Map/Map.i
+Map/Map.i: Map/Map.cpp.i
+.PHONY : Map/Map.i
 
 # target to preprocess a source file
-src/Map/Map.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Map/Map.cpp.i
-.PHONY : src/Map/Map.cpp.i
+Map/Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Map/Map.cpp.i
+.PHONY : Map/Map.cpp.i
 
-src/Map/Map.s: src/Map/Map.cpp.s
-.PHONY : src/Map/Map.s
+Map/Map.s: Map/Map.cpp.s
+.PHONY : Map/Map.s
 
 # target to generate assembly for a file
-src/Map/Map.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Map/Map.cpp.s
-.PHONY : src/Map/Map.cpp.s
+Map/Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Map/Map.cpp.s
+.PHONY : Map/Map.cpp.s
 
-src/Orders/Orders.o: src/Orders/Orders.cpp.o
-.PHONY : src/Orders/Orders.o
+Orders/Orders.o: Orders/Orders.cpp.o
+.PHONY : Orders/Orders.o
 
 # target to build an object file
-src/Orders/Orders.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Orders/Orders.cpp.o
-.PHONY : src/Orders/Orders.cpp.o
+Orders/Orders.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/Orders.cpp.o
+.PHONY : Orders/Orders.cpp.o
 
-src/Orders/Orders.i: src/Orders/Orders.cpp.i
-.PHONY : src/Orders/Orders.i
+Orders/Orders.i: Orders/Orders.cpp.i
+.PHONY : Orders/Orders.i
 
 # target to preprocess a source file
-src/Orders/Orders.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Orders/Orders.cpp.i
-.PHONY : src/Orders/Orders.cpp.i
+Orders/Orders.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/Orders.cpp.i
+.PHONY : Orders/Orders.cpp.i
 
-src/Orders/Orders.s: src/Orders/Orders.cpp.s
-.PHONY : src/Orders/Orders.s
+Orders/Orders.s: Orders/Orders.cpp.s
+.PHONY : Orders/Orders.s
 
 # target to generate assembly for a file
-src/Orders/Orders.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Orders/Orders.cpp.s
-.PHONY : src/Orders/Orders.cpp.s
+Orders/Orders.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/Orders.cpp.s
+.PHONY : Orders/Orders.cpp.s
 
-src/Orders/OrdersDriver.o: src/Orders/OrdersDriver.cpp.o
-.PHONY : src/Orders/OrdersDriver.o
+Orders/OrdersDriver.o: Orders/OrdersDriver.cpp.o
+.PHONY : Orders/OrdersDriver.o
 
 # target to build an object file
-src/Orders/OrdersDriver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/src/Orders/OrdersDriver.cpp.o
-.PHONY : src/Orders/OrdersDriver.cpp.o
+Orders/OrdersDriver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.o
+.PHONY : Orders/OrdersDriver.cpp.o
 
-src/Orders/OrdersDriver.i: src/Orders/OrdersDriver.cpp.i
-.PHONY : src/Orders/OrdersDriver.i
+Orders/OrdersDriver.i: Orders/OrdersDriver.cpp.i
+.PHONY : Orders/OrdersDriver.i
 
 # target to preprocess a source file
-src/Orders/OrdersDriver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/src/Orders/OrdersDriver.cpp.i
-.PHONY : src/Orders/OrdersDriver.cpp.i
+Orders/OrdersDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.i
+.PHONY : Orders/OrdersDriver.cpp.i
 
-src/Orders/OrdersDriver.s: src/Orders/OrdersDriver.cpp.s
-.PHONY : src/Orders/OrdersDriver.s
+Orders/OrdersDriver.s: Orders/OrdersDriver.cpp.s
+.PHONY : Orders/OrdersDriver.s
 
 # target to generate assembly for a file
-src/Orders/OrdersDriver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrdersDriver.dir/build.make CMakeFiles/OrdersDriver.dir/src/Orders/OrdersDriver.cpp.s
-.PHONY : src/Orders/OrdersDriver.cpp.s
+Orders/OrdersDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.s
+.PHONY : Orders/OrdersDriver.cpp.s
 
-src/Player/PlayerDriver.o: src/Player/PlayerDriver.cpp.o
-.PHONY : src/Player/PlayerDriver.o
+Player/Player.o: Player/Player.cpp.o
+.PHONY : Player/Player.o
 
 # target to build an object file
-src/Player/PlayerDriver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlayerDriver.dir/build.make CMakeFiles/PlayerDriver.dir/src/Player/PlayerDriver.cpp.o
-.PHONY : src/Player/PlayerDriver.cpp.o
+Player/Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/Player.cpp.o
+.PHONY : Player/Player.cpp.o
 
-src/Player/PlayerDriver.i: src/Player/PlayerDriver.cpp.i
-.PHONY : src/Player/PlayerDriver.i
+Player/Player.i: Player/Player.cpp.i
+.PHONY : Player/Player.i
 
 # target to preprocess a source file
-src/Player/PlayerDriver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlayerDriver.dir/build.make CMakeFiles/PlayerDriver.dir/src/Player/PlayerDriver.cpp.i
-.PHONY : src/Player/PlayerDriver.cpp.i
+Player/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/Player.cpp.i
+.PHONY : Player/Player.cpp.i
 
-src/Player/PlayerDriver.s: src/Player/PlayerDriver.cpp.s
-.PHONY : src/Player/PlayerDriver.s
+Player/Player.s: Player/Player.cpp.s
+.PHONY : Player/Player.s
 
 # target to generate assembly for a file
-src/Player/PlayerDriver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlayerDriver.dir/build.make CMakeFiles/PlayerDriver.dir/src/Player/PlayerDriver.cpp.s
-.PHONY : src/Player/PlayerDriver.cpp.s
+Player/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/Player.cpp.s
+.PHONY : Player/Player.cpp.s
 
-src/Player/Player_.o: src/Player/Player_.cpp.o
-.PHONY : src/Player/Player_.o
+Player/PlayerDriver.o: Player/PlayerDriver.cpp.o
+.PHONY : Player/PlayerDriver.o
 
 # target to build an object file
-src/Player/Player_.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Player/Player_.cpp.o
-.PHONY : src/Player/Player_.cpp.o
+Player/PlayerDriver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.o
+.PHONY : Player/PlayerDriver.cpp.o
 
-src/Player/Player_.i: src/Player/Player_.cpp.i
-.PHONY : src/Player/Player_.i
+Player/PlayerDriver.i: Player/PlayerDriver.cpp.i
+.PHONY : Player/PlayerDriver.i
 
 # target to preprocess a source file
-src/Player/Player_.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Player/Player_.cpp.i
-.PHONY : src/Player/Player_.cpp.i
+Player/PlayerDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.i
+.PHONY : Player/PlayerDriver.cpp.i
 
-src/Player/Player_.s: src/Player/Player_.cpp.s
-.PHONY : src/Player/Player_.s
+Player/PlayerDriver.s: Player/PlayerDriver.cpp.s
+.PHONY : Player/PlayerDriver.s
 
 # target to generate assembly for a file
-src/Player/Player_.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AssignmentLib.dir/build.make CMakeFiles/AssignmentLib.dir/src/Player/Player_.cpp.s
-.PHONY : src/Player/Player_.cpp.s
+Player/PlayerDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.s
+.PHONY : Player/PlayerDriver.cpp.s
+
+TestDriver.o: TestDriver.cpp.o
+.PHONY : TestDriver.o
+
+# target to build an object file
+TestDriver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/TestDriver.cpp.o
+.PHONY : TestDriver.cpp.o
+
+TestDriver.i: TestDriver.cpp.i
+.PHONY : TestDriver.i
+
+# target to preprocess a source file
+TestDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/TestDriver.cpp.i
+.PHONY : TestDriver.cpp.i
+
+TestDriver.s: TestDriver.cpp.s
+.PHONY : TestDriver.s
+
+# target to generate assembly for a file
+TestDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/TestDriver.cpp.s
+.PHONY : TestDriver.cpp.s
 
 # Help Target
 help:
@@ -283,24 +281,25 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... AssignmentLib"
-	@echo "... OrdersDriver"
-	@echo "... PlayerDriver"
-	@echo "... src/Map/Map.o"
-	@echo "... src/Map/Map.i"
-	@echo "... src/Map/Map.s"
-	@echo "... src/Orders/Orders.o"
-	@echo "... src/Orders/Orders.i"
-	@echo "... src/Orders/Orders.s"
-	@echo "... src/Orders/OrdersDriver.o"
-	@echo "... src/Orders/OrdersDriver.i"
-	@echo "... src/Orders/OrdersDriver.s"
-	@echo "... src/Player/PlayerDriver.o"
-	@echo "... src/Player/PlayerDriver.i"
-	@echo "... src/Player/PlayerDriver.s"
-	@echo "... src/Player/Player_.o"
-	@echo "... src/Player/Player_.i"
-	@echo "... src/Player/Player_.s"
+	@echo "... assignment1"
+	@echo "... Map/Map.o"
+	@echo "... Map/Map.i"
+	@echo "... Map/Map.s"
+	@echo "... Orders/Orders.o"
+	@echo "... Orders/Orders.i"
+	@echo "... Orders/Orders.s"
+	@echo "... Orders/OrdersDriver.o"
+	@echo "... Orders/OrdersDriver.i"
+	@echo "... Orders/OrdersDriver.s"
+	@echo "... Player/Player.o"
+	@echo "... Player/Player.i"
+	@echo "... Player/Player.s"
+	@echo "... Player/PlayerDriver.o"
+	@echo "... Player/PlayerDriver.i"
+	@echo "... Player/PlayerDriver.s"
+	@echo "... TestDriver.o"
+	@echo "... TestDriver.i"
+	@echo "... TestDriver.s"
 .PHONY : help
 
 

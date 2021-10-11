@@ -66,35 +66,109 @@ include CMakeFiles/assignment1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/assignment1.dir/flags.make
 
-CMakeFiles/assignment1.dir/library.cpp.o: CMakeFiles/assignment1.dir/flags.make
-CMakeFiles/assignment1.dir/library.cpp.o: ../library.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/assignment1.dir/library.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/assignment1.dir/library.cpp.o -c /Users/hoangtugio/CLionProjects/assignment1/library.cpp
+CMakeFiles/assignment1.dir/TestDriver.cpp.o: CMakeFiles/assignment1.dir/flags.make
+CMakeFiles/assignment1.dir/TestDriver.cpp.o: ../TestDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/assignment1.dir/TestDriver.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/assignment1.dir/TestDriver.cpp.o -c /Users/hoangtugio/CLionProjects/assignment1/TestDriver.cpp
 
-CMakeFiles/assignment1.dir/library.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment1.dir/library.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hoangtugio/CLionProjects/assignment1/library.cpp > CMakeFiles/assignment1.dir/library.cpp.i
+CMakeFiles/assignment1.dir/TestDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment1.dir/TestDriver.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hoangtugio/CLionProjects/assignment1/TestDriver.cpp > CMakeFiles/assignment1.dir/TestDriver.cpp.i
 
-CMakeFiles/assignment1.dir/library.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment1.dir/library.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hoangtugio/CLionProjects/assignment1/library.cpp -o CMakeFiles/assignment1.dir/library.cpp.s
+CMakeFiles/assignment1.dir/TestDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment1.dir/TestDriver.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hoangtugio/CLionProjects/assignment1/TestDriver.cpp -o CMakeFiles/assignment1.dir/TestDriver.cpp.s
+
+CMakeFiles/assignment1.dir/Player/Player.cpp.o: CMakeFiles/assignment1.dir/flags.make
+CMakeFiles/assignment1.dir/Player/Player.cpp.o: ../Player/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/assignment1.dir/Player/Player.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/assignment1.dir/Player/Player.cpp.o -c /Users/hoangtugio/CLionProjects/assignment1/Player/Player.cpp
+
+CMakeFiles/assignment1.dir/Player/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment1.dir/Player/Player.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hoangtugio/CLionProjects/assignment1/Player/Player.cpp > CMakeFiles/assignment1.dir/Player/Player.cpp.i
+
+CMakeFiles/assignment1.dir/Player/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment1.dir/Player/Player.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hoangtugio/CLionProjects/assignment1/Player/Player.cpp -o CMakeFiles/assignment1.dir/Player/Player.cpp.s
+
+CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.o: CMakeFiles/assignment1.dir/flags.make
+CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.o: ../Player/PlayerDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.o -c /Users/hoangtugio/CLionProjects/assignment1/Player/PlayerDriver.cpp
+
+CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hoangtugio/CLionProjects/assignment1/Player/PlayerDriver.cpp > CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.i
+
+CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hoangtugio/CLionProjects/assignment1/Player/PlayerDriver.cpp -o CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.s
+
+CMakeFiles/assignment1.dir/Orders/Orders.cpp.o: CMakeFiles/assignment1.dir/flags.make
+CMakeFiles/assignment1.dir/Orders/Orders.cpp.o: ../Orders/Orders.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/assignment1.dir/Orders/Orders.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/assignment1.dir/Orders/Orders.cpp.o -c /Users/hoangtugio/CLionProjects/assignment1/Orders/Orders.cpp
+
+CMakeFiles/assignment1.dir/Orders/Orders.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment1.dir/Orders/Orders.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hoangtugio/CLionProjects/assignment1/Orders/Orders.cpp > CMakeFiles/assignment1.dir/Orders/Orders.cpp.i
+
+CMakeFiles/assignment1.dir/Orders/Orders.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment1.dir/Orders/Orders.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hoangtugio/CLionProjects/assignment1/Orders/Orders.cpp -o CMakeFiles/assignment1.dir/Orders/Orders.cpp.s
+
+CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.o: CMakeFiles/assignment1.dir/flags.make
+CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.o: ../Orders/OrdersDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.o -c /Users/hoangtugio/CLionProjects/assignment1/Orders/OrdersDriver.cpp
+
+CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hoangtugio/CLionProjects/assignment1/Orders/OrdersDriver.cpp > CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.i
+
+CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hoangtugio/CLionProjects/assignment1/Orders/OrdersDriver.cpp -o CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.s
+
+CMakeFiles/assignment1.dir/Map/Map.cpp.o: CMakeFiles/assignment1.dir/flags.make
+CMakeFiles/assignment1.dir/Map/Map.cpp.o: ../Map/Map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/assignment1.dir/Map/Map.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/assignment1.dir/Map/Map.cpp.o -c /Users/hoangtugio/CLionProjects/assignment1/Map/Map.cpp
+
+CMakeFiles/assignment1.dir/Map/Map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/assignment1.dir/Map/Map.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hoangtugio/CLionProjects/assignment1/Map/Map.cpp > CMakeFiles/assignment1.dir/Map/Map.cpp.i
+
+CMakeFiles/assignment1.dir/Map/Map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/assignment1.dir/Map/Map.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hoangtugio/CLionProjects/assignment1/Map/Map.cpp -o CMakeFiles/assignment1.dir/Map/Map.cpp.s
 
 # Object files for target assignment1
 assignment1_OBJECTS = \
-"CMakeFiles/assignment1.dir/library.cpp.o"
+"CMakeFiles/assignment1.dir/TestDriver.cpp.o" \
+"CMakeFiles/assignment1.dir/Player/Player.cpp.o" \
+"CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.o" \
+"CMakeFiles/assignment1.dir/Orders/Orders.cpp.o" \
+"CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.o" \
+"CMakeFiles/assignment1.dir/Map/Map.cpp.o"
 
 # External object files for target assignment1
 assignment1_EXTERNAL_OBJECTS =
 
-libassignment1.a: CMakeFiles/assignment1.dir/library.cpp.o
-libassignment1.a: CMakeFiles/assignment1.dir/build.make
-libassignment1.a: CMakeFiles/assignment1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libassignment1.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/assignment1.dir/cmake_clean_target.cmake
+assignment1: CMakeFiles/assignment1.dir/TestDriver.cpp.o
+assignment1: CMakeFiles/assignment1.dir/Player/Player.cpp.o
+assignment1: CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.o
+assignment1: CMakeFiles/assignment1.dir/Orders/Orders.cpp.o
+assignment1: CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.o
+assignment1: CMakeFiles/assignment1.dir/Map/Map.cpp.o
+assignment1: CMakeFiles/assignment1.dir/build.make
+assignment1: CMakeFiles/assignment1.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable assignment1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/assignment1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/assignment1.dir/build: libassignment1.a
+CMakeFiles/assignment1.dir/build: assignment1
 .PHONY : CMakeFiles/assignment1.dir/build
 
 CMakeFiles/assignment1.dir/clean:

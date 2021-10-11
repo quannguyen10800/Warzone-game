@@ -4,19 +4,12 @@
 
 #ifndef UNTITLED19_PLAYER_H
 #define UNTITLED19_PLAYER_H
-using  namespace std;
+//using namespace std;
 #include <iostream>
-#include "Map.h"
-#include "Orders.h"
 #include "list"
+#include "../Map/Map.h"
+#include "../Orders/Orders.h"
 
-
-
-
-using  namespace std;
-#include <iostream>
-#include "Map.h"
-#include "Orders.h"
 //#include "HandsOfCards.h"
 #include  <vector>
 
@@ -30,8 +23,6 @@ private:
     OrdersList *orders;
     //each player has a name
     string Pname;
-
-
     //each player has a number assigned to them
     //this number will be static and will belong to the class each time a player is created , the number will increament
     //and th enumber will be assigned to them
@@ -39,16 +30,12 @@ private:
     //there  is a territory randlonly assigned to the player at the begining of the game
     Territory *initial = new Territory();
     list<Territory*> toDefend;
-    list<Territory*> toAttact;
-
-
+    list<Territory*> toAttact;  //*Attack
 
 public:
-
-
     //defualt contructor
     Player();
-    Player(string s ,vector<Territory*> territories,HandsofCards *handofcard,Orders *orders);
+  //  Player(string s ,vector<Territory*> territories,HandsofCards *handofcard,Orders *orders);
     //contructor with name
     Player(string n);
 
@@ -73,7 +60,7 @@ public:
 
     OrdersList* getOrdersList();
 
-    void addOrder(Orders *order);
+    void addOrder(Order *order);
 
     vector<Territory*> conqures();
 
@@ -82,7 +69,7 @@ public:
     void removeTerritory(Territory* territory);
 
     //Hand* getHand();
-    void issueOrder(string s ,vector<Territory*> territories,HandsofCards *handofcard,int priority);
+   // void issueOrder(string s ,vector<Territory*> territories,HandsofCards *handofcard,int priority);
 
     list<Territory*> to_Defend();
     list<Territory*> to_Attact();
