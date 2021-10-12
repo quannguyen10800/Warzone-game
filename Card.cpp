@@ -1,53 +1,139 @@
-#include <string>
-#include <vector>
 #include "Card.h"
+#include "Orders.h"
+#include "iostream"
 
-using namespace std;
+Card::Card()
+{
+	//if no card type is specified in the constructor, a random int will be generated to determine the cards type
+	type = rand() % 6 + 1;
+}
 
-class Card{
-	public:
-		string type;
-		Card(string t){
-			type = t;
-		}
-		void play();
-};
-class Deck{
-	public:
-		vector<Card> deck;
-		Deck(vector<Card> d){
-			deck = d;
-		}
-		void draw(Hand hand);
-};
-class Hand{
-	public:
-		vector<Card> hand;
-		Hand(vector<Card> h){
-			hand = h;
-		}
-		void putBack(Card card, Deck deck);
-};
-void Card::play(Deck deck){
-	if (Card.type == "bomb"){
-		Card.putBack(deck);
+Card::Card(string n)
+{
+	//if the constructor contains the type, it will be passed through
+	name = n;
+	if (name._Equal("bomb")) {
+		type = 1;
 	}
-	else if(Card.type == "reinforcement"){
-		Card.putBack(deck);
+	else if (name._Equal("reinforcement")) {
+		type = 2;
 	}
-	else if(Card.type == "blockade"){
-		Card.putBack(deck);
+	else if (name._Equal("blockade")) {
+		type = 3;
 	}
-	else if(Card.type == "airlift"){
-		Card.putBack(deck);
+	else if (name._Equal("airlift")) {
+		type = 4;
 	}
-	else if(Card.type == "diplomacy"){
-		Card.putBack(deck);
+	else if (name._Equal("diplomacy")) {
+		type = 5;
+	}
+	else {
+		cout << "not a valid card type";
 	}
 }
-void Deck::draw(Hand hand){
-	
+
+int Card::getType() {
+	return this->type;
 }
-void Hand::putBack(Card card, Deck deck){
-	
+
+string Card::getName() {
+	return this->name;
+}
+
+void Card::setType(int t) {
+	this->type = t;
+}
+void Card::play(Deck deck, Hand hand)
+{
+	vector<Card> h = hand.getVector();
+	vector<Card> d = deck.getVector();
+	//switch statement will check the type of the card being played and run the corresponding code to that card type
+	switch (this->type) {
+		case 1:
+			//code for if card is a bomb
+			d.insert(d.end(), std::make_move_iterator(h.begin()), std::make_move_iterator(h.end()));
+			break;
+		case 2:
+			d.insert(d.end(), std::make_move_iterator(h.begin()), std::make_move_iterator(h.end()));
+			//code for if card is a reinforcement
+			break;
+		case 3:
+			d.insert(d.end(), std::make_move_iterator(h.begin()), std::make_move_iterator(h.end()));
+			//code for if card is a blockade
+			break;
+		case 4:
+			d.insert(d.end(), std::make_move_iterator(h.begin()), std::make_move_iterator(h.end()));
+			//code for if card is a airlift
+			break;
+		case 5:
+			d.insert(d.end(), std::make_move_iterator(h.begin()), std::make_move_iterator(h.end()));
+			//code for if card is a diplomacy
+			break;
+		default:
+			//code for incompatible int type
+			break;
+	}
+}
+
+Deck::Deck()
+{
+	std::vector<Card> d;
+	//if no deck is provided in the constructor we generate 50 random cards and insert them into a vector 'd'
+	for (int i = 0; i < 50; i++) {
+		Card card = Card();
+		d.push_back(card);
+	}
+	deck = d;
+}
+
+Deck::Deck(vector<Card> d)
+{
+	//if the constructor contains the deck, it will be passed through
+	deck = d;
+}
+
+void Deck::draw(Hand hand)
+{	
+	vector<Card> h = hand.getVector();
+	vector<Card> d = this->getVector();
+	h.insert(h.end(), std::make_move_iterator(d.begin()),std::make_move_iterator(d.end()));
+}
+
+Hand::Hand() {
+	std::vector<Card> h;
+	hand = h;
+}
+
+Hand::Hand(Deck deck)
+{
+	std::vector<Card> h;
+	//if the deck is provided in the consructor, we draw 7 cards from the deck
+	for (int i = 0; i < 7; i++) {
+		deck.draw(h);
+	}
+	hand = h;
+}
+
+Hand::Hand(vector<Card> h)
+{
+	//if the constructor contains the hand, it will be passed through
+	hand = h;
+}
+
+vector<Card> Hand::getVector() {
+	return this->hand;
+}
+
+Card Hand::getCard()
+{
+	return Card();
+}
+
+vector<Card> Deck::getVector() {
+	return this->deck;
+}
+
+Card Deck::getCard()
+{
+	return Card();
 }
