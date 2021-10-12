@@ -12,6 +12,7 @@ int main(){
 
     GameEngine ge;
 
+    //LOOP UNTIL GAME ENGINE REACHES END
     do{
         cout<<"Current Game status = "<<ge.getState()<<endl;
         string command;
@@ -21,12 +22,10 @@ int main(){
             cout<<"Invalid command!!!"<<endl;
         }
 
-
-    }while (ge.getEndStatus() == 0);
-
-
+    }while (ge.getEndStatus() == false);  //CHECKING END STATUS
 
 }
+
 
 // g++ GameEngine.cpp GameEngineDriver.cpp -o main
 // ./main
