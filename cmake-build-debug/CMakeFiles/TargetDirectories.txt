@@ -1,5 +1,3 @@
-/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles/PlayerDriver.dir
-/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles/OrdersDriver.dir
-/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles/AssignmentLib.dir
+/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/assignment1.dir
