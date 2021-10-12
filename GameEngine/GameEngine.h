@@ -1,29 +1,32 @@
 //
-// Created by Thong Tran on 2021-10-11.
+// Created by Kai Tran on 2021-09-28
 //
 
-#ifndef ASSIGNMENT1_GAMEENGINE_H
-#define ASSIGNMENT1_GAMEENGINE_H
-#include "../Player/Player.h"
-#include "../Map/Map.h"
-#include "../Card/Card.h"
-#include <vector>
-#include <string>
+#ifndef GAMEENGINE_H_INCLUDED
+#define GAMEENGINE_H_INCLUDED
 #include <iostream>
+#include <string.h>
+
 using namespace std;
-class Player;
-class GameEngine {
+
+class GameEngine{
+    char* state;
+    int gameEnd;
+
 public:
+
     GameEngine();
-    GameEngine& operator = (GameEngine const &anotherGameEngine);
-    friend ostream& operator << (ostream &stream, const GameEngine &gameEngine);
-    static Player* getOwnerOf(Territory* territory);
-    static void assignToNeutralPlayer(Territory* territory);
-    static void addPlayersToList(Player* player);
-    static void clearPlayerList();
-    static std::vector<Player*> players_;
-private:
+    GameEngine(char* initialState);
+    GameEngine(const GameEngine &ge);
+    const GameEngine& operator=(const GameEngine& ge);
+    char *getState();
+    int getEndStatus();
+    bool isValidState(char *state);
+    bool transition(const char* command);
+    friend istream & operator >> (istream &in,  GameEngine &ge);
+    ~GameEngine();
+
+
 };
 
-
-#endif //ASSIGNMENT1_GAMEENGINE_H
+#endif // GAMEENGINE_H_INCLUDED
