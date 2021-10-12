@@ -23,6 +23,8 @@ int OrdersDriver()
     enemy->addTerritory(ontario);
 
    // GameEngine::setPlayers({ player, enemy });
+   GameEngine::addPlayersToList(player);
+   GameEngine::addPlayersToList(enemy);
 
     OrdersList ordersList;
     ordersList.add(new DeployOrder(player, 5, quebec));
@@ -63,6 +65,6 @@ int OrdersDriver()
     delete quebec;
     delete ontario;
     delete bc;
-
+    GameEngine::clearPlayerList();
     return 0;
 }

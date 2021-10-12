@@ -1,7 +1,8 @@
 #include "../Player/Player.h"
 #include <iostream>
 #include <vector>
-
+#include "../Map/Map.h"
+#include "../GameEngine/GameEngine.h"
 enum OrderType : short
 {
     DEPLOY,
@@ -46,16 +47,17 @@ public:
     OrdersList();
     OrdersList(const OrdersList &orders);
     ~OrdersList();
+    int size() const;
+    void add(Order* order);
+    void move(int source, int destination);
+    void remove(int target);
     const OrdersList &operator=(const OrdersList &orders);
     friend std::ostream &operator<<(std::ostream &output, const OrdersList &orders);
     std::vector<Order*> getOrders() const;
     void setOrders(std::vector<Order*> orders);
     Order* popTopOrder();
     Order* peek();
-    int size() const;
-    void add(Order* order);
-    void move(int source, int destination);
-    void remove(int target);
+
 
 private:
     std::vector<Order*> orders_;
@@ -69,10 +71,10 @@ public:
     DeployOrder(Player* issuer, int numberOfArmies, Territory* destination);
     DeployOrder(const DeployOrder &order);
     const DeployOrder &operator=(const DeployOrder &order);
-    Order* clone() const;
     void addArmies(int additional);
     bool validate() const;
     OrderType getType() const;
+    Order* clone() const;
 
 protected:
     void execute_();
@@ -155,10 +157,9 @@ public:
     AirliftOrder(Player* issuer, int numberOfArmies, Territory* source, Territory* destination);
     AirliftOrder(const AirliftOrder &order);
     const AirliftOrder &operator=(const AirliftOrder &order);
-    Order* clone() const;
     bool validate() const;
     OrderType getType() const;
-
+    Order* clone() const;
 protected:
     void execute_();
     void undo_();

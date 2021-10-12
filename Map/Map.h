@@ -18,12 +18,29 @@ private:
     int *continent{};
     int *owner{};
 
+    // Quan Nguyen
+    int pendingIncomingArmies_;
+    int pendingOutgoingArmies_;
+    int numberOfArmies_;
+    std::string name_;
+
 public:
+
+    // Quan Nguyen
     Territory();
     Territory(int id, string *n, int *cont);
     Territory(const Territory &t);
     Territory& operator=(const Territory& t);
     ~Territory();
+    int getPendingIncomingArmies() const;
+    int getPendingOutgoingArmies() const;
+    void setPendingIncomingArmies(int armies);
+    void setPendingOutgoingArmies(int armies);
+    void removeArmies(int armies);
+    int getNumberOfMovableArmies();
+
+
+
 
     int getID() {return *t_ID;}
     int getNumberOfArmies() { return *numberOfArmies; }

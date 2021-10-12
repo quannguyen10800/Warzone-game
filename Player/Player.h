@@ -32,6 +32,12 @@ private:
     list<Territory*> toDefend;
     list<Territory*> toAttact;  //*Attack
 
+
+    //Quan Nguyen
+    vector<Player*> diplomaticRelations_;
+    bool neutral = false;
+
+
 public:
     //defualt contructor
     Player();
@@ -67,6 +73,14 @@ public:
     void addTerritory(Territory* territory);
 
     void removeTerritory(Territory* territory);
+
+
+//    //Quan Nguyen
+    void addDiplomaticRelation(Player* player);
+    vector<Player*> getRelations() const;
+    bool isNeutral();
+
+
 
     //Hand* getHand();
    // void issueOrder(string s ,vector<Territory*> territories,HandsofCards *handofcard,int priority);

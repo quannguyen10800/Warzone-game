@@ -19,16 +19,15 @@ namespace
     // if there is no diplomacy between the attacker and the owner of the target.
     bool canAttack(Player* attacker, Territory* target)
     {
-//         Player* ownerOfTarget = GameEngine::getOwnerOf(target);
-//        std::vector<Player*> diplomaticRelations = attacker->getDiplomaticRelations();
-//        bool diplomacyWithOwnerOfTarget = find(diplomaticRelations.begin(), diplomaticRelations.end(), ownerOfTarget) != diplomaticRelations.end();
-//
-//        if (diplomacyWithOwnerOfTarget)
-//        {
-//            std::cout << attacker->getName() << " and " << ownerOfTarget->getName() << " cannot attack each other for the rest of this turn. ";
-//        }
-        return true;
-       // return attacker == ownerOfTarget || !diplomacyWithOwnerOfTarget;
+         Player* targetOwner = GameEngine::getOwnerOf(target);
+        std::vector<Player*> diplomatRelationship = attacker->getRelations();
+        bool diplomacyWithOwnerOfTarget = find(diplomatRelationship.begin(), diplomatRelationship.end(), targetOwner) != diplomatRelationship.end();
+
+        if (diplomacyWithOwnerOfTarget)
+        {
+            std::cout << attacker->getPName() << " and " << targetOwner->getPName() << " cannot attack each other for the rest of this turn. ";
+        }
+        return attacker == targetOwner || !diplomacyWithOwnerOfTarget;
     }
 }
 
@@ -287,7 +286,7 @@ bool DeployOrder::validate() const
         return false;
     }
 
-    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();
+    std::vector<Territory*> currentPlayerTerritories = issuer_->getTerritories();
     return find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), destination_) != currentPlayerTerritories.end();
 }
 
@@ -368,8 +367,8 @@ bool AdvanceOrder::validate() const
         return false;
     }
 
-    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();
-    bool validSourceTerritory = find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), source_) != currentPlayerTerritories.end();
+    std::vector<Territory*> currentTerritories = issuer_->getTerritories();
+    bool validSourceTerritory = find(currentTerritories.begin(), currentTerritories.end(), source_) != currentTerritories.end();
     bool hasAnyArmiesToAdvance = source_->getNumberOfArmies() > 0;
 
     return validSourceTerritory && hasAnyArmiesToAdvance && canAttack(issuer_, destination_);
@@ -414,8 +413,8 @@ void AdvanceOrder::execute_()
             // Successful attack
         else
         {
-            issuer_->addOwnedTerritory(destination_);
-            defender->removeOwnedTerritory(destination_);
+            issuer_->addTerritory(destination_);
+            defender->removeTerritory(destination_);
             destination_->addArmies(survivingAttackers);
             std::cout << "Successful attack on " << destination_->getName() << ". " << survivingAttackers << " armies now occupy this territory." << std::endl;
         }
@@ -495,7 +494,7 @@ bool BombOrder::validate() const
         return false;
     }
 
-    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();
+    std::vector<Territory*> currentPlayerTerritories = issuer_->getTerritories();
     bool validTargetTerritory = find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), target_) == currentPlayerTerritories.end();
     return validTargetTerritory && canAttack(issuer_, target_);
 }
@@ -566,7 +565,7 @@ bool BlockadeOrder::validate() const
         return false;
     }
 
-    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();
+    std::vector<Territory*> currentPlayerTerritories = issuer_->getTerritories();
     return find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), territory_) != currentPlayerTerritories.end();
 }
 
@@ -639,7 +638,7 @@ bool AirliftOrder::validate() const
         return false;
     }
 
-    std::vector<Territory*> currentPlayerTerritories = issuer_->getOwnedTerritories();
+    std::vector<Territory*> currentPlayerTerritories = issuer_->getTerritories();
 
     bool validSourceTerritory = find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), source_) != currentPlayerTerritories.end();
     bool validDestinationTerritory = find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), destination_) != currentPlayerTerritories.end();
@@ -706,7 +705,7 @@ std::ostream &NegotiateOrder::print_(std::ostream &output) const
 
     if (issuer_ != nullptr && target_ != nullptr)
     {
-        output << " Initiator: " << issuer_->getName() << ", Target: " << target_->getName();
+        output << " Initiator: " << issuer_->getPName() << ", Target: " << target_->getPName();
     }
 
     return output;
@@ -734,7 +733,7 @@ void NegotiateOrder::execute_()
 {
     issuer_->addDiplomaticRelation(target_);
     target_->addDiplomaticRelation(issuer_);
-    std::cout << "Negotiated diplomacy between " << issuer_->getName() << " and " << target_->getName() << "." << std::endl;
+    std::cout << "Negotiated diplomacy between " << issuer_->getPName() << " and " << target_->getPName() << "." << std::endl;
 }
 
 // Get the type of the Order sub-class

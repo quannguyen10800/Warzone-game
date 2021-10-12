@@ -12,7 +12,8 @@ using namespace std;
 
 int main(){
 
-    Territory* t1=new Territory(1,"Tehran",2);
+
+    Territory* t1=new Territory(1,"Tehran",2);          //TODO
     Territory* t2=new Territory(1,"shomal",2);
     Territory* t3=new Territory(1,"jonob",2);
     Territory* t4=new Territory(1,"gharb",2);
@@ -24,7 +25,9 @@ int main(){
     practice.push_back(t3);
     practice.push_back(t4);
     practice.push_back(t5);
-    handOfCard* hand=new handOfCard();
+    handOfCard* hand=new handOfCard();              //TODO
+//    Hand*   handOfCard =new Hand;
+
     OrdersList* orders=new OrdersList();
 
 
@@ -48,7 +51,7 @@ int main(){
     p1->removeTerritory(t6);
     cout << p1->getTerritories()<<endl;
 
-    
+
     cout<<"list of territories to be attacted"<< p1->to_Attact()<<endl;
     cout<<"list of territories to be defended"<< p1->to_Defend()<<endl;
 

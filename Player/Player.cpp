@@ -92,6 +92,8 @@ Player ::~Player() {
         delete toAttact.front();
 
     }
+
+
 }
 
 //setname
@@ -138,7 +140,7 @@ void Player ::removeTerritory(Territory *territory) {
 }
 
 
-list<Territory*> Player ::to_Attact() {
+list<Territory*> Player ::to_Attact() { //TODO
     list<Territory*> aux;
     for (int i = 0; i < territories.size(); i++) {
         list<Territory*> aux;
@@ -161,7 +163,7 @@ list<Territory*> Player ::to_Attact() {
 
 }
 
-list<Territory*> Player ::to_Defend() {
+list<Territory*> Player ::to_Defend() {   //TODO
     list<Territory*> aux;
     for (int i = 0; i < territories.size(); i++) {
         list<Territory*> aux;
@@ -184,11 +186,27 @@ list<Territory*> Player ::to_Defend() {
 
 }
 
-void Player ::  issueOrder(string s ,vector<Territory*> territories,HandsofCards *handofcard,int priority){
+bool Player::isNeutral() {
+    return neutral;
+}
+
+// Add an enemy player to the list of diplomatic relations for this player
+void Player::addDiplomaticRelation(Player* player)
+{
+    diplomaticRelations_.push_back(player);
+}
+
+std::vector<Player *> Player::getRelations() const
+{
+    return diplomaticRelations_;
+}
+
+void Player ::  issueOrder(string s ,vector<Territory*> territories,HandsofCards *handofcard,int priority){     //TODO
     Player issuer =new Player(s,territories,handofcard,orders);
     Orders m=new Orders(issuer,priority);
     orders->add(m);
 
 }
+
 
 

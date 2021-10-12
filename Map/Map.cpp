@@ -114,6 +114,42 @@ bool Map::validate(){
     return b1 && b2;
 }
 
+void Territory::setPendingIncomingArmies(int armies)
+{
+    pendingIncomingArmies_ = armies;
+}
+
+void Territory::setPendingOutgoingArmies(int armies)
+{
+    pendingOutgoingArmies_ = armies;
+}
+
+int Territory::getPendingOutgoingArmies() const
+{
+    return pendingOutgoingArmies_;
+}
+int Territory::getPendingIncomingArmies() const
+{
+    return pendingIncomingArmies_;
+}
+
+// Remove a number of armies to the current territory
+void Territory::removeArmies(int armies)
+{
+    numberOfArmies_ -= armies;
+    if (numberOfArmies_ < 0)
+    {
+        numberOfArmies_ = 0;
+    }
+}
+
+int Territory::getNumberOfMovableArmies()
+{
+    return numberOfArmies_ + pendingIncomingArmies_ - pendingOutgoingArmies_;
+}
+
+
+
 void MapLoader::readMap (const string& filename){
     ifstream input(filename);
     Map *map = new Map();
