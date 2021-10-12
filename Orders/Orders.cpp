@@ -17,7 +17,7 @@ namespace
     // Returns `true` if the attacker already owns the target territory
     // OR
     // if there is no diplomacy between the attacker and the owner of the target.
-    bool canAttack(Player* attacker, Territory* target)
+    bool checkIfCanAttack(Player* attacker, Territory* target)
     {
          Player* targetOwner = GameEngine::getOwnerOf(target);
         std::vector<Player*> diplomatRelationship = attacker->getRelations();
@@ -64,7 +64,7 @@ std::ostream &operator<<(std::ostream &output, const Order &order)
     return order.print_(output);
 }
 
-// Validate and execute the Order. Invalid orders will have no effect.
+//  Check if the order is valid and execute it. Invalid order won't execute.
 void Order::execute()
 {
     if (validate())
@@ -84,9 +84,8 @@ int Order::getPriority() const
     return priority_;
 }
 
-// Reverse the pre-orders-execution game state back to before the order was created.
-// The default behavior is to do nothing if there is no meta-state to reset
-// (e.g. resetting pending incoming/outgoing armies from territories)
+// Reset the pre-orders-execution game state to the state it was in before the order was placed.
+// If there is no meta-state to reset, the default behaviour is to do nothing.
 void Order::undo_() {}
 
 
@@ -187,31 +186,31 @@ void OrdersList::add(Order* order)
     orders_.push_back(order);
 }
 
-// Move an order within the OrderList from `source` position to `destination` position.
-void OrdersList::move(int source, int destination)
+// Move an order within the OrderList from `origin` position to `targetDestination` position.
+void OrdersList::move(int origin, int targetDestination)
 {
-    bool sourceInRange = source >= 0 && source < orders_.size();
-    bool destinationInRange = destination >= 0 && destination < orders_.size();
+    bool sourceInRange = origin >= 0 && origin < orders_.size();
+    bool destinationInRange = targetDestination >= 0 && targetDestination < orders_.size();
 
     if (sourceInRange && destinationInRange)
     {
-        auto orderPosition = next(orders_.begin(), source);
-        auto destinationPosition = next(orders_.begin(), destination);
+        auto orderPosition = next(orders_.begin(), origin);
+        auto targetPosition = next(orders_.begin(), targetDestination);
 
-        // If the order is before its destination, move it forwards
-        if (destinationPosition > orderPosition)
+        // If the order is before its targetDestination, move it forwards
+        if (targetPosition > orderPosition)
         {
-            while (orderPosition != destinationPosition)
+            while (orderPosition != targetPosition)
             {
                 std::swap(*orderPosition, *next(orderPosition, 1));
                 orderPosition++;
             }
         }
 
-        // If the order is ahead of its destination, move it backwards
-        if (destinationPosition < orderPosition)
+        // Move the order backward if it is ahead of its destination.
+        if (targetPosition < orderPosition)
         {
-            while (orderPosition != destinationPosition)
+            while (orderPosition != targetPosition)
             {
                 std::swap(*orderPosition, *prev(orderPosition, 1));
                 orderPosition--;
@@ -220,7 +219,10 @@ void OrdersList::move(int source, int destination)
     }
 }
 
-// Delete an order from the OrderList specified by the `target` index.
+/**
+ * This is to delete an order at specified index from OrderList
+ * @param target
+ */
 void OrdersList::remove(int target)
 {
     auto orderToRemoveIterator = orders_.begin() + target;
@@ -229,10 +231,8 @@ void OrdersList::remove(int target)
 }
 
 
-/*
-===================================
- Implementation for DeployOrder class
-===================================
+/**
+ * Implementing Deploy Order class
  */
 
 // Constructors
@@ -266,7 +266,10 @@ std::ostream &DeployOrder::print_(std::ostream &output) const
     return output;
 }
 
-// Return a pointer to a new instance of DeployOrder.
+/**
+ * This is to clone Deploy Order
+ * @return pointer
+ */
 Order* DeployOrder::clone() const
 {
     return new DeployOrder(*this);
@@ -313,10 +316,8 @@ OrderType DeployOrder::getType() const
 }
 
 
-/*
-===================================
- Implementation for AdvanceOrder class
-===================================
+/**
+ * Implementing Advance Order class
  */
 
 // Constructors
@@ -362,16 +363,15 @@ Order* AdvanceOrder::clone() const
 // Checks that the AdvanceOrder is valid.
 bool AdvanceOrder::validate() const
 {
-    if (issuer_ == nullptr || source_ == nullptr || destination_ == nullptr)
-    {
+    if (issuer_ == nullptr || source_ == nullptr || destination_ == nullptr) {
         return false;
     }
 
-    std::vector<Territory*> currentTerritories = issuer_->getTerritories();
-    bool validSourceTerritory = find(currentTerritories.begin(), currentTerritories.end(), source_) != currentTerritories.end();
+    std::vector<Territory*> currentPlayerTerritories = issuer_->getTerritories();
+    bool validSourceTerritory = find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), source_) != currentPlayerTerritories.end();
     bool hasAnyArmiesToAdvance = source_->getNumberOfArmies() > 0;
 
-    return validSourceTerritory && hasAnyArmiesToAdvance && canAttack(issuer_, destination_);
+    return validSourceTerritory && hasAnyArmiesToAdvance && checkIfCanAttack(issuer_, destination_);
 }
 
 // Executes the AdvanceOrder.
@@ -380,12 +380,12 @@ void AdvanceOrder::execute_()
     Player* defender = GameEngine::getOwnerOf(destination_);
     bool offensive = issuer_ != defender;
 
-    // Recalculate how many armies could actually be moved (in case the state of the territory has changed due to an attack)
+    // Recalculate how many armies can really be moved (in case the state of the territory has changed due to an attack)
     int movableArmiesFromSource = std::min(source_->getNumberOfArmies(), numberOfArmies_);
 
     if (offensive)
     {
-        // Simulate battle
+        // Generating the battle
         source_->removeArmies(movableArmiesFromSource);
 
         int defendersKilled = round(movableArmiesFromSource * 0.6);
@@ -395,7 +395,7 @@ void AdvanceOrder::execute_()
         int survivingDefenders = std::max(destination_->getNumberOfArmies() - defendersKilled, 0);
         destination_->removeArmies(defendersKilled);
 
-        // Failed attack
+        // Failed to attack
         if (survivingDefenders > 0 || survivingAttackers <= 0)
         {
             source_->addArmies(survivingAttackers);
@@ -410,13 +410,14 @@ void AdvanceOrder::execute_()
                 std::cout << std::endl;
             }
         }
-            // Successful attack
+            // Successful to attack
         else
         {
             issuer_->addTerritory(destination_);
             defender->removeTerritory(destination_);
             destination_->addArmies(survivingAttackers);
-            std::cout << "Successful attack on " << destination_->getName() << ". " << survivingAttackers << " armies now occupy this territory." << std::endl;
+            std::cout << "Attack is successful on the " << destination_->getName() << ". " << survivingAttackers
+                      << " armies now attacked and owns this territory." << std::endl;
         }
     }
     else
@@ -429,8 +430,8 @@ void AdvanceOrder::execute_()
     source_->setPendingOutgoingArmies(0);
 }
 
-// Reverse the pre-orders-execution game state back to before the order was created.
-// Resets the contribution of this order to the number of pending outgoing armies from the source territory.
+// Reset the pre-orders-execution game state to the state it was in before the order was placed.
+// This order's contribution to the number of pending outgoing armies from the originating territory is reset.
 void AdvanceOrder::undo_()
 {
     int newPendingOutgoingArmies = source_->getPendingOutgoingArmies() - numberOfArmies_;
@@ -444,10 +445,8 @@ OrderType AdvanceOrder::getType() const
 }
 
 
-/*
-===================================
- Implementation for BombOrder class
-===================================
+/**
+ * Implementing Bomb Order class
  */
 
 // Constructors
@@ -480,7 +479,10 @@ std::ostream &BombOrder::print_(std::ostream &output) const
     return output;
 }
 
-// Return a pointer to a new instance of BombOrder.
+/**
+ * This is to clone the Bomb Order
+ * @return pointer
+ */
 Order* BombOrder::clone() const
 {
     return new BombOrder(*this);
@@ -496,7 +498,7 @@ bool BombOrder::validate() const
 
     std::vector<Territory*> currentPlayerTerritories = issuer_->getTerritories();
     bool validTargetTerritory = find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), target_) == currentPlayerTerritories.end();
-    return validTargetTerritory && canAttack(issuer_, target_);
+    return validTargetTerritory && checkIfCanAttack(issuer_, target_);
 }
 
 // Executes the BombOrder.
@@ -515,12 +517,9 @@ OrderType BombOrder::getType() const
 }
 
 
-/*
-===================================
- Implementation for BlockadeOrder class
-===================================
+/**
+ * Implementing Blockade Order class
  */
-
 // Constructors
 BlockadeOrder::BlockadeOrder() : Order(nullptr, 3), territory_(nullptr) {}
 
@@ -531,8 +530,7 @@ BlockadeOrder::BlockadeOrder(const BlockadeOrder &order) : Order(order), territo
 // Operator overloading
 const BlockadeOrder &BlockadeOrder::operator=(const BlockadeOrder &order)
 {
-    if (this != &order)
-    {
+    if (this != &order) {
         Order::operator=(order);
         territory_ = order.territory_;
     }
@@ -551,7 +549,10 @@ std::ostream &BlockadeOrder::print_(std::ostream &output) const
     return output;
 }
 
-// Return a pointer to a new instance of BlockadeOrder.
+/**
+ * This is to clone Blockade Order
+ * @return pointer
+ */
 Order* BlockadeOrder::clone() const
 {
     return new BlockadeOrder(*this);
@@ -566,14 +567,15 @@ bool BlockadeOrder::validate() const
     }
 
     std::vector<Territory*> currentPlayerTerritories = issuer_->getTerritories();
-    return find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), territory_) != currentPlayerTerritories.end();
+    return find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), territory_) !=
+    currentPlayerTerritories.end();
 }
 
 // Executes the BlockadeOrder.
 void BlockadeOrder::execute_()
 {
     territory_->addArmies(territory_->getNumberOfArmies());
-    GameEngine::assignToNeutralPlayer(territory_);
+    GameEngine::assignToNeutralPlayer(territory_);   //Add by Quan Nguyen
     std::cout << "Blockade called on " << territory_->getName() << ". ";
     std::cout << territory_->getNumberOfArmies() << " neutral armies now occupy this territory." << std::endl;
 }
@@ -585,10 +587,8 @@ OrderType BlockadeOrder::getType() const
 }
 
 
-/*
-===================================
- Implementation for AirliftOrder class
-===================================
+/**
+ * Implementing Airlift Order class
  */
 
 // Constructors
@@ -624,7 +624,10 @@ std::ostream &AirliftOrder::print_(std::ostream &output) const
     return output;
 }
 
-// Return a pointer to a new instance of AirliftOrder.
+/**
+ * This is to clone Airlift Order
+ * @return pointer
+ */
 Order* AirliftOrder::clone() const
 {
     return new AirliftOrder(*this);
@@ -675,10 +678,8 @@ OrderType AirliftOrder::getType() const
 }
 
 
-/*
-===================================
- Implementation for NegotiateOrder class
-===================================
+/**
+ * Implementing Negotiate Order class
  */
 
 // Constructors
@@ -691,29 +692,28 @@ NegotiateOrder::NegotiateOrder(const NegotiateOrder &order) : Order(order), targ
 // Operator overloading
 const NegotiateOrder &NegotiateOrder::operator=(const NegotiateOrder &order)
 {
-    if (this != &order)
-    {
+    if (this != &order) {
         Order::operator=(order);
         target_ = order.target_;
     }
     return *this;
 }
 
-std::ostream &NegotiateOrder::print_(std::ostream &output) const
-{
+std::ostream &NegotiateOrder::print_(std::ostream &output) const {
     output << "[NegotiateOrder]";
 
-    if (issuer_ != nullptr && target_ != nullptr)
-    {
+    if (issuer_ != nullptr && target_ != nullptr) {
         output << " Initiator: " << issuer_->getPName() << ", Target: " << target_->getPName();
     }
 
     return output;
 }
 
-// Return a pointer to a new instance of NegotiateOrder.
-Order* NegotiateOrder::clone() const
-{
+/**
+ * This is to clone Negotiate Order
+ * @return pointer
+ */
+Order* NegotiateOrder::clone() const {
     return new NegotiateOrder(*this);
 }
 

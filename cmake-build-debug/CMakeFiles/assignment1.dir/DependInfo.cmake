@@ -8,7 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/hoangtugio/CLionProjects/assignment1/library.cpp" "/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/CMakeFiles/assignment1.dir/library.cpp.o"
+  "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/GameEngine/GameEngine.cpp" "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/assignment1.dir/GameEngine/GameEngine.cpp.o"
+  "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/Map/Map.cpp" "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/assignment1.dir/Map/Map.cpp.o"
+  "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/Orders/Orders.cpp" "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/assignment1.dir/Orders/Orders.cpp.o"
+  "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/Orders/OrdersDriver.cpp" "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.o"
+  "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/Player/Player.cpp" "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/assignment1.dir/Player/Player.cpp.o"
+  "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/Player/PlayerDriver.cpp" "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.o"
+  "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/TestDriver.cpp" "/Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles/assignment1.dir/TestDriver.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

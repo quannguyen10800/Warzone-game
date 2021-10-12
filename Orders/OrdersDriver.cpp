@@ -1,5 +1,7 @@
 
 #include "Orders.h"
+//#include "../Orders/Orders.h"
+//#include "../GameEngine/GameEngine.h"
 
 int OrdersDriver()
 {
@@ -7,14 +9,17 @@ int OrdersDriver()
     Territory* quebec = new Territory();
     quebec->setName("Quebec");
     quebec->setNumberOfArmies(10);
+    quebec->setContinent(101);
 
     Territory* bc = new Territory();
     bc->setNumberOfArmies(5);
     bc->setName("BC");
+    bc->setContinent(102);
 
     Territory* ontario = new Territory();
     ontario->setNumberOfArmies(10);
     ontario->setName("Ontario");
+    ontario->setContinent(103);
 
     Player* player = new Player("Player");
     Player* enemy = new Player("Enemy");
@@ -46,25 +51,33 @@ int OrdersDriver()
         std::cout << std::endl;
     }
 
-    // Show the OrderList after moving an order from index 1 to index 4
-    ordersList.move(1, 4);
+    // Move the order from index 2 to 4
+    ordersList.move(2, 4);
     std::cout << "===== " << "Orders list after moving an order: " << ordersList << " =====" << std::endl;
     for (const auto &order : ordersList.getOrders())
     {
         std::cout << *order << std::endl;
     }
 
-    // Show the OrderList after deleting an order at index 5
-    ordersList.remove(5);
+    // Delete the order at index 3
+    ordersList.remove(3);
     std::cout << "\n===== " << "Orders list after deleting an order: " << ordersList << " =====" << std::endl;
     for (const auto &order : ordersList.getOrders())
     {
         std::cout << *order << std::endl;
     }
 
+
+    // After all, delete all territories
     delete quebec;
+    quebec =NULL;
+
     delete ontario;
+    ontario =NULL;
+
     delete bc;
+    bc = NULL;
+
     GameEngine::clearPlayerList();
     return 0;
 }

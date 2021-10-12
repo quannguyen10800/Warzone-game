@@ -5,7 +5,7 @@
 #include <iostream>
 #include "string"
 #include "list"
-#include "Player.h"
+#include "../Player/Player.h"
 #include "../Map/Map.h"
 
 //initializing  the number to zerp

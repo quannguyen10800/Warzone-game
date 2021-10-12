@@ -40,7 +40,9 @@ private:
     int priority_;
 };
 
-
+/***
+ * The OrderList class contains...
+ */
 class OrdersList
 {
 public:
@@ -49,7 +51,7 @@ public:
     ~OrdersList();
     int size() const;
     void add(Order* order);
-    void move(int source, int destination);
+    void move(int origin, int targetDestination);
     void remove(int target);
     const OrdersList &operator=(const OrdersList &orders);
     friend std::ostream &operator<<(std::ostream &output, const OrdersList &orders);
@@ -62,8 +64,9 @@ public:
 private:
     std::vector<Order*> orders_;
 };
-
-
+/**
+ * DeployOrder class contains
+ */
 class DeployOrder : public Order
 {
 public:
@@ -86,7 +89,9 @@ private:
     Territory* destination_;
 };
 
-
+/**
+ * AdvanceOrder class contains
+ */
 class AdvanceOrder : public Order
 {
 public:
@@ -109,7 +114,9 @@ private:
     Territory* destination_;
 };
 
-
+/**
+ * BomOrder class contains
+ */
 class BombOrder : public Order
 {
 public:
@@ -129,7 +136,9 @@ private:
     Territory* target_;
 };
 
-
+/**
+ * BlockadeOrder class contains
+ */
 class BlockadeOrder : public Order
 {
 public:
@@ -149,7 +158,9 @@ private:
     Territory* territory_;
 };
 
-
+/**
+ * AirLiftOrder contains
+ */
 class AirliftOrder : public Order
 {
 public:
