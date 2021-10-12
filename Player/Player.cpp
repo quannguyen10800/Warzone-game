@@ -134,14 +134,15 @@ void Player ::removeTerritory(Territory *territory) {
 vector<Territory*> Player ::to_Attact() {
     vector<Territory*> aux;
 
-    for (int i = 0; i < territories.size(); i++) {
-        for (int j = 0; j < territories.at(i)->neighbours.size(); j++) {
-            aux.push_back(territories.at(i)->neighbours.at(j));
+     for (int i = 0; i < territories.size(); i++) {
+        for (int j = 0; j < territories.at(i)->get_neighbouring_territory().size(); j++) {
+            aux.push_back(territories.at(i)->get_neighbouring_territory().at(j));
 
 
         }
 
     }
+
 
     for (int i=0;i<aux.size();i++){
         for (int j=0;j<territories.size();j++){
@@ -166,9 +167,9 @@ vector<Territory*> Player ::to_Attact() {
 vector<Territory*> Player ::to_Defend() {
     vector<Territory*> aux;
 
-    for (int i = 0; i < territories.size(); i++) {
-        for (int j = 0; j < territories.at(i)->neighbours.size(); j++) {
-            aux.push_back(territories.at(i)->neighbours.at(j));
+     for (int i = 0; i < territories.size(); i++) {
+        for (int j = 0; j < territories.at(i)->get_neighbouring_territory().size(); j++) {
+            aux.push_back(territories.at(i)->get_neighbouring_territory().at(j));
 
 
         }
