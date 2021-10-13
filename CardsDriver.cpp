@@ -2,9 +2,9 @@
 int main() {
 	Deck deck = Deck();
 	Hand hand = Hand(deck);
-	Card("bomb");
-	Card("reinforcement");
-	Card("blockade");
-	Card("airlift");
-	Card("diplomacy");
+	
+	vector<Card> h = hand.getVector();
+	for (int i = 0; i < h.size();i++) {
+		h[i].play(deck,hand);
+	}
 }
