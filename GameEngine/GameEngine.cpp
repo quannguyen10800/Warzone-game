@@ -15,7 +15,8 @@ GameEngine::GameEngine(){
 
 GameEngine::GameEngine(char* initialState){
 
-    if(NULL==initialState){            //IF PASSED STATE IS NULL THEN START STATE
+    //IF PASSED STATE IS NULL THEN START STATE
+    if(NULL==initialState){
         this->state = new char[6];
         strcpy(state,"start");
         return;
