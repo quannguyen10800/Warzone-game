@@ -1,10 +1,6 @@
-cmake_minimum_required(VERSION 3.17)
-project(assignment1)
+cmake_minimum_required(VERSION 3.20)
+project(Local_COMP345)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
-add_executable(assignment1
-        TestDriver.cpp TestDriver.h
-        Player/Player.cpp Player/Player.h Player/PlayerDriver.cpp
-        Orders/Orders.cpp Orders/Orders.h Orders/OrdersDriver.cpp
-        Map/Map.cpp Map/Map.h GameEngine/GameEngine.cpp GameEngine/GameEngine.h)
+add_executable(Local_COMP345 main.cpp)

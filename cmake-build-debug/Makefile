@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /cygdrive/c/Users/kaidu/AppData/Local/JetBrains/CLion2021.2/cygwin_cmake/bin/cmake.exe
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /cygdrive/c/Users/kaidu/AppData/Local/JetBrains/CLion2021.2/cygwin_cmake/bin/cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/hoangtugio/CLionProjects/COMP345_quannguyen
+CMAKE_SOURCE_DIR = /cygdrive/c/Users/kaidu/Desktop/Local_COMP345
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/c/Users/kaidu/Desktop/Local_COMP345/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-buil
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/cygdrive/c/Users/kaidu/AppData/Local/JetBrains/CLion2021.2/cygwin_cmake/bin/cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/cygdrive/c/Users/kaidu/AppData/Local/JetBrains/CLion2021.2/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles /Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/kaidu/Desktop/Local_COMP345/cmake-build-debug/CMakeFiles /cygdrive/c/Users/kaidu/Desktop/Local_COMP345/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hoangtugio/CLionProjects/COMP345_quannguyen/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/kaidu/Desktop/Local_COMP345/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,185 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named assignment1
+# Target rules for targets named Local_COMP345
 
 # Build rule for target.
-assignment1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment1
-.PHONY : assignment1
+Local_COMP345: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Local_COMP345
+.PHONY : Local_COMP345
 
 # fast build rule for target.
-assignment1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/build
-.PHONY : assignment1/fast
+Local_COMP345/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Local_COMP345.dir/build.make CMakeFiles/Local_COMP345.dir/build
+.PHONY : Local_COMP345/fast
 
-GameEngine/GameEngine.o: GameEngine/GameEngine.cpp.o
-.PHONY : GameEngine/GameEngine.o
-
-# target to build an object file
-GameEngine/GameEngine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/GameEngine/GameEngine.cpp.o
-.PHONY : GameEngine/GameEngine.cpp.o
-
-GameEngine/GameEngine.i: GameEngine/GameEngine.cpp.i
-.PHONY : GameEngine/GameEngine.i
-
-# target to preprocess a source file
-GameEngine/GameEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/GameEngine/GameEngine.cpp.i
-.PHONY : GameEngine/GameEngine.cpp.i
-
-GameEngine/GameEngine.s: GameEngine/GameEngine.cpp.s
-.PHONY : GameEngine/GameEngine.s
-
-# target to generate assembly for a file
-GameEngine/GameEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/GameEngine/GameEngine.cpp.s
-.PHONY : GameEngine/GameEngine.cpp.s
-
-Map/Map.o: Map/Map.cpp.o
-.PHONY : Map/Map.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-Map/Map.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Map/Map.cpp.o
-.PHONY : Map/Map.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Local_COMP345.dir/build.make CMakeFiles/Local_COMP345.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-Map/Map.i: Map/Map.cpp.i
-.PHONY : Map/Map.i
-
-# target to preprocess a source file
-Map/Map.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Map/Map.cpp.i
-.PHONY : Map/Map.cpp.i
-
-Map/Map.s: Map/Map.cpp.s
-.PHONY : Map/Map.s
-
-# target to generate assembly for a file
-Map/Map.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Map/Map.cpp.s
-.PHONY : Map/Map.cpp.s
-
-Orders/Orders.o: Orders/Orders.cpp.o
-.PHONY : Orders/Orders.o
-
-# target to build an object file
-Orders/Orders.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/Orders.cpp.o
-.PHONY : Orders/Orders.cpp.o
-
-Orders/Orders.i: Orders/Orders.cpp.i
-.PHONY : Orders/Orders.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-Orders/Orders.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/Orders.cpp.i
-.PHONY : Orders/Orders.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Local_COMP345.dir/build.make CMakeFiles/Local_COMP345.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-Orders/Orders.s: Orders/Orders.cpp.s
-.PHONY : Orders/Orders.s
-
-# target to generate assembly for a file
-Orders/Orders.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/Orders.cpp.s
-.PHONY : Orders/Orders.cpp.s
-
-Orders/OrdersDriver.o: Orders/OrdersDriver.cpp.o
-.PHONY : Orders/OrdersDriver.o
-
-# target to build an object file
-Orders/OrdersDriver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.o
-.PHONY : Orders/OrdersDriver.cpp.o
-
-Orders/OrdersDriver.i: Orders/OrdersDriver.cpp.i
-.PHONY : Orders/OrdersDriver.i
-
-# target to preprocess a source file
-Orders/OrdersDriver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.i
-.PHONY : Orders/OrdersDriver.cpp.i
-
-Orders/OrdersDriver.s: Orders/OrdersDriver.cpp.s
-.PHONY : Orders/OrdersDriver.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-Orders/OrdersDriver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.s
-.PHONY : Orders/OrdersDriver.cpp.s
-
-Player/Player.o: Player/Player.cpp.o
-.PHONY : Player/Player.o
-
-# target to build an object file
-Player/Player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/Player.cpp.o
-.PHONY : Player/Player.cpp.o
-
-Player/Player.i: Player/Player.cpp.i
-.PHONY : Player/Player.i
-
-# target to preprocess a source file
-Player/Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/Player.cpp.i
-.PHONY : Player/Player.cpp.i
-
-Player/Player.s: Player/Player.cpp.s
-.PHONY : Player/Player.s
-
-# target to generate assembly for a file
-Player/Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/Player.cpp.s
-.PHONY : Player/Player.cpp.s
-
-Player/PlayerDriver.o: Player/PlayerDriver.cpp.o
-.PHONY : Player/PlayerDriver.o
-
-# target to build an object file
-Player/PlayerDriver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.o
-.PHONY : Player/PlayerDriver.cpp.o
-
-Player/PlayerDriver.i: Player/PlayerDriver.cpp.i
-.PHONY : Player/PlayerDriver.i
-
-# target to preprocess a source file
-Player/PlayerDriver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.i
-.PHONY : Player/PlayerDriver.cpp.i
-
-Player/PlayerDriver.s: Player/PlayerDriver.cpp.s
-.PHONY : Player/PlayerDriver.s
-
-# target to generate assembly for a file
-Player/PlayerDriver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.s
-.PHONY : Player/PlayerDriver.cpp.s
-
-TestDriver.o: TestDriver.cpp.o
-.PHONY : TestDriver.o
-
-# target to build an object file
-TestDriver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/TestDriver.cpp.o
-.PHONY : TestDriver.cpp.o
-
-TestDriver.i: TestDriver.cpp.i
-.PHONY : TestDriver.i
-
-# target to preprocess a source file
-TestDriver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/TestDriver.cpp.i
-.PHONY : TestDriver.cpp.i
-
-TestDriver.s: TestDriver.cpp.s
-.PHONY : TestDriver.s
-
-# target to generate assembly for a file
-TestDriver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment1.dir/build.make CMakeFiles/assignment1.dir/TestDriver.cpp.s
-.PHONY : TestDriver.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Local_COMP345.dir/build.make CMakeFiles/Local_COMP345.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -305,28 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... assignment1"
-	@echo "... GameEngine/GameEngine.o"
-	@echo "... GameEngine/GameEngine.i"
-	@echo "... GameEngine/GameEngine.s"
-	@echo "... Map/Map.o"
-	@echo "... Map/Map.i"
-	@echo "... Map/Map.s"
-	@echo "... Orders/Orders.o"
-	@echo "... Orders/Orders.i"
-	@echo "... Orders/Orders.s"
-	@echo "... Orders/OrdersDriver.o"
-	@echo "... Orders/OrdersDriver.i"
-	@echo "... Orders/OrdersDriver.s"
-	@echo "... Player/Player.o"
-	@echo "... Player/Player.i"
-	@echo "... Player/Player.s"
-	@echo "... Player/PlayerDriver.o"
-	@echo "... Player/PlayerDriver.i"
-	@echo "... Player/PlayerDriver.s"
-	@echo "... TestDriver.o"
-	@echo "... TestDriver.i"
-	@echo "... TestDriver.s"
+	@echo "... Local_COMP345"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g -Wl,--enable-auto-import CMakeFiles/Local_COMP345.dir/main.cpp.o -o Local_COMP345.exe -Wl,--out-implib,libLocal_COMP345.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
