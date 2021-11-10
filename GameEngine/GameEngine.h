@@ -54,6 +54,12 @@ public:
     static void addPlayersToList(Player *pPlayer);
 
     static void clearPlayerList();
+
+    static Player *getOwnerOf(Territory *pTerritory);
+
+    static std::vector<PLayer *> players_;
+
+    static void assignToNeutralPlayer(Territory *territory);
 };
 
 #endif // GAMEENGINE_H_INCLUDED

@@ -19,7 +19,7 @@ public:
     Continent();
     ~Continent();
 
-    string get_name();
+    string get_name() const;
     int get_army_bonus();
     vector<Territory*> get_territories();
 
@@ -27,6 +27,8 @@ public:
 
     Continent& operator=(const Continent &c);
     friend ostream& operator<<(ostream&, const Continent&);
+
+
 
 };
 
@@ -37,6 +39,11 @@ private:
     Continent* continent;
     Player* player;
     vector<Territory*> neighbours;
+
+    //Quan Nguyen
+    int pendingIncomingArmies;
+    int pendingOutgoingArmies;
+    int numArmies;
 
 public:
     Territory(int id, string name, int continent);
@@ -60,6 +67,23 @@ public:
     Territory& operator=(const Territory &c);
     friend ostream& operator<<(ostream&, const Territory&);
 
+    string getName() const;
+
+    void addArmies(int armies);
+
+    void setPendingIncomingArmies(int armies);
+
+    int getPendingIncomingArmies() const;
+
+    int getNumberOfArmies() const;
+
+    void removeArmies(int armies);
+
+    void setPendingOutgoingArmies(int armies);
+
+    int getPendingOutgoingArmies() const;
+
+    int getNumberOfMovableArmies() const;
 };
 
 class Map{

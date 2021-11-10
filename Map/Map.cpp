@@ -41,7 +41,7 @@ Continent::~Continent(){
 
 // Accessors and Mutators
 
-string Continent::get_name() {
+string Continent::get_name() const {
     return name;
 }
 int Continent::get_army_bonus() {
@@ -168,6 +168,49 @@ Territory& Territory::operator=(const Territory& t) {
         delete neighbour;
     }
 }
+
+//Quan Nguyen
+
+void Territory::addArmies(int armies) {
+    numArmies += armies;
+}
+
+void Territory::setPendingIncomingArmies(int armies) {
+    pendingIncomingArmies = armies;
+}
+
+int Territory::getPendingIncomingArmies() const {
+    return pendingIncomingArmies;
+}
+
+int Territory::getNumberOfArmies() const {
+    return numArmies;
+}
+
+void Territory::removeArmies(int armies) {
+    numArmies -= armies;
+    if(numArmies < 0) {
+        numArmies = 0;
+    }
+}
+
+void Territory::setPendingOutgoingArmies(int i) {
+    pendingOutgoingArmies = armies;
+
+}
+
+int Territory::getPendingOutgoingArmies() const{
+    return pendingOutgoingArmies;
+}
+
+int Territory::getNumberOfMovableArmies() const {
+    return numArmies + pendingIncomingArmies - pendingOutgoingArmies;
+}
+
+
+
+
+
 
 
 /*
