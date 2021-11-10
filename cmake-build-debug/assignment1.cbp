@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Card/CardsDriver.cpp">
+			<Option target="assignment1"/>
+		</Unit>
 		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/GameEngine/GameEngine.cpp">
 			<Option target="assignment1"/>
 		</Unit>
@@ -90,6 +93,9 @@
 			<Option target="assignment1"/>
 		</Unit>
 		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Map/Map.h">
+			<Option target="assignment1"/>
+		</Unit>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Map/MapDriver.cpp">
 			<Option target="assignment1"/>
 		</Unit>
 		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Orders/Orders.cpp">
@@ -113,10 +119,7 @@
 		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Player/PlayerDriver.cpp">
 			<Option target="assignment1"/>
 		</Unit>
-		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/TestDriver.cpp">
-			<Option target="assignment1"/>
-		</Unit>
-		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/TestDriver.h">
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/main.cpp">
 			<Option target="assignment1"/>
 		</Unit>
 		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/CMakeLists.txt">

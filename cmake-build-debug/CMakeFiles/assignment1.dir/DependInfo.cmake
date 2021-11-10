@@ -8,13 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Quan Nguyen/CLionProjects/COMP345/Card/CardsDriver.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/Card/CardsDriver.cpp.obj"
   "C:/Users/Quan Nguyen/CLionProjects/COMP345/GameEngine/GameEngine.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/GameEngine/GameEngine.cpp.obj"
   "C:/Users/Quan Nguyen/CLionProjects/COMP345/Map/Map.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/Map/Map.cpp.obj"
+  "C:/Users/Quan Nguyen/CLionProjects/COMP345/Map/MapDriver.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/Map/MapDriver.cpp.obj"
   "C:/Users/Quan Nguyen/CLionProjects/COMP345/Orders/Orders.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/Orders/Orders.cpp.obj"
   "C:/Users/Quan Nguyen/CLionProjects/COMP345/Orders/OrdersDriver.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/Orders/OrdersDriver.cpp.obj"
   "C:/Users/Quan Nguyen/CLionProjects/COMP345/Player/Player.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/Player/Player.cpp.obj"
   "C:/Users/Quan Nguyen/CLionProjects/COMP345/Player/PlayerDriver.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.obj"
-  "C:/Users/Quan Nguyen/CLionProjects/COMP345/TestDriver.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/TestDriver.cpp.obj"
+  "C:/Users/Quan Nguyen/CLionProjects/COMP345/main.cpp" "C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/CMakeFiles/assignment1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

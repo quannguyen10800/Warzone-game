@@ -4,17 +4,14 @@
 int OrdersDriver()
 {
     // Setup
-    Territory* quebec = new Territory();
-    quebec->setName("Quebec");
-    quebec->setNumberOfArmies(10);
+//    Territory* quebec = new Territory();
+    Territory* quebec = new Territory(1, "Quebec", 0);
+//    quebec->setName("Quebec");
+//    quebec->setNumberOfArmies(10);
 
-    Territory* bc = new Territory();
-    bc->setNumberOfArmies(5);
-    bc->setName("BC");
+    Territory* bc = new Territory(1, "Quebec", 0);
 
-    Territory* ontario = new Territory();
-    ontario->setNumberOfArmies(10);
-    ontario->setName("Ontario");
+    Territory* ontario = new Territory(1, "Quebec", 0);
 
     Player* player = new Player("Player");
     Player* enemy = new Player("Enemy");

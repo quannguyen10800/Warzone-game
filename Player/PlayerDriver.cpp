@@ -1,5 +1,4 @@
 
-
 //
 // Created by Mehrsa Yazdani on 2021-10-07.
 //
@@ -7,13 +6,14 @@
 #include "Player.h"
 #include "Map.h"
 #include "Map.cpp"
-#include "Player .cpp"
+#include "Player.cpp"
 using namespace std;
 
 
 int main(){
-    Map *map=new Map();
-    Territory* t1=new Territory(1,"Tehran",2);
+
+
+    Territory* t1=new Territory(1,"Tehran",2);          //TODO
     Territory* t2=new Territory(1,"shomal",2);
     Territory* t3=new Territory(1,"jonob",2);
     Territory* t4=new Territory(1,"gharb",2);
@@ -25,7 +25,9 @@ int main(){
     practice.push_back(t3);
     practice.push_back(t4);
     practice.push_back(t5);
-    Hand* hand=new Hand();
+    handOfCard* hand=new handOfCard();              //TODO
+//    Hand*   handOfCard =new Hand;
+
     OrdersList* orders=new OrdersList();
 
 
@@ -34,11 +36,6 @@ int main(){
     Player* p3=new Player("mehrsa",practice,hand,orders);
     Player* p4;
     p4=p3;
-    p1->AssignFirstTerritory(map);
-    p2->AssignFirstTerritory(map);
-    p3->AssignFirstTerritory(map);
-    p4->AssignFirstTerritory(map);
-
     string * s1=new string("terry");
 
 

@@ -1,83 +1,102 @@
-//
-// Created by Mehrsa Yazdani on 2021-10-03.
-//
-#ifndef UNTITLED19_MAP_H
-#define UNTITLED19_MAP_H
-#include <string>
+#pragma once
+
 #include <vector>
+#include <string>
 
 using namespace std;
+class Player;
+class Territory;
+
+class Continent{
+private:
+    int army_bonus;
+    string name;
+    vector<Territory*> territories;
+
+public:
+    Continent(string name, int army_bonus);
+    Continent(Continent &obj);
+    Continent();
+    ~Continent();
+
+    string get_name();
+    int get_army_bonus();
+    vector<Territory*> get_territories();
+
+    void add_territory(Territory* territory);
+
+    Continent& operator=(const Continent &c);
+    friend ostream& operator<<(ostream&, const Continent&);
+
+};
 
 class Territory{
 private:
-
-
-    string *name{};
-    int *t_ID{};
-    int *numberOfArmies{};
-    int *continent{};
-    int *owner{};
-
-    // Quan Nguyen
-    int pendingIncomingArmies_;
-    int pendingOutgoingArmies_;
-    int numberOfArmies_;
-    std::string name_;
+    int id, continent_id, armies;
+    string name;
+    Continent* continent;
+    Player* player;
+    vector<Territory*> neighbours;
 
 public:
-
-    // Quan Nguyen
+    Territory(int id, string name, int continent);
+    Territory(const Territory& obj);
     Territory();
-    Territory(int id, string *n, int *cont);
-    Territory(const Territory &t);
-    Territory& operator=(const Territory& t);
     ~Territory();
-    int getPendingIncomingArmies() const;
-    int getPendingOutgoingArmies() const;
-    void setPendingIncomingArmies(int armies);
-    void setPendingOutgoingArmies(int armies);
-    void removeArmies(int armies);
-    int getNumberOfMovableArmies();
 
+    int get_continent_id() const;
+    int get_id() const;
+    string get_name();
+    int get_armies() const;
+    void set_armies(int);
+    void setPlayer(Player* player);
+    Player* getPlayer();
+    vector<Territory*> get_bordering_territory();
+    Continent* get_continent();
+    void set_continent(Continent *continent);
 
+    void add_neighbour(Territory *neighbour);
 
-
-    int getID() {return *t_ID;}
-    int getNumberOfArmies() { return *numberOfArmies; }
-    int getOwner() { return *owner; }
-    int getContinent(){ return *continent; } //might error!!!!!!
-    void setNumberOfArmies(int n) { *numberOfArmies = n; }
-    void addArmies(int n) { *numberOfArmies += n;}
-    void setOwner(int n) { *owner = n; }
-    void setContinent(int cont) {this->continent = &cont; }; //todo recheck!!!!
-    void setName(string n) {this->name = &n;}
-    string getName(){return *name;}
-    vector<Territory*> neighbours(Territory *t1);
-
-    friend std::ostream& operator<<(std::ostream& out, const Territory& t);
+    Territory& operator=(const Territory &c);
+    friend ostream& operator<<(ostream&, const Territory&);
 
 };
 
-
-class Map {
-private:
-    vector<Territory *> map;
-    vector<Map*> continentsList;
-    string* name{};
-
+class Map{
 public:
+    vector<Continent*> continents;
+    vector<Territory*> territories;
+
     Map();
-    Map(string *name);
+    Map(const Map& map);
     ~Map();
 
-    void addEdge(Territory* t1, Territory* t2);
-    bool isConnected();
-    void DFS(int n, bool *visited);
-    bool validate();
+    vector<Territory*> get_territories() const;
+    vector<Continent*> get_continents() const;
 
+    void add_territory(Territory* new_territory);
+    void add_continent(Continent* new_continent);
+    bool static validate(Map* map);
+    bool verify_map_connected_graph();
+    bool verify_continent_connected_subgraph();
+    bool verify_unique_continents();
+
+/*    Map* parse(string file_name);
+    vector<string> split(const string&);
+    vector<string> split(const string&, char);
+*/
+    Territory* random_territory(const string& continent_name);
+    void DFSUtil(Territory *terr, bool visited[], bool connected_continent);
+
+    Map& operator=(const Map& m);
+    friend ostream& operator<<(ostream&, const Map&);
     friend class MapLoader;
-
-
 };
 
-#endif //UNTITLED19_MAP_H
+
+class MapLoader{
+public:
+    static bool parse(string file_name, Map *map);
+    static vector<string> split(const string&);
+    static vector<string> split(const string&, char);
+};

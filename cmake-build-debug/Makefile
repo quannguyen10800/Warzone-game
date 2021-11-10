@@ -128,6 +128,30 @@ assignment1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/build
 .PHONY : assignment1/fast
 
+Card/CardsDriver.obj: Card/CardsDriver.cpp.obj
+.PHONY : Card/CardsDriver.obj
+
+# target to build an object file
+Card/CardsDriver.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/Card/CardsDriver.cpp.obj
+.PHONY : Card/CardsDriver.cpp.obj
+
+Card/CardsDriver.i: Card/CardsDriver.cpp.i
+.PHONY : Card/CardsDriver.i
+
+# target to preprocess a source file
+Card/CardsDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/Card/CardsDriver.cpp.i
+.PHONY : Card/CardsDriver.cpp.i
+
+Card/CardsDriver.s: Card/CardsDriver.cpp.s
+.PHONY : Card/CardsDriver.s
+
+# target to generate assembly for a file
+Card/CardsDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/Card/CardsDriver.cpp.s
+.PHONY : Card/CardsDriver.cpp.s
+
 GameEngine/GameEngine.obj: GameEngine/GameEngine.cpp.obj
 .PHONY : GameEngine/GameEngine.obj
 
@@ -175,6 +199,30 @@ Map/Map.s: Map/Map.cpp.s
 Map/Map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/Map/Map.cpp.s
 .PHONY : Map/Map.cpp.s
+
+Map/MapDriver.obj: Map/MapDriver.cpp.obj
+.PHONY : Map/MapDriver.obj
+
+# target to build an object file
+Map/MapDriver.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/Map/MapDriver.cpp.obj
+.PHONY : Map/MapDriver.cpp.obj
+
+Map/MapDriver.i: Map/MapDriver.cpp.i
+.PHONY : Map/MapDriver.i
+
+# target to preprocess a source file
+Map/MapDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/Map/MapDriver.cpp.i
+.PHONY : Map/MapDriver.cpp.i
+
+Map/MapDriver.s: Map/MapDriver.cpp.s
+.PHONY : Map/MapDriver.s
+
+# target to generate assembly for a file
+Map/MapDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/Map/MapDriver.cpp.s
+.PHONY : Map/MapDriver.cpp.s
 
 Orders/Orders.obj: Orders/Orders.cpp.obj
 .PHONY : Orders/Orders.obj
@@ -272,29 +320,29 @@ Player/PlayerDriver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/Player/PlayerDriver.cpp.s
 .PHONY : Player/PlayerDriver.cpp.s
 
-TestDriver.obj: TestDriver.cpp.obj
-.PHONY : TestDriver.obj
+main.obj: main.cpp.obj
+.PHONY : main.obj
 
 # target to build an object file
-TestDriver.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/TestDriver.cpp.obj
-.PHONY : TestDriver.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-TestDriver.i: TestDriver.cpp.i
-.PHONY : TestDriver.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-TestDriver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/TestDriver.cpp.i
-.PHONY : TestDriver.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-TestDriver.s: TestDriver.cpp.s
-.PHONY : TestDriver.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-TestDriver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/TestDriver.cpp.s
-.PHONY : TestDriver.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment1.dir\build.make CMakeFiles/assignment1.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -305,12 +353,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... assignment1
+	@echo ... Card/CardsDriver.obj
+	@echo ... Card/CardsDriver.i
+	@echo ... Card/CardsDriver.s
 	@echo ... GameEngine/GameEngine.obj
 	@echo ... GameEngine/GameEngine.i
 	@echo ... GameEngine/GameEngine.s
 	@echo ... Map/Map.obj
 	@echo ... Map/Map.i
 	@echo ... Map/Map.s
+	@echo ... Map/MapDriver.obj
+	@echo ... Map/MapDriver.i
+	@echo ... Map/MapDriver.s
 	@echo ... Orders/Orders.obj
 	@echo ... Orders/Orders.i
 	@echo ... Orders/Orders.s
@@ -323,9 +377,9 @@ help:
 	@echo ... Player/PlayerDriver.obj
 	@echo ... Player/PlayerDriver.i
 	@echo ... Player/PlayerDriver.s
-	@echo ... TestDriver.obj
-	@echo ... TestDriver.i
-	@echo ... TestDriver.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 
