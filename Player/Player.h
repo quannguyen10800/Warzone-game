@@ -44,6 +44,9 @@ private:
     vector<Player*> diplomaticRelations_;
     bool neutral = false;
 
+    vector<PLayer*> diplomaticRelations_ ;
+    bool neutral = false;
+
 
 
 public:
@@ -97,12 +100,7 @@ public:
     vector<Territory*> to_Attact();
 
 
-
-
-
-
-
-
-
+    void addDiplomaticRelation(Player *pPlayer);
+    vector<Player*> getRelations()const;
 };
 

@@ -8,187 +8,118 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
-				<Option type="4"/>
+			<Target title="assignment1">
+				<Option output="C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/assignment1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 assignment1"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="assignment1/fast">
+				<Option output="C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/assignment1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 assignment1/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="PlayerDriver">
-				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/PlayerDriver" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug"/>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlayerDriver"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="PlayerDriver/fast">
-				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/PlayerDriver" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlayerDriver/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="OrdersDriver">
-				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/OrdersDriver" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 OrdersDriver"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="OrdersDriver/fast">
-				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/OrdersDriver" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 OrdersDriver/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="AssignmentLib">
-				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/libAssignmentLib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 AssignmentLib"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="AssignmentLib/fast">
-				<Option output="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/libAssignmentLib.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 AssignmentLib/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/hoangtugio/CLionProjects/assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Quan Nguyen/CLionProjects/COMP345/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Map/Map.cpp">
-			<Option target="AssignmentLib"/>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/GameEngine/GameEngine.cpp">
+			<Option target="assignment1"/>
 		</Unit>
-		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Map/Map.h">
-			<Option target="AssignmentLib"/>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/GameEngine/GameEngine.h">
+			<Option target="assignment1"/>
 		</Unit>
-		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Orders/Orders.cpp">
-			<Option target="AssignmentLib"/>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Map/Map.cpp">
+			<Option target="assignment1"/>
 		</Unit>
-		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Orders/Orders.h">
-			<Option target="AssignmentLib"/>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Map/Map.h">
+			<Option target="assignment1"/>
 		</Unit>
-		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Orders/OrdersDriver.cpp">
-			<Option target="OrdersDriver"/>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Orders/Orders.cpp">
+			<Option target="assignment1"/>
 		</Unit>
-		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Player/Player .cpp">
-			<Option target="AssignmentLib"/>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Orders/Orders.h">
+			<Option target="assignment1"/>
 		</Unit>
-		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Player/Player.h">
-			<Option target="AssignmentLib"/>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Orders/OrdersDriver.cpp">
+			<Option target="assignment1"/>
 		</Unit>
-		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/src/Player/PlayerDriver.cpp">
-			<Option target="PlayerDriver"/>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Orders/OrdersDriver.h">
+			<Option target="assignment1"/>
 		</Unit>
-		<Unit filename="/Users/hoangtugio/CLionProjects/assignment1/CMakeLists.txt">
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Player/Player.cpp">
+			<Option target="assignment1"/>
+		</Unit>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Player/Player.h">
+			<Option target="assignment1"/>
+		</Unit>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/Player/PlayerDriver.cpp">
+			<Option target="assignment1"/>
+		</Unit>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/TestDriver.cpp">
+			<Option target="assignment1"/>
+		</Unit>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/TestDriver.h">
+			<Option target="assignment1"/>
+		</Unit>
+		<Unit filename="C:/Users/Quan Nguyen/CLionProjects/COMP345/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

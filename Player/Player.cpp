@@ -217,3 +217,16 @@ void Player :: AssignFirstTerritory(Map *map){
 
 
 }
+
+void Player::addDiplomaticRelation(Player *pPlayer) {
+
+}
+
+//void PLayer::addDiplomaticRelation(Player* player) {
+//    diplomaticRelation_.push_back(player);
+//}
+
+
+std::vector<Player *> Player::getRelations() const {
+    return diplomaticRelations_;
+}
