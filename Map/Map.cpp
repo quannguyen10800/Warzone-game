@@ -335,20 +335,23 @@ bool Map::validate(Map* map) {
     if (map->verify_map_connected_graph()) {
         cout << "Map is a connected graph." << endl;
     } else {
-        throw invalid_argument("Error loading map -> Reason: Map is not a connected graph.");
+        cout << "Error loading map -> Reason: Map is not a connected graph." << endl;
+        return false;
     }
     // check if continents are a connected subgraph
     if (map->verify_continent_connected_subgraph()) {
         cout << "Continents are connected subgraphs." << endl;
     } else {
-        throw invalid_argument("Error loading map -> Reason: Continents are not connected subgraphs.");
+        cout << "Error loading map -> Reason: Continents are not connected subgraphs." << endl;
+        return false;
     }
     // check if territories are connected by at most 1 continent
-    if (map->verify_unique_continents()) {
+    if (map->verify_unique_continents())
         cout << "Territories all have unique continents." << endl;
-    } else {
-        throw invalid_argument("Error loading map -> Reason: Territories do not have unique continents.");
-    }
+    //} else {
+    //    throw invalid_argument("Error loading map -> Reason: Territories do not have unique continents.");
+    //}
+    return true;
 }
 
 // Function to return a random territory in a given continent.
@@ -489,5 +492,5 @@ Map* MapLoader::parse(string file_name, Map *map) {
             }
         }
     }
-    return map;
+    return *map;
 }
