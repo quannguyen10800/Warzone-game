@@ -84,7 +84,7 @@ public:
 
     void removeTerritory(Territory* territory);
 
-    //Hand* getHand();
+    Hand* getHand();
     void issueOrder(Order* ord);
 
 //    Territory * random_territory(string continent_name,Map* map);

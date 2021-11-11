@@ -32,7 +32,7 @@ class GameEngine {
 public:
 
 
-    static std::vector<Player*> players_;
+     std::vector<Player*> players_;
 
 
 
@@ -70,8 +70,17 @@ public:
     //DESTRUCTOR
     ~GameEngine();
 
+    void startupPhase();
+
+    int getTheTurn(int numb);
+    void   addPlayersToList(Player* p1);
+
+
 
 private:
+
+
+
 };
 
 

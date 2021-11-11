@@ -114,9 +114,16 @@ OrdersList* Player ::getOrdersList()  {
 
 }
 //add to otderlist
-void Player :: addOrder(Order *order){
-    orders->add(order);
+void Player ::  issueOrder(Order* ord){
+
+    orders->add(ord);
+
 }
+
+Hand* Player:: getHand(){
+    return handofcard;
+}
+
 
 //add a territories to the vector of the territories
 void Player ::addTerritory(Territory *territory) {
@@ -198,11 +205,6 @@ vector<Territory*> Player ::to_Defend() {
 }
 
 
-void Player ::  issueOrder(Order* ord){
-
-    orders->add(ord);
-
-}
 
 
 

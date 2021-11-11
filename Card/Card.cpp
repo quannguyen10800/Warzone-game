@@ -92,10 +92,10 @@ Deck::Deck(vector<Card> d)
     deck = d;
 }
 
-void Deck::draw(Hand hand)
+void Deck::draw(Player* player)
 {
-    vector<Card> h = hand.getVector();
-    vector<Card> d = this->getVector();
+    vector<Card> h = player->getHand().getVector();
+    vector<Card> d = player->getHand().getVector();
     h.insert(h.end(), std::make_move_iterator(d.begin()),std::make_move_iterator(d.end()));
 }
 

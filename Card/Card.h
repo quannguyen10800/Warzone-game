@@ -37,7 +37,7 @@ public:
     Deck(vector<Card> d);
 
     //void method to add a card from the deck vector to the hand
-    void draw(Hand hand);
+    void draw(Player* player);
     //getters
     vector<Card> getVector();
     Card getCard();

@@ -7,8 +7,10 @@
 #include "GameEngine.h"
 #include "../Map/Map.h"
 #include "../Player/Player.h"
+#include "../Card/Card.h"
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 
 
 GameEngine::GameEngine(){
@@ -209,7 +211,11 @@ istream& operator >> (istream &in,  GameEngine &ge){
 }
 
 
+void GameEngine:: addPlayersToList(Player* p1){
+    players_.push_back(p1);
 
+
+}
 
 
 
@@ -287,13 +293,13 @@ void GameEngine::startupPhase() {
 
         }
 
-        for (int i = 0; i <numOfPlayers ; i++) {
-            for (int j = 0; j < 2; j++) {
-                players_.at(i).draw();
+//        for (int i = 0; i <numOfPlayers ; i++) {
+//            for (int j = 0; j < 2; j++) {
+//              //  players_.at(i).draw();
+//
+//            }
 
-            }
-
-        }
+//        }
         StringStateOfTheGame="play";
 
 
