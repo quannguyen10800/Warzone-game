@@ -1,55 +1,45 @@
 //
-// Created by Kai Tran on 2021-09-28
+// Created by mehrsa yazdani on 2021-11-09.
 //
 
-#ifndef GAMEENGINE_H_INCLUDED
-#define GAMEENGINE_H_INCLUDED
+
+
+#ifndef UNTITLED1_GAMEENGINE_H
+#define UNTITLED1_GAMEENGINE_H
+
+#define ASSIGNMENT1_GAMEENGINE_H
+#include "Plater.h"
+#include "Map.h"
+#include "Card.h"
+#include <vector>
+#include <string>
 #include <iostream>
-#include <string.h>
-
 using namespace std;
+class Player;
 
-class GameEngine{
-    char* state;
-    bool isGameEnd; //TURNS TRUE WHEN GAME ENDS
-
+class CommandProcessor{
+private:
+    string command;
 public:
-
-    //DEFAULT CONSTRUCTOR
-    GameEngine();
-
-    //PARAMETERIZED CONSTRUCTOR
-    //PARAMETERS: CHAR*
-    GameEngine(char* initialState);
-
-    //COPY CONSTRUCTOR
-    GameEngine(const GameEngine &ge);
-
-    //ASSIGNMENT OPERATOR OVERLOAD FUNCTION
-    const GameEngine& operator=(const GameEngine& ge);
-
-    //RETURN CURRENT STATE OF GAME
-    char *getState();
-
-    //RETURN END STATUS OF THE GAME
-    bool getEndStatus();
-
-    //RETURNS TRUE IF PASSED CHAR* STATE
-    //IS VALID STATE OF OUR GAME ENGINE
-    bool isValidState(char* state);
-
-    //CHANGE THE CURRENT STATE OF GAME ENGINE
-    //AND RETURN TRUE IF CORRECT COMMAND ENTERED
-    //ELSE STATE WILL REMAIN SAME AND FALSE RETURNED
-    bool transition(const char* command);
-
-    //INSERTION OPERATOR OVERLOAD FUNCTION
-    friend istream & operator >> (istream &in,  GameEngine &ge);
-
-    //DESTRUCTOR
-    ~GameEngine();
-
-
+    string getCommand();
 };
 
-#endif // GAMEENGINE_H_INCLUDED
+class GameEngine {
+public:
+    GameEngine();
+    GameEngine& operator = (GameEngine const &anotherGameEngine);
+    friend ostream& operator << (ostream &stream, const GameEngine &gameEngine);
+    static Player* getOwnerOf(Territory* territory);
+    static void assignToNeutralPlayer(Territory* territory);
+    static void addPlayersToList(Player* player);
+    static void clearPlayerList();
+    static std::vector<Player*> players_;
+    void startupPhase();
+    void gameStart();
+    int getTheTurn(int numb);
+private:
+};
+
+
+#endif //UNTITLED1_GAMEENGINE_H
+
