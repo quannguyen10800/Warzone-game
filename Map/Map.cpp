@@ -1,6 +1,4 @@
 #include <iostream>
-#include <map>
-#include <list>
 #include <vector>
 #include <array>
 #include <sstream>
@@ -90,20 +88,28 @@ Territory::Territory() {
     id = 0;
     continent_id = 0;
     armies = 0;
+    player = nullptr;
 }
 
-Territory::Territory(int id, string name, int continent) : id(id), name(name), continent_id(continent) {}
+Territory::Territory(int id, string name, int continent) : id(id), name(name), continent_id(continent) {
+    player = nullptr;
+}
 
 Territory::Territory(const Territory& t) {
     this->id = t.id;
     this->continent_id = t.continent_id;
     this->name = t.name;
     this->armies = t.armies;
-    this->neighbours = t.neighbours;
+    this->player = t.player;
+    for (Territory *neighbour: t.neighbours) {
+        this->neighbours.push_back(neighbour);
+    }
 }
 
 Territory::~Territory() {
     delete player;
+    for (Territory *neighbour: neighbours)
+        delete neighbour;
 }
 
 
@@ -164,9 +170,14 @@ ostream &operator<<(std::ostream &strm, const Territory &territory) {
 
 // Assignment operator
 Territory& Territory::operator=(const Territory& t) {
-    for (Territory *neighbour: neighbours) {
-        delete neighbour;
+    this->id = t.id;
+    this->continent_id = t.continent_id;
+    this->name = t.name;
+    this->armies = t.armies;
+    for (Territory *neighbour: t.neighbours) {
+        this->neighbours.push_back(neighbour);
     }
+    return *this;
 }
 
 
@@ -251,7 +262,7 @@ void Map::DFSUtil(Territory *terr, bool visited[], bool connected_continent){
         //In case we are verifying connected components, disregard neighbours of the territory
         //that are not in the same continent.
         if (connected_continent && neighbour->get_continent_id() != terr->get_continent_id()){
-            break;
+            continue;
         }
 
         if(!visited[neighbour->get_id()-1]){
@@ -351,7 +362,6 @@ Territory *Map::random_territory(const string& continent_name){
 }
 
 
-
 /*
  * ==============================
  * MapLoader Class Implementation
@@ -374,7 +384,7 @@ vector<string> MapLoader::split(const string &str) {
     return split(str, ' ');
 }
 
-bool MapLoader::parse(string file_name, Map *map) {
+Map* MapLoader::parse(string file_name, Map *map) {
 
     ifstream file_reader(file_name);
     string line;
@@ -479,5 +489,5 @@ bool MapLoader::parse(string file_name, Map *map) {
             }
         }
     }
-    return Map::validate(map);
+    return map;
 }
