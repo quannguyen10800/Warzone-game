@@ -5,10 +5,10 @@
 #ifndef UNTITLED1_PLATER_H
 #define UNTITLED1_PLATER_H
 
-using  namespace std;
-#include <iostream>
-#include "Map.h"
-#include "list"
+//using namespace std;
+//#include <iostream>
+//#include "Map.h"
+//#include "list"
 
 class Order;
 class OrdersList;
@@ -16,9 +16,9 @@ class OrdersList;
 
 using  namespace std;
 #include <iostream>
-#include "Map.h"
-#include "Orders.h"
-#include "card.h"
+#include "../Map/Map.h"
+#include "../Orders/Orders.h"
+#include "../Card/Card.h"
 #include  <vector>
 
 

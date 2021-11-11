@@ -2,9 +2,8 @@
 // Created by mehrsa yazdani on 2021-11-07.
 //
 
-#include "Plater.h"
-#include "Map.h"
-#include "Map.cpp"
+#include "../Player/Player.h"
+#include "../Map/Map.h"
 #include <iostream>
 #include "string"
 #include "list"

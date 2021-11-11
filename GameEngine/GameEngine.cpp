@@ -11,6 +11,11 @@
 #include "Map.h"
 #include <cstdlib>
 #include <ctime>
+
+//************************
+//ADDED BY MMYA - BEGIN
+//************************
+
 void GameEngine::assignToNeutralPlayer(Territory* territory)
 {
     Player* owner = getOwnerOf(territory);
@@ -30,7 +35,6 @@ void GameEngine::assignToNeutralPlayer(Territory* territory)
         neutralPlayer->addTerritory(territory);
     }
 }
-
 // Find the player who owns the specified territory. Return nullptr if the territory is unowned.
 Player* GameEngine::getOwnerOf(Territory* territory)
 {
@@ -45,12 +49,15 @@ Player* GameEngine::getOwnerOf(Territory* territory)
     return nullptr;
 }
 
+//************************
+//ADDED BY MMYA - END
+//************************
+
+
+
 // Default constructor
 GameEngine::GameEngine(){
 }
-
-
-
 
 // Assignment operator
 GameEngine &GameEngine::operator=(const GameEngine &anotherGameEngine) {

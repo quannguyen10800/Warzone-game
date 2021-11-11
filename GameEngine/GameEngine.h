@@ -8,9 +8,9 @@
 #define UNTITLED1_GAMEENGINE_H
 
 #define ASSIGNMENT1_GAMEENGINE_H
-#include "Plater.h"
-#include "Map.h"
-#include "Card.h"
+#include "../Player/Player.h"
+#include "../Map/Map.h"
+#include "../Card/Card.h"
 #include <vector>
 #include <string>
 #include <iostream>
