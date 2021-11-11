@@ -9,17 +9,12 @@ using  namespace std;
 #include <iostream>
 #include "Map.h"
 #include "list"
+#include  <vector>
+
 
 class Order;
 class OrdersList;
 
-
-using  namespace std;
-#include <iostream>
-#include "Map.h"
-#include "Orders.h"
-#include "card.h"
-#include  <vector>
 
 
 
