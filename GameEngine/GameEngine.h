@@ -31,11 +31,7 @@ class GameEngine {
 
 public:
 
-    friend ostream& operator << (ostream &stream, const GameEngine &gameEngine);
-    static Player* getOwnerOf(Territory* territory);
-    static void assignToNeutralPlayer(Territory* territory);
-    static void addPlayersToList(Player* player);
-    static void clearPlayerList();
+
     static std::vector<Player*> players_;
 
 

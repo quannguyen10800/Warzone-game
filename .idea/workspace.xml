@@ -18,10 +18,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameEngine/GameEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/GameEngine.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameEngine/GameEngine.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/GameEngine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameEngine/main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player/Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/PlayerDriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player/PlayerDriver.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
