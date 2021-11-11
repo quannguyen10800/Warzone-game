@@ -8,14 +8,15 @@
 #define UNTITLED1_GAMEENGINE_H
 
 #define ASSIGNMENT1_GAMEENGINE_H
-#include "../Player/Player.h"
-#include "../Map/Map.h"
-#include "../Card/Card.h"
+class Player;
+class Territory;
+
+
 #include <vector>
 #include <string>
 #include <iostream>
 using namespace std;
-class Player;
+
 
 class CommandProcessor{
 private:

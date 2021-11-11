@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
-
+class Deck;
+class Hand;
 using namespace std;
 
 class Card {

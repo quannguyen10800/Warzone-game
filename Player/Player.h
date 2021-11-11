@@ -7,13 +7,15 @@
 
 using  namespace std;
 #include <iostream>
-#include "Map.h"
+class Map;
+class Territory;
+class Order;
+class OrdersList;
 #include "list"
 #include  <vector>
 
 
-class Order;
-class OrdersList;
+
 
 
 
@@ -37,8 +39,8 @@ private:
     //this number will be static and will belong to the class each time a player is created , the number will increament
     //and th enumber will be assigned to them
     static  int *number;
-    //there  is a territory randlonly assigned to the player at the begining of the game
-    Territory *initial = new Territory();
+    //there  is a territory randomly assigned to the player at the begining of the game
+//    Territory *initial = new Territory();
     vector <Territory*> toDefend;
     vector <Territory*> toAttact;
 

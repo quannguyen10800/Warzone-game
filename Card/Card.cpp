@@ -1,5 +1,5 @@
 #include "Card.h"
-#include "Orders.h"
+#include "../Orders/Orders.h"
 #include "iostream"
 
 Card::Card()
@@ -12,19 +12,19 @@ Card::Card(string n)
 {
     //if the constructor contains the type, it will be passed through
     name = n;
-    if (name._Equal("bomb")) {
+    if (name.string::compare("bomb")) {
         type = 1;
     }
-    else if (name._Equal("reinforcement")) {
+    else if (name.string::compare("reinforcement")) {
         type = 2;
     }
-    else if (name._Equal("blockade")) {
+    else if (name.string::compare("blockade")) {
         type = 3;
     }
-    else if (name._Equal("airlift")) {
+    else if (name=="airlift") {
         type = 4;
     }
-    else if (name._Equal("diplomacy")) {
+    else if (name.string::compare("diplomacy")) {
         type = 5;
     }
     else {
