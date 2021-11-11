@@ -81,10 +81,6 @@ public:
     bool verify_continent_connected_subgraph();
     bool verify_unique_continents();
 
-/*    Map* parse(string file_name);
-    vector<string> split(const string&);
-    vector<string> split(const string&, char);
-*/
     Territory* random_territory(const string& continent_name);
     void DFSUtil(Territory *terr, bool visited[], bool connected_continent);
 
@@ -94,9 +90,10 @@ public:
 };
 
 
+
 class MapLoader{
 public:
-    static bool parse(string file_name, Map *map);
+    static Map* parse(string file_name, Map *map);
     static vector<string> split(const string&);
     static vector<string> split(const string&, char);
 };
