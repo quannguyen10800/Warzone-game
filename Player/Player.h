@@ -5,19 +5,16 @@
 #ifndef UNTITLED1_PLATER_H
 #define UNTITLED1_PLATER_H
 
-using  namespace std;
+
 #include <iostream>
 class Map;
 class Territory;
 class Order;
 class OrdersList;
+class Hand;
 #include "list"
 #include  <vector>
-
-
-
-
-
+using namespace std;
 
 
 
@@ -90,9 +87,9 @@ public:
     //Hand* getHand();
     void issueOrder(Order* ord);
 
-    Territory * random_territory(string continent_name,Map* map);
-
-    void AssignFirstTerritory(Map* map);
+//    Territory * random_territory(string continent_name,Map* map);
+//
+//    void AssignFirstTerritory(Map* map);
 
 
     vector<Territory*> to_Defend();
@@ -101,6 +98,7 @@ public:
 
     int getTheNumberOFArmies();
     void setTheNumberOFArmies(int numb);
+    void  printVector(vector<Territory*> a);
 
 
 

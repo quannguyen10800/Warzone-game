@@ -3,10 +3,11 @@
 // Created by Mehrsa Yazdani on 2021-10-07.
 //
 #include <iostream>
-#include "Player.h"
-#include "Map.h"
-#include "Map.cpp"
-#include "Player.cpp"
+#include "../Player/Player.h"
+#include "../Map/Map.h"
+#include "../Card/Card.h"
+#include "../Orders/Orders.h"
+
 using namespace std;
 
 
@@ -25,7 +26,7 @@ int main(){
     practice.push_back(t3);
     practice.push_back(t4);
     practice.push_back(t5);
-    handOfCard* hand=new handOfCard();              //TODO
+    Hand* hand=new Hand();              //TODO
 //    Hand*   handOfCard =new Hand;
 
     OrdersList* orders=new OrdersList();
@@ -47,13 +48,13 @@ int main(){
     vector<Territory*> hi=p1->getTerritories();
     p1->addTerritory(t6);
 
-    cout << p1->getTerritories()<<endl;
-    p1->removeTerritory(t6);
-    cout << p1->getTerritories()<<endl;
+//    cout << p1->getTerritories()<<endl;
+//    p1->removeTerritory(t6);
+//    cout << p1->getTerritories()<<endl;
 
 
-    cout<<"list of territories to be attacted"<< p1->to_Attact()<<endl;
-    cout<<"list of territories to be defended"<< p1->to_Defend()<<endl;
+    cout<<"list of territories to be attacted"<< p1->to_Attact().front()->get_name()<<endl;
+//    cout<<"list of territories to be defended"<< printVector(p1->to_Defend())<<endl;
 
 
 

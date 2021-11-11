@@ -26,18 +26,55 @@ public:
 };
 
 class GameEngine {
+    char* state;
+    bool isGameEnd; //TURNS TRUE WHEN GAME ENDS
+
 public:
-    GameEngine();
-    GameEngine& operator = (GameEngine const &anotherGameEngine);
+
     friend ostream& operator << (ostream &stream, const GameEngine &gameEngine);
     static Player* getOwnerOf(Territory* territory);
     static void assignToNeutralPlayer(Territory* territory);
     static void addPlayersToList(Player* player);
     static void clearPlayerList();
     static std::vector<Player*> players_;
-    void startupPhase();
-    void gameStart();
-    int getTheTurn(int numb);
+
+
+
+    //DEFAULT CONSTRUCTOR
+    GameEngine();
+
+    //PARAMETERIZED CONSTRUCTOR
+    //PARAMETERS: CHAR*
+    GameEngine(char* initialState);
+
+    //COPY CONSTRUCTOR
+    GameEngine(const GameEngine &ge);
+
+    //ASSIGNMENT OPERATOR OVERLOAD FUNCTION
+    const GameEngine& operator=(const GameEngine& ge);
+
+    //RETURN CURRENT STATE OF GAME
+    char *getState();
+
+    //RETURN END STATUS OF THE GAME
+    bool getEndStatus();
+
+    //RETURNS TRUE IF PASSED CHAR* STATE
+    //IS VALID STATE OF OUR GAME ENGINE
+    bool isValidState(char* state);
+
+    //CHANGE THE CURRENT STATE OF GAME ENGINE
+    //AND RETURN TRUE IF CORRECT COMMAND ENTERED
+    //ELSE STATE WILL REMAIN SAME AND FALSE RETURNED
+    bool transition(const char* command);
+
+    //INSERTION OPERATOR OVERLOAD FUNCTION
+    friend istream & operator >> (istream &in,  GameEngine &ge);
+
+    //DESTRUCTOR
+    ~GameEngine();
+
+
 private:
 };
 

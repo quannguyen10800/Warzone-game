@@ -4,6 +4,8 @@
 
 #include "../Player/Player.h"
 #include "../Map/Map.h"
+#include "../Orders/Orders.h"
+#include "../Card/Card.h"
 #include <iostream>
 #include "string"
 #include "list"
@@ -81,7 +83,7 @@ Player ::~Player() {
 
     }
     for (int i = 0; i < toDefend.size(); i++) {
-        delete toDefend.front()
+        delete toDefend.front();
 
     }
     for (int i = 0; i < toAttact.size(); i++) {
@@ -160,7 +162,7 @@ vector<Territory*> Player ::to_Attact() {
 
 
 
-
+    return toAttact;
 
 
 
@@ -191,6 +193,7 @@ vector<Territory*> Player ::to_Defend() {
     }
 
 
+    return toDefend;
 
 }
 
@@ -203,26 +206,36 @@ void Player ::  issueOrder(Order* ord){
 
 
 
-Territory * Player::random_territory(string continent_name,Map* map){
-    for(Continent *continent : map->continents){
-        if (continent->get_name() == continent_name){
-            int r = rand() % (continent->get_territories().size() -1);
-            return continent->get_territories().at(r);
-        }
-    }
-}
-
-
-void Player :: AssignFirstTerritory(Map *map){
-    int  random=rand() % map->continents.size() -1;
-    territories.push_back(random_territory(map->continents.at(random)->get_name(),map));
-
-
-}
+//Territory * Player::random_territory(string continent_name,Map* map){
+//    for(Continent *continent : map->continents){
+//        if (continent->get_name() == continent_name){
+//            int r = rand() % (continent->get_territories().size() -1);
+//            return continent->get_territories().at(r);
+//        }
+//    }
+//}
+//
+//
+//void Player :: AssignFirstTerritory(Map *map){
+//    int  random=rand() % map->continents.size() -1;
+//    territories.push_back(random_territory(map->continents.at(random)->get_name(),map));
+//
+//
+//}
 
 int Player::getTheNumberOFArmies() {
     return numberofarmies;
 }
 void Player::setTheNumberOFArmies(int num) {
     numberofarmies=num;
+}
+
+
+void Player :: printVector(vector<Territory*> a){
+
+    for (int i = 0; i < a.size() ; i++) {
+        cout << a.at(i) <<endl;
+
+    }
+
 }
