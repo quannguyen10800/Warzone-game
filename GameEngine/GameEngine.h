@@ -71,6 +71,8 @@ public:
     ~GameEngine();
 
 
+    void startupPhase();
+    int getTheTurn(int numb);
 private:
 };
 
