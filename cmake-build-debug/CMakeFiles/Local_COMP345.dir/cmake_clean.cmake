@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Local_COMP345.dir/main.cpp.o"
+  "CMakeFiles/Local_COMP345.dir/main.cpp.obj"
   "Local_COMP345.exe"
+  "Local_COMP345.exe.manifest"
   "Local_COMP345.pdb"
   "libLocal_COMP345.dll.a"
 )

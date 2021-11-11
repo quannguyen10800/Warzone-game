@@ -1,1 +1,3 @@
-/usr/bin/c++.exe -g -Wl,--enable-auto-import CMakeFiles/Local_COMP345.dir/main.cpp.o -o Local_COMP345.exe -Wl,--out-implib,libLocal_COMP345.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+C:\Users\Asus\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\Local_COMP345.dir/objects.a
+D:\CLion\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\ar.exe cr CMakeFiles\Local_COMP345.dir/objects.a @CMakeFiles\Local_COMP345.dir\objects1.rsp
+D:\CLion\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Local_COMP345.dir/objects.a -Wl,--no-whole-archive -o Local_COMP345.exe -Wl,--out-implib,libLocal_COMP345.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Local_COMP345.dir\linklibs.rsp
