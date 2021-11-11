@@ -4,6 +4,7 @@
 
 #include <string>
 #include <algorithm>
+#include <cstring>
 #include "GameEngine.h"
 #include "../Map/Map.h"
 #include "../Player/Player.h"

@@ -77,6 +77,8 @@ public:
 
 
 
+    void startupPhase();
+    int getTheTurn(int numb);
 private:
 
 
