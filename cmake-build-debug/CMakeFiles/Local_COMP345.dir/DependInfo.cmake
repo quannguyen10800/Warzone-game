@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/CLion/COMP345/COMP345/LoggingObserver/LoggingObserver.cpp" "D:/CLion/COMP345/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj"
   "D:/CLion/COMP345/COMP345/main.cpp" "D:/CLion/COMP345/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

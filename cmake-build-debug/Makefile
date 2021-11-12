@@ -128,6 +128,30 @@ Local_COMP345/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Local_COMP345.dir\build.make CMakeFiles/Local_COMP345.dir/build
 .PHONY : Local_COMP345/fast
 
+LoggingObserver/LoggingObserver.obj: LoggingObserver/LoggingObserver.cpp.obj
+.PHONY : LoggingObserver/LoggingObserver.obj
+
+# target to build an object file
+LoggingObserver/LoggingObserver.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Local_COMP345.dir\build.make CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj
+.PHONY : LoggingObserver/LoggingObserver.cpp.obj
+
+LoggingObserver/LoggingObserver.i: LoggingObserver/LoggingObserver.cpp.i
+.PHONY : LoggingObserver/LoggingObserver.i
+
+# target to preprocess a source file
+LoggingObserver/LoggingObserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Local_COMP345.dir\build.make CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.i
+.PHONY : LoggingObserver/LoggingObserver.cpp.i
+
+LoggingObserver/LoggingObserver.s: LoggingObserver/LoggingObserver.cpp.s
+.PHONY : LoggingObserver/LoggingObserver.s
+
+# target to generate assembly for a file
+LoggingObserver/LoggingObserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Local_COMP345.dir\build.make CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.s
+.PHONY : LoggingObserver/LoggingObserver.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Local_COMP345
+	@echo ... LoggingObserver/LoggingObserver.obj
+	@echo ... LoggingObserver/LoggingObserver.i
+	@echo ... LoggingObserver/LoggingObserver.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

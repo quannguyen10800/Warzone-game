@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj"
   "CMakeFiles/Local_COMP345.dir/main.cpp.obj"
   "Local_COMP345.exe"
   "Local_COMP345.exe.manifest"
