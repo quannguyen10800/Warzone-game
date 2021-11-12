@@ -1,10 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj"
-  "CMakeFiles/Local_COMP345.dir/main.cpp.obj"
-  "Local_COMP345.exe"
-  "Local_COMP345.exe.manifest"
+  "CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o"
+  "CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o"
+  "CMakeFiles/Local_COMP345.dir/main.cpp.o"
+  "Local_COMP345"
   "Local_COMP345.pdb"
-  "libLocal_COMP345.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -8,10 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/quannguyen1/CLionProjects/COMP34_reorganize/LoggingObserver/LoggingObserver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP34_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP34_reorganize/main.cpp" "C:/Users/quannguyen1/CLionProjects/COMP34_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/main.cpp.obj"
+  "/Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessor.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o"
+  "/Users/kaitran/Desktop/COMP345/LoggingObserver/LoggingObserver.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o"
+  "/Users/kaitran/Desktop/COMP345/main.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
