@@ -3,23 +3,14 @@
 //#include "../Orders/Orders.h"
 //#include "../GameEngine/GameEngine.h"
 
-int OrdersDriver()
+[[maybe_unused]] int OrdersDriver()
 {
     // Setup
-    Territory* quebec = new Territory();
-    quebec->setName("Quebec");
-    quebec->setNumberOfArmies(10);
-    quebec->setContinent(101);
 
-    Territory* bc = new Territory();
-    bc->setNumberOfArmies(5);
-    bc->setName("BC");
-    bc->setContinent(102);
+    Territory* quebec = new Territory(1, "Quebec", 101);
+    Territory* bc = new Territory(2, "bc", 102);
+    Territory* ontario = new Territory(3, "Ontario",103);
 
-    Territory* ontario = new Territory();
-    ontario->setNumberOfArmies(10);
-    ontario->setName("Ontario");
-    ontario->setContinent(103);
 
     Player* player = new Player("Player");
     Player* enemy = new Player("Enemy");
@@ -78,6 +69,6 @@ int OrdersDriver()
     delete bc;
     bc = NULL;
 
-    GameEngine::clearPlayerList();
+//    GameEngine::clearPlayerList();
     return 0;
 }

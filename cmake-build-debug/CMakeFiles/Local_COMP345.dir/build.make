@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\Asus\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\Users\Asus\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\CLion\COMP345\COMP345
+CMAKE_SOURCE_DIR = C:\Users\quannguyen1\CLionProjects\COMP34_reorganize
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\CLion\COMP345\COMP345\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Local_COMP345.dir/depend.make
@@ -67,29 +67,29 @@ include CMakeFiles/Local_COMP345.dir/flags.make
 
 CMakeFiles/Local_COMP345.dir/main.cpp.obj: CMakeFiles/Local_COMP345.dir/flags.make
 CMakeFiles/Local_COMP345.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\CLion\COMP345\COMP345\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Local_COMP345.dir/main.cpp.obj"
-	D:\CLion\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Local_COMP345.dir\main.cpp.obj -c D:\CLion\COMP345\COMP345\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Local_COMP345.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Local_COMP345.dir\main.cpp.obj -c C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\main.cpp
 
 CMakeFiles/Local_COMP345.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/main.cpp.i"
-	D:\CLion\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLion\COMP345\COMP345\main.cpp > CMakeFiles\Local_COMP345.dir\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\main.cpp > CMakeFiles\Local_COMP345.dir\main.cpp.i
 
 CMakeFiles/Local_COMP345.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/main.cpp.s"
-	D:\CLion\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLion\COMP345\COMP345\main.cpp -o CMakeFiles\Local_COMP345.dir\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\main.cpp -o CMakeFiles\Local_COMP345.dir\main.cpp.s
 
 CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj: CMakeFiles/Local_COMP345.dir/flags.make
 CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj: ../LoggingObserver/LoggingObserver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\CLion\COMP345\COMP345\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj"
-	D:\CLion\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Local_COMP345.dir\LoggingObserver\LoggingObserver.cpp.obj -c D:\CLion\COMP345\COMP345\LoggingObserver\LoggingObserver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Local_COMP345.dir\LoggingObserver\LoggingObserver.cpp.obj -c C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\LoggingObserver\LoggingObserver.cpp
 
 CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.i"
-	D:\CLion\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLion\COMP345\COMP345\LoggingObserver\LoggingObserver.cpp > CMakeFiles\Local_COMP345.dir\LoggingObserver\LoggingObserver.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\LoggingObserver\LoggingObserver.cpp > CMakeFiles\Local_COMP345.dir\LoggingObserver\LoggingObserver.cpp.i
 
 CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.s"
-	D:\CLion\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLion\COMP345\COMP345\LoggingObserver\LoggingObserver.cpp -o CMakeFiles\Local_COMP345.dir\LoggingObserver\LoggingObserver.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\LoggingObserver\LoggingObserver.cpp -o CMakeFiles\Local_COMP345.dir\LoggingObserver\LoggingObserver.cpp.s
 
 # Object files for target Local_COMP345
 Local_COMP345_OBJECTS = \
@@ -105,7 +105,7 @@ Local_COMP345.exe: CMakeFiles/Local_COMP345.dir/build.make
 Local_COMP345.exe: CMakeFiles/Local_COMP345.dir/linklibs.rsp
 Local_COMP345.exe: CMakeFiles/Local_COMP345.dir/objects1.rsp
 Local_COMP345.exe: CMakeFiles/Local_COMP345.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\CLion\COMP345\COMP345\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Local_COMP345.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Local_COMP345.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Local_COMP345.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -117,6 +117,6 @@ CMakeFiles/Local_COMP345.dir/clean:
 .PHONY : CMakeFiles/Local_COMP345.dir/clean
 
 CMakeFiles/Local_COMP345.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\CLion\COMP345\COMP345 D:\CLion\COMP345\COMP345 D:\CLion\COMP345\COMP345\cmake-build-debug D:\CLion\COMP345\COMP345\cmake-build-debug D:\CLion\COMP345\COMP345\cmake-build-debug\CMakeFiles\Local_COMP345.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\quannguyen1\CLionProjects\COMP34_reorganize C:\Users\quannguyen1\CLionProjects\COMP34_reorganize C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\cmake-build-debug C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\cmake-build-debug C:\Users\quannguyen1\CLionProjects\COMP34_reorganize\cmake-build-debug\CMakeFiles\Local_COMP345.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Local_COMP345.dir/depend
 

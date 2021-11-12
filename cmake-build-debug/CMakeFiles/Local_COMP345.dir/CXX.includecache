@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-D:/CLion/COMP345/COMP345/main.cpp
+C:/Users/quannguyen1/CLionProjects/COMP34_reorganize/LoggingObserver/LoggingObserver.cpp
+LoggingObserver.h
+C:/Users/quannguyen1/CLionProjects/COMP34_reorganize/LoggingObserver/LoggingObserver.h
+list
+-
+
+C:/Users/quannguyen1/CLionProjects/COMP34_reorganize/LoggingObserver/LoggingObserver.h
+string
+-
+list
+-
+
+C:/Users/quannguyen1/CLionProjects/COMP34_reorganize/main.cpp
 iostream
 -
 
