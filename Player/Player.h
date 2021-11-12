@@ -1,10 +1,7 @@
 //
 // Created by mehrsa yazdani on 2021-11-07.
 //
-
-#ifndef UNTITLED1_PLATER_H
-#define UNTITLED1_PLATER_H
-
+#pragma once
 
 #include <iostream>
 class Map;
@@ -109,4 +106,3 @@ public:
 
 
 };
-#endif //UNTITLED1_PLATER_H

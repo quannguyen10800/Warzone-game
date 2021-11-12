@@ -1,13 +1,7 @@
 //
 // Created by mehrsa yazdani on 2021-11-09.
 //
-
-
-
-#ifndef UNTITLED1_GAMEENGINE_H
-#define UNTITLED1_GAMEENGINE_H
-
-#define ASSIGNMENT1_GAMEENGINE_H
+#pragma once
 class Player;
 class Territory;
 
@@ -70,9 +64,6 @@ public:
     //DESTRUCTOR
     ~GameEngine();
 
-    void startupPhase();
-
-    int getTheTurn(int numb);
     void   addPlayersToList(Player* p1);
 
 
@@ -84,7 +75,4 @@ private:
 
 
 };
-
-
-#endif //UNTITLED1_GAMEENGINE_H
 
