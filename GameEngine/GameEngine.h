@@ -66,8 +66,6 @@ public:
 
     void   addPlayersToList(Player* p1);
 
-
-
     void startupPhase();
     int getTheTurn(int numb);
 private:

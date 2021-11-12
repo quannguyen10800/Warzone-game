@@ -1,7 +1,4 @@
 
-#ifndef ASSIGNMENT1_GAMEENGINE_H
-#define ASSIGNMENT1_GAMEENGINE_H
-
 #include <string>
 #include <algorithm>
 #include <cstring>
@@ -321,5 +318,3 @@ int  GameEngine :: getTheTurn(int numb){
 
 }
 
-
-#endif //ASSIGNMENT1_GAMEENGINE_H

@@ -15,12 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48954358-9ded-492d-9bb5-d5db7dd54f13" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card/Card.h" beforeDir="false" afterPath="$PROJECT_DIR$/Card/Card.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameEngine/GameEngine.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/GameEngine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orders/Orders.h" beforeDir="false" afterPath="$PROJECT_DIR$/Orders/Orders.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Orders/OrdersDriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/Orders/OrdersDriver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player/Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEngine/GameEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameEngine/GameEngine.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
