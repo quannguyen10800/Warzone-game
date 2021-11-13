@@ -1,9 +1,73 @@
+//
+// Created by Quan Nguyen on 2021-10-11.
+//
+
+
+
 //#include "../game_engine/GameEngine.h"
 //#include "Orders.h"
 #include <algorithm>
 #include <iterator>
 #include <math.h>
 #include "Orders.h"
+
+
+// ---------------------------------------
+// Implementations for Assignment 2 Part 5
+// ---------------------------------------
+// The saveEffect() method is called each time any subclass of order is executed in its inherited execute_().
+// It saves the effect of their execution in a static string member of Order class.
+// This makes the effects of the execute_() in any child class available to the base class.
+
+
+Player* Order::getPlayer() const
+{
+    return issuer_;
+}
+
+void Order::saveEffect(string &effects) {
+    orderEffect += effects;
+}
+
+void Order::clearEffect() {
+    orderEffect = "";
+}
+
+string Order::stringToLog() {
+    string log = "Order Executed: " + orderEffect;
+    clearEffect();
+    return log;
+}
+
+string OrdersList::stringToLog() {
+    OrderType etype = orders_.back()->getType();
+    string stype = "";
+    switch (type){
+        case DEPLOY:
+            stype = "[Deploy]";
+            break;
+        case ADVANCE:
+            stype = "[Advance]";
+            break;
+        case BOMB:
+            stype = "[Bomb]";
+            break;
+        case BLOCKADE:
+            stype = "[Blockade]";
+            break;
+        case AIRLIFT:
+            stype = "[Airlift]";
+            break;
+        case NEGOTIATE:
+            stype = "[Negotiation]";
+            break;
+    }
+    return "Order Issued: " + stype + "by " + orders_.back()->getPlayer() + ".\n";
+}
+
+
+
+
 
 namespace
 {
@@ -19,7 +83,7 @@ namespace
     // if there is no diplomacy between the attacker and the owner of the target.
     bool checkIfCanAttack(Player* attacker, Territory* target)
     {
-         Player* targetOwner = GameEngine::getOwnerOf(target);
+        Player* targetOwner = GameEngine::getOwnerOf(target);
         std::vector<Player*> diplomatRelationship = attacker->getRelations();
         bool diplomacyWithOwnerOfTarget = find(diplomatRelationship.begin(), diplomatRelationship.end(), targetOwner) != diplomatRelationship.end();
 
@@ -70,6 +134,7 @@ void Order::execute()
     if (validate())
     {
         execute_();
+        Notify(this);
     }
     else
     {
@@ -83,6 +148,8 @@ int Order::getPriority() const
 {
     return priority_;
 }
+
+
 
 // Reset the pre-orders-execution game state to the state it was in before the order was placed.
 // If there is no meta-state to reset, the default behaviour is to do nothing.
@@ -184,6 +251,7 @@ int OrdersList::size() const
 void OrdersList::add(Order* order)
 {
     orders_.push_back(order);
+    Notify(this);
 }
 
 // Move an order within the OrderList from `origin` position to `targetDestination` position.
@@ -299,6 +367,7 @@ void DeployOrder::execute_()
     destination_->addArmies(numberOfArmies_);
     destination_->setPendingIncomingArmies(0);
     std::cout << "Deployed " << numberOfArmies_ << " armies to " << destination_->getName() << "." << std::endl;
+    saveEffect("Deployed " << numberOfArmies_ << " armies to " << destination_->getName() << ".");
 }
 
 // Reverse the pre-orders-execution game state back to before the order was created.
@@ -400,10 +469,12 @@ void AdvanceOrder::execute_()
         {
             source_->addArmies(survivingAttackers);
             std::cout << "Failed attack on " << destination_->getName() << " with " << survivingDefenders << " enemy armies left standing.";
+            saveEffect("Failed attack on " + destination_->getName() + " with " + survivingDefenders + " enemy armies left standing.");
 
             if (survivingAttackers > 0)
             {
                 std::cout << " Retreating " << survivingAttackers << " attacking armies back to " << source_->getName() << std::endl;
+                saveEffect(" Retreating " + lexical_cast<string>(survivingAttackers) + " attacking armies back to " + source_->getName());
             }
             else
             {
@@ -418,13 +489,18 @@ void AdvanceOrder::execute_()
             destination_->addArmies(survivingAttackers);
             std::cout << "Attack is successful on the " << destination_->getName() << ". " << survivingAttackers
                       << " armies now attacked and owns this territory." << std::endl;
+            saveEffect("Attack is successful on the " + destination_->getName() + ". " + survivingAttackers
+                       + " armies now attacked and owns this territory.");
         }
     }
     else
     {
         source_->removeArmies(movableArmiesFromSource);
         destination_->addArmies(movableArmiesFromSource);
-        std::cout << "Advanced " << movableArmiesFromSource << " armies from " << source_->getName() << " to " << destination_->getName() << "." << std::endl;
+        std::cout << "Advanced " << movableArmiesFromSource << " armies from " << source_->getName() << " to "
+                  << destination_->getName() << "." << std::endl;
+        saveEffect("Advanced " + lexical_cast<string>(movableArmiesFromSource) + " armies from " + source_->getName() + " to "
+                   + destination_->getName() + ".");
     }
 
     source_->setPendingOutgoingArmies(0);
@@ -508,6 +584,8 @@ void BombOrder::execute_()
     target_->removeArmies(armiesOnTarget / 2);
     std::cout << "Bombed " << armiesOnTarget / 2 << " enemy armies on " << target_->getName() << ". ";
     std::cout << target_->getNumberOfArmies() << " remaining." << std::endl;
+    saveEffect("Bombed " << armiesOnTarget / 2 << " enemy armies on " << target_->getName() << ". "
+                         << target_->getNumberOfArmies() << " remaining.");
 }
 
 // Get the type of the Order sub-class
@@ -568,7 +646,7 @@ bool BlockadeOrder::validate() const
 
     std::vector<Territory*> currentPlayerTerritories = issuer_->getTerritories();
     return find(currentPlayerTerritories.begin(), currentPlayerTerritories.end(), territory_) !=
-    currentPlayerTerritories.end();
+           currentPlayerTerritories.end();
 }
 
 // Executes the BlockadeOrder.
@@ -578,6 +656,8 @@ void BlockadeOrder::execute_()
     GameEngine::assignToNeutralPlayer(territory_);   //Add by Quan Nguyen
     std::cout << "Blockade called on " << territory_->getName() << ". ";
     std::cout << territory_->getNumberOfArmies() << " neutral armies now occupy this territory." << std::endl;
+    saveEffect("Blockade called on " << territory_->getName() << ". "
+                                     << territory_->getNumberOfArmies() << " neutral armies now occupy this territory.");
 }
 
 // Get the type of the Order sub-class
@@ -734,10 +814,10 @@ void NegotiateOrder::execute_()
     issuer_->addDiplomaticRelation(target_);
     target_->addDiplomaticRelation(issuer_);
     std::cout << "Negotiated diplomacy between " << issuer_->getPName() << " and " << target_->getPName() << "." << std::endl;
+    saveEffect("Negotiated diplomacy between " << issuer_->getPName() << " and " << target_->getPName() << ".");
 }
 
 // Get the type of the Order sub-class
-OrderType NegotiateOrder::getType() const
-{
+OrderType NegotiateOrder::getType() const {
     return NEGOTIATE;
 }

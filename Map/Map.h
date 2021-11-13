@@ -37,6 +37,7 @@ private:
     Continent* continent;
     Player* player;
     vector<Territory*> neighbours;
+    int numArmies;
 
 public:
     Territory(int id, string name, int continent);
@@ -58,6 +59,7 @@ public:
     void add_neighbour(Territory *neighbour);
 
     Territory& operator=(const Territory &c);
+    void addArmies(int armies);
     friend ostream& operator<<(ostream&, const Territory&);
 
 };

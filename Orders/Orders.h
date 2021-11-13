@@ -1,9 +1,16 @@
+//
+// Created by Quan Nguyen on 2021-10-11.
+//
+
+//#pragma once
+
 #pragma once
 
 #include "../Player/Player.h"
 #include <iostream>
 #include <vector>
 #include "../GameEngine/GameEngine.h"
+#include "../Map/Map.h"
 enum OrderType : short
 {
     DEPLOY,

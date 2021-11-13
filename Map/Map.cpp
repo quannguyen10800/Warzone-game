@@ -112,6 +112,10 @@ Territory::~Territory() {
         delete neighbour;
 }
 
+// method that adds number of armies to territory
+void Territory::addArmies(int armies) {
+    numArmies += armies;
+}
 
 // Accessor and Getters
 
