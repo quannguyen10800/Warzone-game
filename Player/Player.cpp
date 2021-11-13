@@ -241,3 +241,7 @@ void Player :: printVector(vector<Territory*> a){
     }
 
 }
+
+void Player::setPlayerCards(Hand *&PlayerCards) {
+    this->playerCards = PlayerCards;
+}

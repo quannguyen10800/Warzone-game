@@ -25,6 +25,7 @@ private:
     OrdersList *orders;
     //each player has a name
     string Pname;
+    Hand *playerCards;
 
     int numberofarmies;
 
@@ -96,6 +97,7 @@ public:
     int getTheNumberOFArmies();
     void setTheNumberOFArmies(int numb);
     void  printVector(vector<Territory*> a);
+    void setPlayerCards(Hand *&PlayerCards);
 
 
 
