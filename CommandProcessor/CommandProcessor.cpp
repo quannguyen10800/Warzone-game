@@ -3,14 +3,30 @@
 //
 
 #include "CommandProcessor.h"
-
+#include <string>
+#include <sstream>
 
 /*
 CommandProcessor - start
 */
+string CommandProcessor::readCommand() {
+    string command;
+    cout << "Enter command: \n";
+    //take the string until hit enter
+    getline(cin, command);
+    return command;
+}
+CommandProcessor::CommandProcessor() {}
+CommandProcessor::~CommandProcessor() {
+    for (Command* command1 : cmList) {
+        delete command1;
+        command1 = NULL;
+    }
+    cmList.erase(cmList.begin(), cmList.end());
+}
 
 /*
-//CommandProcessor -end
+CommandProcessor -end
 */
 
 
@@ -20,7 +36,7 @@ Command - start
 */
 
 /*
-//Command -end
+Command -end
 */
 
 
@@ -30,7 +46,7 @@ FileLineReader - start
 */
 
 /*
-//FileLineReader -end
+FileLineReader -end
 */
 
 
@@ -40,5 +56,5 @@ FileLineReader - start
 */
 
 /*
-//FileLineReader -end
+FileLineReader -end
 */

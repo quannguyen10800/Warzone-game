@@ -15,9 +15,12 @@ class Player;
 
 class CommandProcessor {
 private:
-    void readCommand();
+    //READ COMMAND FROM THE CONSOLE
+    virtual string readCommand();
+
     string command;
     string effect;
+    vector<Command*> cmList;
 public:
     //CONSTRUCTOR & DESTRUCTOR
     CommandProcessor();
