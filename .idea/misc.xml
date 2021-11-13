@@ -6,6 +6,7 @@
       <file path="$PROJECT_DIR$/Card" />
       <file path="$PROJECT_DIR$/CommandProcessor" />
       <file path="$PROJECT_DIR$/GameEngine" />
+      <file path="$PROJECT_DIR$/LoggingObserver" />
       <file path="$PROJECT_DIR$/Map" />
       <file path="$PROJECT_DIR$/Orders" />
       <file path="$PROJECT_DIR$/Player" />

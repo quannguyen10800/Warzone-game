@@ -2,13 +2,74 @@
 // Created by Tam Nhu Tran on 2021-11-12.
 //
 
-#ifndef LOCAL_COMP345_COMMANDPROCESSOR_H
-#define LOCAL_COMP345_COMMANDPROCESSOR_H
+#pragma once
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <vector>
+using namespace std;
+
+class GameEngine;
+class Player;
 
 
 class CommandProcessor {
+private:
+    void readCommand();
+    string command;
+    string effect;
+public:
+    //CONSTRUCTOR & DESTRUCTOR
+    CommandProcessor();
+    ~CommandProcessor();
+
+    //MUTATORS & ACCESSORS
+    string getCommand();
+    void setCommand(string command);
+    string getEffect();
+    void setEffect(string effect);
+};
+
+
+class Command {
+private:
+    string command;
+    string effect;
+public:
+    //CONSTRUCTOR & DESTRUCTOR
+    Command();
+    ~Command();
+
+    void SaveEffect();
+};
+
+
+class FileLineReader {
+private:
+    string file;
+    string line;
+public:
+    //CONSTRUCTOR & DESTRUCTOR
+    FileLineReader();
+    ~FileLineReader();
+    void readLineFromFile();
 
 };
 
 
-#endif //LOCAL_COMP345_COMMANDPROCESSOR_H
+class FileCommandProcessorAdapter : public CommandProcessor {
+private:
+    string readCommand();
+    FileLineReader* flr;
+
+public:
+    //CONSTRUCTOR & DESTRUCTOR
+    FileCommandProcessorAdapter();
+    ~FileCommandProcessorAdapter();
+
+    Command* getCommand();
+
+
+};
+
+
