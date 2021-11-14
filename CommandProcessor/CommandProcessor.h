@@ -13,27 +13,6 @@ class GameEngine;
 class Player;
 
 
-class CommandProcessor {
-private:
-    //READ COMMAND FROM THE CONSOLE
-    virtual string readCommand();
-
-    string command;
-    string effect;
-    vector<Command*> cmList;
-public:
-    //CONSTRUCTOR & DESTRUCTOR
-    CommandProcessor();
-    ~CommandProcessor();
-
-    //MUTATORS & ACCESSORS
-    string getCommand();
-    void setCommand(string command);
-    string getEffect();
-    void setEffect(string effect);
-};
-
-
 class Command {
 private:
     string command;
@@ -43,7 +22,10 @@ public:
     Command();
     ~Command();
 
-    void SaveEffect();
+    string getEffect();
+    void saveEffect(string ef);
+    string getCommand();
+    void setCommand(string cm);
 };
 
 
@@ -56,6 +38,29 @@ public:
     FileLineReader();
     ~FileLineReader();
     void readLineFromFile();
+
+};
+
+
+class CommandProcessor : Command {
+private:
+    string command;
+    string effect;
+    vector<Command*> cmList;
+public:
+    //CONSTRUCTOR & DESTRUCTOR
+    CommandProcessor();
+    ~CommandProcessor();
+
+    //READ COMMAND FROM THE CONSOLE
+    static string readCommand();
+    void saveCommand(string cm);
+    Command* getLastCommand();
+
+    //MUTATORS & ACCESSORS
+    Command* getCommand();
+
+    void setCommand(string cm);
 
 };
 

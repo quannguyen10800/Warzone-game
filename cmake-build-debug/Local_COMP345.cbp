@@ -86,6 +86,9 @@
 		<Unit filename="/Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessor.h">
 			<Option target="Local_COMP345"/>
 		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessorDriver.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
 		<Unit filename="/Users/kaitran/Desktop/COMP345/LoggingObserver/LoggingObserver.cpp">
 			<Option target="Local_COMP345"/>
 		</Unit>

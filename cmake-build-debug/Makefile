@@ -153,6 +153,30 @@ CommandProcessor/CommandProcessor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Local_COMP345.dir/build.make CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.s
 .PHONY : CommandProcessor/CommandProcessor.cpp.s
 
+CommandProcessor/CommandProcessorDriver.o: CommandProcessor/CommandProcessorDriver.cpp.o
+.PHONY : CommandProcessor/CommandProcessorDriver.o
+
+# target to build an object file
+CommandProcessor/CommandProcessorDriver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Local_COMP345.dir/build.make CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o
+.PHONY : CommandProcessor/CommandProcessorDriver.cpp.o
+
+CommandProcessor/CommandProcessorDriver.i: CommandProcessor/CommandProcessorDriver.cpp.i
+.PHONY : CommandProcessor/CommandProcessorDriver.i
+
+# target to preprocess a source file
+CommandProcessor/CommandProcessorDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Local_COMP345.dir/build.make CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.i
+.PHONY : CommandProcessor/CommandProcessorDriver.cpp.i
+
+CommandProcessor/CommandProcessorDriver.s: CommandProcessor/CommandProcessorDriver.cpp.s
+.PHONY : CommandProcessor/CommandProcessorDriver.s
+
+# target to generate assembly for a file
+CommandProcessor/CommandProcessorDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Local_COMP345.dir/build.make CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.s
+.PHONY : CommandProcessor/CommandProcessorDriver.cpp.s
+
 LoggingObserver/LoggingObserver.o: LoggingObserver/LoggingObserver.cpp.o
 .PHONY : LoggingObserver/LoggingObserver.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... CommandProcessor/CommandProcessor.o"
 	@echo "... CommandProcessor/CommandProcessor.i"
 	@echo "... CommandProcessor/CommandProcessor.s"
+	@echo "... CommandProcessor/CommandProcessorDriver.o"
+	@echo "... CommandProcessor/CommandProcessorDriver.i"
+	@echo "... CommandProcessor/CommandProcessorDriver.s"
 	@echo "... LoggingObserver/LoggingObserver.o"
 	@echo "... LoggingObserver/LoggingObserver.i"
 	@echo "... LoggingObserver/LoggingObserver.s"

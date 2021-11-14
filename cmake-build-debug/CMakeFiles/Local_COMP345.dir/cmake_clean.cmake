@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o"
+  "CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o"
   "CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o"
   "CMakeFiles/Local_COMP345.dir/main.cpp.o"
   "Local_COMP345"
