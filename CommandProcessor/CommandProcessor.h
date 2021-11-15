@@ -7,13 +7,14 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "../LoggingObserver/LoggingObserver.h"
 using namespace std;
 
 class GameEngine;
 class Player;
 
 
-class Command {
+class Command: public Iloggable{
 private:
     string command;
     string effect;

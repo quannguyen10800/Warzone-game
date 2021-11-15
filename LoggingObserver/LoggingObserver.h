@@ -6,77 +6,36 @@
 #include <fstream>
 using namespace std;
 
-//class Iloggable{
-//public:
-//    virtual string stringToLog() = 0;
-//
-//protected:
-//    string log;
-//};
-//
-//
-//class Observer {
-//public:
-//    ~Observer();
-//    virtual void Update() = 0;
-//protected:
-//    Observer();
-//};
-//
-//class Subject {
-//public:
-//    virtual void Attach(Observer* o);
-//    virtual void Detach(Observer* o);
-//    virtual void Notify();
-//    Subject();
-//    ~Subject();
-//private:
-//    list<Observer*> *_observers;
-//};
-//
-//class LogObserver: public Observer{
-//public:
-//    void Update(Iloggable _Iloggable);
-//};
+class Iloggable{
+public:
+    virtual string stringToLog() = 0;
 
+protected:
+    string log;
+};
 
-
-class Iloggable;
-class Subject;
 
 class Observer {
 public:
-    Observer();
     ~Observer();
-    virtual void update(Subject* i) = 0;
+    virtual void Update(Iloggable* _Iloggable) = 0;
+protected:
+    Observer();
 };
 
-class Iloggable{
+class Subject {
 public:
-    Iloggable();
-    ~Iloggable();
-    virtual string stringToLog() = 0;
-};
-
-class Subject : public Iloggable{
-public:
-    string contentToLog;
+    virtual void Attach(Observer* o);
+    virtual void Detach(Observer* o);
+    virtual void Notify(Iloggable* _Iloggable);
     Subject();
     ~Subject();
-    virtual void attach(Observer* o);
-    virtual void detach(Observer* o);
-    virtual void notify();
 private:
-    list<Observer*> * _observers;
+
+    list<Observer*> *_observers;
 };
 
-
-
-class LogObserver : public Observer {
+class LogObserver: public Observer{
 public:
-    LogObserver(Subject *subject);
-    virtual ~LogObserver();
-    void update(Subject* s);
-private:
-    Subject * _subject;
+    void Update(Iloggable* _Iloggable);
 };

@@ -2,6 +2,8 @@
 
 #include <string>
 #include <vector>
+#include "../Orders/Orders.h"
+#include "../Map/Map.h"
 class Deck;
 class Hand;
 using namespace std;
@@ -48,7 +50,7 @@ public:
 class Hand {
 private:
     //a hand is a vector of cards
-    vector<Card> hand;
+    vector<Card*> hand;
 public:
     //empty constructor
     Hand();
@@ -59,4 +61,5 @@ public:
     //getters
     vector<Card> getVector();
     Card getCard();
+    Hand(const vector<Card*> &cards);
 };

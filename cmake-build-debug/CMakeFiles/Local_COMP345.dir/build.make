@@ -79,9 +79,35 @@ CMakeFiles/Local_COMP345.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/main.cpp -o CMakeFiles/Local_COMP345.dir/main.cpp.s
 
+CMakeFiles/Local_COMP345.dir/Player/Player.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
+CMakeFiles/Local_COMP345.dir/Player/Player.cpp.o: ../Player/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Local_COMP345.dir/Player/Player.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/Player/Player.cpp.o -c /Users/kaitran/Desktop/COMP345/Player/Player.cpp
+
+CMakeFiles/Local_COMP345.dir/Player/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/Player/Player.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaitran/Desktop/COMP345/Player/Player.cpp > CMakeFiles/Local_COMP345.dir/Player/Player.cpp.i
+
+CMakeFiles/Local_COMP345.dir/Player/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/Player/Player.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/Player/Player.cpp -o CMakeFiles/Local_COMP345.dir/Player/Player.cpp.s
+
+CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
+CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.o: ../Player/PlayerDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.o -c /Users/kaitran/Desktop/COMP345/Player/PlayerDriver.cpp
+
+CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaitran/Desktop/COMP345/Player/PlayerDriver.cpp > CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.i
+
+CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/Player/PlayerDriver.cpp -o CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.s
+
 CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
 CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o: ../LoggingObserver/LoggingObserver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o -c /Users/kaitran/Desktop/COMP345/LoggingObserver/LoggingObserver.cpp
 
 CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.i: cmake_force
@@ -92,9 +118,35 @@ CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/LoggingObserver/LoggingObserver.cpp -o CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.s
 
+CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
+CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.o: ../Orders/Orders.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.o -c /Users/kaitran/Desktop/COMP345/Orders/Orders.cpp
+
+CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaitran/Desktop/COMP345/Orders/Orders.cpp > CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.i
+
+CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/Orders/Orders.cpp -o CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.s
+
+CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
+CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.o: ../Orders/OrdersDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.o -c /Users/kaitran/Desktop/COMP345/Orders/OrdersDriver.cpp
+
+CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaitran/Desktop/COMP345/Orders/OrdersDriver.cpp > CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.i
+
+CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/Orders/OrdersDriver.cpp -o CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.s
+
 CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
 CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o: ../CommandProcessor/CommandProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o -c /Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessor.cpp
 
 CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.i: cmake_force
@@ -107,7 +159,7 @@ CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.s: cmake_forc
 
 CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
 CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o: ../CommandProcessor/CommandProcessorDriver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o -c /Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessorDriver.cpp
 
 CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.i: cmake_force
@@ -118,23 +170,106 @@ CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.s: cmak
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessorDriver.cpp -o CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.s
 
+CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
+CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.o: ../Card/CardsDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.o -c /Users/kaitran/Desktop/COMP345/Card/CardsDriver.cpp
+
+CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaitran/Desktop/COMP345/Card/CardsDriver.cpp > CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.i
+
+CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/Card/CardsDriver.cpp -o CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.s
+
+CMakeFiles/Local_COMP345.dir/Card/Card.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
+CMakeFiles/Local_COMP345.dir/Card/Card.cpp.o: ../Card/Card.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Local_COMP345.dir/Card/Card.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/Card/Card.cpp.o -c /Users/kaitran/Desktop/COMP345/Card/Card.cpp
+
+CMakeFiles/Local_COMP345.dir/Card/Card.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/Card/Card.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaitran/Desktop/COMP345/Card/Card.cpp > CMakeFiles/Local_COMP345.dir/Card/Card.cpp.i
+
+CMakeFiles/Local_COMP345.dir/Card/Card.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/Card/Card.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/Card/Card.cpp -o CMakeFiles/Local_COMP345.dir/Card/Card.cpp.s
+
+CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
+CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.o: ../Map/MapDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.o -c /Users/kaitran/Desktop/COMP345/Map/MapDriver.cpp
+
+CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaitran/Desktop/COMP345/Map/MapDriver.cpp > CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.i
+
+CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/Map/MapDriver.cpp -o CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.s
+
+CMakeFiles/Local_COMP345.dir/Map/Map.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
+CMakeFiles/Local_COMP345.dir/Map/Map.cpp.o: ../Map/Map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Local_COMP345.dir/Map/Map.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/Map/Map.cpp.o -c /Users/kaitran/Desktop/COMP345/Map/Map.cpp
+
+CMakeFiles/Local_COMP345.dir/Map/Map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/Map/Map.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaitran/Desktop/COMP345/Map/Map.cpp > CMakeFiles/Local_COMP345.dir/Map/Map.cpp.i
+
+CMakeFiles/Local_COMP345.dir/Map/Map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/Map/Map.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/Map/Map.cpp -o CMakeFiles/Local_COMP345.dir/Map/Map.cpp.s
+
+CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.o: CMakeFiles/Local_COMP345.dir/flags.make
+CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.o: ../GameEngine/GameEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.o -c /Users/kaitran/Desktop/COMP345/GameEngine/GameEngine.cpp
+
+CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaitran/Desktop/COMP345/GameEngine/GameEngine.cpp > CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.i
+
+CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaitran/Desktop/COMP345/GameEngine/GameEngine.cpp -o CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.s
+
 # Object files for target Local_COMP345
 Local_COMP345_OBJECTS = \
 "CMakeFiles/Local_COMP345.dir/main.cpp.o" \
+"CMakeFiles/Local_COMP345.dir/Player/Player.cpp.o" \
+"CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.o" \
 "CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o" \
+"CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.o" \
+"CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.o" \
 "CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o" \
-"CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o"
+"CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o" \
+"CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.o" \
+"CMakeFiles/Local_COMP345.dir/Card/Card.cpp.o" \
+"CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.o" \
+"CMakeFiles/Local_COMP345.dir/Map/Map.cpp.o" \
+"CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.o"
 
 # External object files for target Local_COMP345
 Local_COMP345_EXTERNAL_OBJECTS =
 
 Local_COMP345: CMakeFiles/Local_COMP345.dir/main.cpp.o
+Local_COMP345: CMakeFiles/Local_COMP345.dir/Player/Player.cpp.o
+Local_COMP345: CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.o
 Local_COMP345: CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o
+Local_COMP345: CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.o
+Local_COMP345: CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.o
 Local_COMP345: CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o
 Local_COMP345: CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o
+Local_COMP345: CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.o
+Local_COMP345: CMakeFiles/Local_COMP345.dir/Card/Card.cpp.o
+Local_COMP345: CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.o
+Local_COMP345: CMakeFiles/Local_COMP345.dir/Map/Map.cpp.o
+Local_COMP345: CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.o
 Local_COMP345: CMakeFiles/Local_COMP345.dir/build.make
 Local_COMP345: CMakeFiles/Local_COMP345.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Local_COMP345"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Local_COMP345"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Local_COMP345.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

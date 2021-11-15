@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Card/Card.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Card/Card.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Card/CardsDriver.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Card/CardsDriver.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
 		<Unit filename="/Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessor.cpp">
 			<Option target="Local_COMP345"/>
 		</Unit>
@@ -89,13 +101,67 @@
 		<Unit filename="/Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessorDriver.cpp">
 			<Option target="Local_COMP345"/>
 		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessorDriver.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/GameEngine/GameEngine.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/GameEngine/GameEngine.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/GameEngine/GameEngineDriver.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
 		<Unit filename="/Users/kaitran/Desktop/COMP345/LoggingObserver/LoggingObserver.cpp">
 			<Option target="Local_COMP345"/>
 		</Unit>
 		<Unit filename="/Users/kaitran/Desktop/COMP345/LoggingObserver/LoggingObserver.h">
 			<Option target="Local_COMP345"/>
 		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Map/Map.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Map/Map.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Map/MapDriver.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Map/MapDriver.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Orders/Orders.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Orders/Orders.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Orders/OrdersDriver.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Orders/OrdersDriver.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Player/PLayerDriver.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Player/Player.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Player/Player.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Player/PlayerDriver.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/Player/PlayerDriver.h">
+			<Option target="Local_COMP345"/>
+		</Unit>
 		<Unit filename="/Users/kaitran/Desktop/COMP345/main.cpp">
+			<Option target="Local_COMP345"/>
+		</Unit>
+		<Unit filename="/Users/kaitran/Desktop/COMP345/main.h">
 			<Option target="Local_COMP345"/>
 		</Unit>
 		<Unit filename="/Users/kaitran/Desktop/COMP345/CMakeLists.txt">
