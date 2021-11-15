@@ -337,3 +337,43 @@ int  GameEngine :: getTheTurn(int numb){
     return turn;
 
 }
+    
+void mainGameLoop(int numOfPlayers, <Player> players) {
+
+    while (numOfPlayers > 1) {
+        for (i = 0; i < numOfPlayers; i++) {
+
+            reinforcementPhase(players.at(i));
+
+            issueOrdersPhase(players.at(i));
+
+            executeOrdersPhase(players.at(i));
+
+            for (i = 0; i < numOfPlayers; i++) {
+                if (players.at(i).getTerritories() = 0) {
+                    players.erase(players.at(i));
+                    numOfPlayers--;
+                }
+            }
+        }
+        break;
+    }
+}
+void reinforcementPhase(Player p) {
+    int atd;
+    int armiesToDeploy = p.getTerritories()/3 + p.getContinentBonus();
+    if (armiesToDeploy < 3) {
+        atd = 3;
+    }
+    else {
+        atd = armiesToDeploy;
+    }
+    p.setTheNumberOfArmies(atd);
+
+}
+void issueOrdersPhase() {
+
+}
+void executeOrdersPhase() {
+
+}
