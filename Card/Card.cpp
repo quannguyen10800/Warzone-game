@@ -1,7 +1,8 @@
-#include "Card.h"
+#include "../Card/Card.h"
 #include "../Orders/Orders.h"
 #include "iostream"
-
+#include <sstream>
+#include <ctime>
 Card::Card()
 {
     //if no card type is specified in the constructor, a random int will be generated to determine the cards type
@@ -30,6 +31,12 @@ Card::Card(string n)
     else {
         cout << "not a valid card type";
     }
+}
+
+Hand::Hand(){
+}
+
+Hand::Hand(const vector<Card*> &cards) : hand(cards){
 }
 
 int Card::getType() {
