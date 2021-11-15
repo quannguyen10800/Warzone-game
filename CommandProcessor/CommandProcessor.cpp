@@ -33,8 +33,37 @@ void Command::setCommand(string cm) {
 
 //************************************
 //FileLineReader - start
+FileLineReader::FileLineReader() {
+    fileInputStream = nullptr;
+}
+FileLineReader::~FileLineReader() {
+    fileInputStream->close();
+    delete fileInputStream;
+    fileInputStream = nullptr;
+}
+FileLineReader::FileLineReader(string file) {
+    //check whethere file is open
+    this->file = file;
+    fileInputStream = new fstream();
+    if (!fileInputStream->is_open()){
+        cout << "File not found." << endl;
+        exit(0);
+    }
+}
 
-
+bool FileLineReader::readLineFromFile() {
+    string lineUnderRead;
+    getline(*fileInputStream, lineUnderRead);
+    if (lineUnderRead.compare("") != 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+string FileLineReader::getLine() {
+    return line;
+}
 //FileLineReader -end
 //************************************
 
@@ -82,7 +111,11 @@ void CommandProcessor::setCommand(string cm) {
 
 //************************************
 //FileCommandProcessorAdapter - start
+string FileCommandProcessorAdapter::readCommand() {
+    if (flr->readLineFromFile()) {
 
+    }
+}
 
 //FileCommandProcessorAdapter -end
 *///************************************

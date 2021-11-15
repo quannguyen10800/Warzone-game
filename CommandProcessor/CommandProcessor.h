@@ -33,16 +33,20 @@ class FileLineReader {
 private:
     string file;
     string line;
+    fstream* fileInputStream;
 public:
     //CONSTRUCTOR & DESTRUCTOR
     FileLineReader();
     ~FileLineReader();
-    void readLineFromFile();
+    FileLineReader(string file);
 
+
+    bool readLineFromFile();
+    string getLine();
 };
 
 
-class CommandProcessor : Command {
+class CommandProcessor : public Command {
 private:
     string command;
     string effect;
@@ -59,7 +63,6 @@ public:
 
     //MUTATORS & ACCESSORS
     Command* getCommand();
-
     void setCommand(string cm);
 
 };
@@ -67,7 +70,7 @@ public:
 
 class FileCommandProcessorAdapter : public CommandProcessor {
 private:
-    string readCommand();
+
     FileLineReader* flr;
 
 public:
@@ -76,8 +79,7 @@ public:
     ~FileCommandProcessorAdapter();
 
     Command* getCommand();
-
-
+    string readCommand();
 };
 
 
