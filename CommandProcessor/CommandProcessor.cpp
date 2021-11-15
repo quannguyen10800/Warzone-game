@@ -20,6 +20,7 @@ string Command::getEffect() {
 }
 void Command::saveEffect(string ef) {
     this->effect = ef;
+    Notify(this);
 }
 string Command::getCommand() {
     return command;
@@ -91,6 +92,7 @@ void CommandProcessor::saveCommand(string cm){
     Command* cmObject = new Command();
     cmObject->setCommand(cm);
     cmList.push_back(cmObject);
+    Notify(this);
 }
 Command* CommandProcessor::getLastCommand() {
     return cmList.back();
@@ -119,3 +121,16 @@ string FileCommandProcessorAdapter::readCommand() {
 
 //FileCommandProcessorAdapter -end
 *///************************************
+
+//----------------------------
+// -------
+//Implementation of Logging mechanism
+//-----------------------------------
+
+string Command::stringToLog(){
+    return "Command: " + command;
+}
+
+string CommandProcessor::stringToLog(){
+    return "Command effect: " + effect;
+}
