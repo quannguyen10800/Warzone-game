@@ -1,7 +1,11 @@
+<<<<<<< Updated upstream
 set(CMAKE_C_COMPILER "D:/CLion/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe")
+=======
+set(CMAKE_C_COMPILER "/Library/Developer/CommandLineTools/usr/bin/cc")
+>>>>>>> Stashed changes
 set(CMAKE_C_COMPILER_ARG1 "")
-set(CMAKE_C_COMPILER_ID "GNU")
-set(CMAKE_C_COMPILER_VERSION "8.1.0")
+set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_VERSION "13.0.0.13000029")
 set(CMAKE_C_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_C_COMPILER_WRAPPER "")
 set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "11")
@@ -10,7 +14,7 @@ set(CMAKE_C90_COMPILE_FEATURES "")
 set(CMAKE_C99_COMPILE_FEATURES "")
 set(CMAKE_C11_COMPILE_FEATURES "")
 
-set(CMAKE_C_PLATFORM_ID "MinGW")
+set(CMAKE_C_PLATFORM_ID "Darwin")
 set(CMAKE_C_SIMULATE_ID "")
 set(CMAKE_C_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_C_SIMULATE_VERSION "")
@@ -18,17 +22,31 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
+<<<<<<< Updated upstream
 set(CMAKE_AR "D:/CLion/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/ar.exe")
 set(CMAKE_C_COMPILER_AR "D:/CLion/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc-ar.exe")
 set(CMAKE_RANLIB "D:/CLion/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/ranlib.exe")
 set(CMAKE_C_COMPILER_RANLIB "D:/CLion/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc-ranlib.exe")
 set(CMAKE_LINKER "D:/CLion/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/ld.exe")
+=======
+set(CMAKE_AR "/Library/Developer/CommandLineTools/usr/bin/ar")
+set(CMAKE_C_COMPILER_AR "")
+set(CMAKE_RANLIB "/Library/Developer/CommandLineTools/usr/bin/ranlib")
+set(CMAKE_C_COMPILER_RANLIB "")
+set(CMAKE_LINKER "/Library/Developer/CommandLineTools/usr/bin/ld")
+>>>>>>> Stashed changes
 set(CMAKE_MT "")
-set(CMAKE_COMPILER_IS_GNUCC 1)
+set(CMAKE_COMPILER_IS_GNUCC )
 set(CMAKE_C_COMPILER_LOADED 1)
+<<<<<<< Updated upstream
 set(CMAKE_C_COMPILER_WORKS )
 set(CMAKE_C_ABI_COMPILED )
 set(CMAKE_COMPILER_IS_MINGW 1)
+=======
+set(CMAKE_C_COMPILER_WORKS TRUE)
+set(CMAKE_C_ABI_COMPILED TRUE)
+set(CMAKE_COMPILER_IS_MINGW )
+>>>>>>> Stashed changes
 set(CMAKE_COMPILER_IS_CYGWIN )
 if(CMAKE_COMPILER_IS_CYGWIN)
   set(CYGWIN 1)
@@ -72,7 +90,14 @@ endif()
 
 
 
+<<<<<<< Updated upstream
 set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
+=======
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include;/Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/include;/Library/Developer/CommandLineTools/usr/include")
+set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/usr/lib")
+set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "/Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk/System/Library/Frameworks")
+>>>>>>> Stashed changes
