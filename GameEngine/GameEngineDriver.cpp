@@ -23,6 +23,9 @@ int main(){
         }
 
     }while (ge.getEndStatus() == false);  //CHECKING END STATUS
+        
+    
+    StartUpPhase();
 
 }
 
