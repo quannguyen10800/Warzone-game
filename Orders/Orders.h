@@ -2,15 +2,17 @@
 // Created by Quan Nguyen on 2021-10-11.
 //
 
-//#pragma once
 
-#pragma once
+
+
+//#pragma once
 
 #include "../Player/Player.h"
 #include <iostream>
 #include <vector>
-#include "../GameEngine/GameEngine.h"
+//#include "../GameEngine/GameEngine.h"
 #include "../Map/Map.h"
+#include "../LoggingObserver/LoggingObserver.h"
 enum OrderType : short
 {
     DEPLOY,
@@ -209,3 +211,4 @@ protected:
 private:
     Player* target_;
 };
+
