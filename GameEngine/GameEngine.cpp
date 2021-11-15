@@ -224,72 +224,95 @@ GameEngine::~GameEngine(){
 }
 
 void GameEngine::startupPhase() {
+
+    CommandProcessor* command=new CommandProcessor();
     Map* map =new Map();
-    string nameofthemap;
-    cout << "please enter the name of the map"<<endl;
-    cin >> nameofthemap;
-    map=MapLoader::parse(nameofthemap,map);
-
-    if(!Map::validate(map)){
-        cout << "the map is validate to be incorrect , please start over" <<endl;
-        exit(0);
 
 
-    }else{
-        int numOfPlayers;
+    if(command->getCommand()=="loadmap") {
+        cout << "please enter the name of the map"<<endl;
+        cin >> nameofthemap;
+        map = MapLoader::parse(nameofthemap, map);
+        state="map loaded";
+        command->setEffect("map loaded");
 
-        cout << "please enter the number of players " <<endl;
-        cin >> numOfPlayers;
-        while(numOfPlayers > 6  || numOfPlayers <2){
-            cout <<"the number entered is incorrect please try again" <<endl;
+    }
+
+
+    if(command->getCommand()=="validatemap") {
+        while(!Map::validate(map)) {
+            cout << "the map is validated to be incorrect , please restart the game" << endl;
+            State = "mapValidated";
+            command.setEffect("mapIsNotValidated");
+        }
+        else{
+            State = "map validated";
+            command.setEffect("mapIsValidated");
+        }
+    }
+
+    if(state ==  "map validated ") {
+
+        if(command->getCommand() == "addPlayer") {
+            int numOfPlayers;
+
+            cout << "please enter the number of players " << endl;
             cin >> numOfPlayers;
-        }
-
-        for (int i = 0; i < numOfPlayers ; i++) {
-            string name;
-            cout << "please enter the name of the player "<<i<<endl;
-            cin  >> name;
-            Player* p1=new Player(name);
-            addPlayersToList(p1);
-        }
-        int numberofterritoris=map->territories.size();
-        //int numberofterritoriesforeachplayer;
-        int helper=numberofterritoris/numOfPlayers;
-        int helper3=helper*4;
-        int helper2=numberofterritoris-(helper3);
-
-        for (int i = 0; i < players_.size(); i++) {
-            for (int j = 0; j < helper; j++) {
-                static int indexofterritories=0;
-                players_.at(i)->addTerritory(map->territories.at(indexofterritories));
-                indexofterritories++;
-
+            while (numOfPlayers > 6 || numOfPlayers < 2) {
+                cout << "the number entered is incorrect please try again" << endl;
+                cin >> numOfPlayers;
             }
 
-        }
-
-        for (int i = 0; i < helper2 ; i++) {
-            for (int j = 0; j < map->territories.size(); j++) {
-
-                players_.at(i)->addTerritory(map->territories.at(helper3));
-                helper3++;
-
-
+            for (int i = 0; i < numOfPlayers; i++) {
+                string name;
+                cout << "please enter the name of the player " << i << endl;
+                cin >> name;
+                Player *p1 = new Player(name);
+                addPlayersToList(p1);
             }
+            state = playersadded;
 
         }
 
-        bool order;
-        string StringStateOfTheGame="starting";
-        int turn;
-        turn =getTheTurn(numOfPlayers);
-        cout << "it is the turn for player number " <<turn <<endl;
+        if(state = "players added ") {
+            if (command->getCommand() == "gameStart") {
+                int numberofterritoris = map->territories.size();
+                //int numberofterritoriesforeachplayer;
+                int helper = numberofterritoris / numOfPlayers;
+                int helper3 = helper * 4;
+                int helper2 = numberofterritoris - (helper3);
+
+                for (int i = 0; i < players_.size(); i++) {
+                    for (int j = 0; j < helper; j++) {
+                        static int indexofterritories = 0;
+                        players_.at(i)->addTerritory(map->territories.at(indexofterritories));
+                        indexofterritories++;
+
+                    }
+
+                }
+
+                for (int i = 0; i < helper2; i++) {
+                    for (int j = 0; j < map->territories.size(); j++) {
+
+                        players_.at(i)->addTerritory(map->territories.at(helper3));
+                        helper3++;
 
 
-        for (int i = 0; i <numOfPlayers ; i++) {
-            players_.at(i)->setTheNumberOFArmies(50);
+                    }
 
-        }
+                }
+
+                bool order;
+                int turn;
+                turn = getTheTurn(numOfPlayers);
+                cout << "it is the turn for player number " << turn << endl;
+
+
+                for (int i = 0; i < numOfPlayers; i++) {
+                    players_.at(i)->setTheNumberOFArmies(50);
+
+                }
 
 //        for (int i = 0; i <numOfPlayers ; i++) {
 //            for (int j = 0; j < 2; j++) {
@@ -298,23 +321,19 @@ void GameEngine::startupPhase() {
 //            }
 
 //        }
-        StringStateOfTheGame="play";
+            }
+        }
 
 
+
+
+    State = "play";
 
     }
-
-
-
-
-}
 
 int  GameEngine :: getTheTurn(int numb){
     srand(time(0));
     int turn =(rand() % numb + 1);
     return turn;
 
-
-
 }
-
