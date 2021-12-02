@@ -100,11 +100,9 @@ public:
     void setPlayerCards(Hand *&PlayerCards);
 
 
-
-
-
-
-
-
-
+    std::vector<Territory*> ownedTerritories_;
+    bool committed_;
+    int reinforcements_;
+    Hand* hand_;
+    std::vector<Territory*> getOwnTerritoriesWithMovableArmies() const;
 };

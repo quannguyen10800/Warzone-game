@@ -6,10 +6,12 @@
 #include "../Map/Map.h"
 #include "../Player/Player.h"
 #include "../Card/Card.h"
+#include "../Orders/Orders.h"
 #include <cstdlib>
 #include <ctime>
 #include <vector>
 
+std::vector<Player*> GameEngine::players_;
 
 GameEngine::GameEngine(){
     //default state will be start
@@ -73,6 +75,14 @@ bool GameEngine::isValidState(char *state){
     if (strcmp(state,"win") == 0) return true;
 
     return false;
+}
+
+void GameEngine::assignToNeutralPlayer(Territory* territory)
+{
+    Player* owner = territory->getOwner();
+    owner->removeTerritory(territory);
+    territory->setOwner(neutralPlayer);
+    neutralPlayer->addTerritory(territory);
 }
 
 
@@ -216,6 +226,11 @@ void GameEngine:: addPlayersToList(Player* p1){
 }
 
 
+Map* GameEngine::getMap()
+{
+    return map_;
+}
+
 
 
 
@@ -225,22 +240,22 @@ GameEngine::~GameEngine(){
 
 void GameEngine::startupPhase() {
 
-    CommandProcessor* command=new CommandProcessor();
-    Map* map =new Map();
+    CommandProcessor *command = new CommandProcessor();
+    Map *map = new Map();
 
 
-    if(command->getCommand()=="loadmap") {
-        cout << "please enter the name of the map"<<endl;
+    if (command->getCommand() == "loadmap") {
+        cout << "please enter the name of the map" << endl;
         cin >> nameofthemap;
         map = MapLoader::parse(nameofthemap, map);
-        state="map loaded";
+        state = "map loaded";
         command->setEffect("map loaded");
 
     }
 
 
-    if(command->getCommand()=="validatemap") {
-        while(!Map::validate(map)) {
+    if (command->getCommand() == "validatemap") {
+        while (!Map::validate(map)) {
             cout << "the map is validated to be incorrect , please restart the game" << endl;
             State = "mapValidated";
             command.setEffect("mapIsNotValidated");
@@ -251,9 +266,9 @@ void GameEngine::startupPhase() {
         }
     }
 
-    if(state ==  "map validated ") {
+    if (state == "map validated ") {
 
-        if(command->getCommand() == "addPlayer") {
+        if (command->getCommand() == "addPlayer") {
             int numOfPlayers;
 
             cout << "please enter the number of players " << endl;
@@ -274,7 +289,7 @@ void GameEngine::startupPhase() {
 
         }
 
-        if(state = "players added ") {
+        if (state = "players added ") {
             if (command->getCommand() == "gameStart") {
                 int numberofterritoris = map->territories.size();
                 //int numberofterritoriesforeachplayer;
@@ -325,55 +340,68 @@ void GameEngine::startupPhase() {
         }
 
 
-
-
-    State = "play";
+        State = "play";
 
     }
 
-int  GameEngine :: getTheTurn(int numb){
-    srand(time(0));
-    int turn =(rand() % numb + 1);
-    return turn;
-
 }
-    
-void mainGameLoop(int numOfPlayers, <Player> players) {
 
-    while (numOfPlayers > 1) {
-        for (i = 0; i < numOfPlayers; i++) {
+    int GameEngine::getTheTurn(int numb) {
+        srand(time(0));
+        int turn = (rand() % numb + 1);
+        return turn;
 
-            reinforcementPhase(players.at(i));
+    }
 
-            issueOrdersPhase(players.at(i));
+    void mainGameLoop(int numOfPlayers, <Player> players) {
 
-            executeOrdersPhase(players.at(i));
-
+        while (numOfPlayers > 1) {
             for (i = 0; i < numOfPlayers; i++) {
-                if (players.at(i).getTerritories() = 0) {
-                    players.erase(players.at(i));
-                    numOfPlayers--;
+
+                reinforcementPhase(players.at(i));
+
+                issueOrdersPhase(players.at(i));
+
+                executeOrdersPhase(players.at(i));
+
+                for (i = 0; i < numOfPlayers; i++) {
+                    if (players.at(i).getTerritories() = 0) {
+                        players.erase(players.at(i));
+                        numOfPlayers--;
+                    }
                 }
             }
+            break;
         }
-        break;
     }
-}
-void reinforcementPhase(Player p) {
-    int atd;
-    int armiesToDeploy = p.getTerritories()/3 + p.getContinentBonus();
-    if (armiesToDeploy < 3) {
-        atd = 3;
+    void reinforcementPhase(Player p) {
+        int atd;
+        int armiesToDeploy = p.getTerritories() / 3 + p.getContinentBonus();
+        if (armiesToDeploy < 3) {
+            atd = 3;
+        } else {
+            atd = armiesToDeploy;
+        }
+        p.setTheNumberOfArmies(atd);
+
     }
-    else {
-        atd = armiesToDeploy;
+    void issueOrdersPhase() {
+
     }
-    p.setTheNumberOfArmies(atd);
+    void executeOrdersPhase() {
 
-}
-void issueOrdersPhase() {
+    }
 
-}
-void executeOrdersPhase() {
+Player* GameEngine::getOwnerOf(Territory* territory)
+{
+    for (const auto &player : players_)
+    {
+        std::vector<Territory*> territories = player->getOwnedTerritories();
+        if (find(territories.begin(), territories.end(), territory) != territories.end())
+        {
+            return player;
+        }
+    }
 
+    return nullptr;
 }

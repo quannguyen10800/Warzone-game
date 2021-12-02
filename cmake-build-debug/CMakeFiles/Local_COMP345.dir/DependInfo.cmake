@@ -8,21 +8,24 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/kaitran/Desktop/COMP345/Card/Card.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Card/Card.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/Card/CardsDriver.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessor.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/CommandProcessor/CommandProcessorDriver.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/GameEngine/GameEngine.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/LoggingObserver/LoggingObserver.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/Map/Map.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Map/Map.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/Map/MapDriver.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/Orders/Orders.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/Orders/OrdersDriver.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/Player/Player.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Player/Player.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/Player/PlayerDriver.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.o"
-  "/Users/kaitran/Desktop/COMP345/main.cpp" "/Users/kaitran/Desktop/COMP345/cmake-build-debug/CMakeFiles/Local_COMP345.dir/main.cpp.o"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Card/Card.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Card/Card.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Card/CardsDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/CommandProcessor/CommandProcessor.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/CommandProcessor/CommandProcessorDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/GameEngine/GameEngine.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/LoggingObserver/LoggingDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingDriver.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/LoggingObserver/LoggingObserver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Map/Map.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Map/Map.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Map/MapDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Orders/Orders.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Orders/OrdersDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Player/Player.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Player/Player.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Player/PlayerDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Strategies/PlayerStrategies.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Strategies/PlayerStrategies.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Strategies/PlayerStrategiesDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Strategies/PlayerStrategiesDriver.cpp.obj"
+  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/main.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

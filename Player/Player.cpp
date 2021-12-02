@@ -245,3 +245,19 @@ void Player :: printVector(vector<Territory*> a){
 void Player::setPlayerCards(Hand *&PlayerCards) {
     this->playerCards = PlayerCards;
 }
+
+
+// Get a list of territories with available armies for moving
+std::vector<Territory*> Player::getOwnTerritoriesWithMovableArmies() const
+{
+    std::vector<Territory*> territories;
+    for (const auto &territory : ownedTerritories_)
+    {
+        if (territory->getNumberOfMovableArmies() > 0)
+        {
+            territories.push_back(territory);
+        }
+    }
+
+    return territories;
+}

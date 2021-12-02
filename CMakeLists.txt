@@ -11,4 +11,4 @@ add_executable(Local_COMP345
         CommandProcessor/CommandProcessor.cpp CommandProcessor/CommandProcessor.h CommandProcessor/CommandProcessorDriver.cpp
         Card/CardsDriver.cpp Card/Card.h Card/Card.cpp
         Map/MapDriver.cpp Map/Map.cpp Map/Map.h
-        GameEngine/GameEngine.cpp GameEngine/GameEngine.h main.h Card/CardsDriver.h CommandProcessor/CommandProcessorDriver.h GameEngine/GameEngineDriver.h Map/MapDriver.h Player/PLayerDriver.h LoggingObserver/LoggingDriver.cpp)
+        GameEngine/GameEngine.cpp GameEngine/GameEngine.h main.h Card/CardsDriver.h CommandProcessor/CommandProcessorDriver.h GameEngine/GameEngineDriver.h Map/MapDriver.h Player/PLayerDriver.h LoggingObserver/LoggingDriver.cpp Strategies/PlayerStrategies.cpp Strategies/PlayerStrategies.h Strategies/PlayerStrategiesDriver.cpp)

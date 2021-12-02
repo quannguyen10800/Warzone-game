@@ -2,6 +2,8 @@
 
 #include <vector>
 #include <string>
+#include <unordered_map>
+#include <iostream>
 
 using namespace std;
 class Player;
@@ -27,7 +29,8 @@ public:
 
     Continent& operator=(const Continent &c);
     friend ostream& operator<<(ostream&, const Continent&);
-
+    void addPendingIncomingArmies(int armies);
+    void addPendingOutgoingArmies(int armies);
 };
 
 class Territory{
@@ -38,6 +41,11 @@ private:
     Player* player;
     vector<Territory*> neighbours;
     int numArmies;
+    int numberOfArmies_;
+    int pendingIncomingArmies_;
+    int pendingOutgoingArmies_;
+    std::string name_;
+
 
 public:
     Territory(int id, string name, int continent);
@@ -61,7 +69,17 @@ public:
     Territory& operator=(const Territory &c);
     void addArmies(int armies);
     friend ostream& operator<<(ostream&, const Territory&);
+    int getNumberOfMovableArmies();
+//    int getNumbersOfArmies() const;
 
+
+
+
+    void addPendingIncomingArmies(int armies);
+
+    void addPendingOutgoingArmies(int armies);
+
+    std::string getName() const;
 };
 
 class Map{
@@ -89,13 +107,28 @@ public:
     Map& operator=(const Map& m);
     friend ostream& operator<<(ostream&, const Map&);
     friend class MapLoader;
+
+    vector<Territory *> getAdjacentTerritories(Territory *territory);
+
+//    std::unordered_map<Territory*, std::vector<Territory*>> getAdjacencyList() const;
+//    std::vector<Territory*> getAdjacentTerritories(Territory* territory);
+
+private:
+
+//    std::unordered_map<Territory*, std::vector<Territory*>> adjacencyList_;
+
+
+    unordered_map<Territory *, vector<Territory *>> getAdjacencyList() const;
+    std::unordered_map<Territory*, std::vector<Territory*>> adjacencyList_;
 };
 
 
 
 class MapLoader{
 public:
-    static Map* parse(string file_name, Map *map);
+    static Map parse(string file_name, Map *map);
     static vector<string> split(const string&);
     static vector<string> split(const string&, char);
 };
+
+

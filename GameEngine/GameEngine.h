@@ -5,7 +5,8 @@
 class Player;
 class Territory;
 
-
+#include "../Map/Map.h"
+#include "../Player/Player.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -28,7 +29,7 @@ public:
 
      std::vector<Player*> players_;
 
-
+    static void assignToNeutralPlayer(Territory* territory);
 
     //DEFAULT CONSTRUCTOR
     GameEngine();
@@ -68,9 +69,14 @@ public:
 
     void startupPhase();
     int getTheTurn(int numb);
+
+
+    static Map *getMap();
+    static Player* getOwnerOf(Territory* territory);
+
 private:
 
-
+    static Map* map_;
 
 };
 

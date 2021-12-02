@@ -51,6 +51,7 @@ class Hand {
 private:
     //a hand is a vector of cards
     vector<Card*> hand;
+    std::vector<Card*> cards_;
 public:
     //empty constructor
     Hand();
@@ -62,4 +63,5 @@ public:
     vector<Card> getVector();
     Card getCard();
     Hand(const vector<Card*> &cards);
+    int size() ;
 };

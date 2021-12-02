@@ -330,6 +330,18 @@ bool Map::verify_continent_connected_subgraph() {
     return true;
 }
 
+void Territory::addPendingIncomingArmies(int armies)
+{
+    pendingIncomingArmies_ += armies;
+}
+
+void Territory::addPendingOutgoingArmies(int armies)
+{
+    pendingOutgoingArmies_ += armies;
+}
+
+
+
 
 bool Map::verify_unique_continents(){
     return true;
@@ -391,7 +403,7 @@ vector<string> MapLoader::split(const string &str) {
     return split(str, ' ');
 }
 
-Map* MapLoader::parse(string file_name, Map *map) {
+Map MapLoader::parse(string file_name, Map *map) {
 
     ifstream file_reader(file_name);
     string line;
@@ -498,3 +510,26 @@ Map* MapLoader::parse(string file_name, Map *map) {
     }
     return *map;
 }
+    // Return a list of territories that are adjacent to the one specified
+    std::vector<Territory*> Map::getAdjacentTerritories(Territory* territory)
+    {
+        return adjacencyList_[territory];
+    }
+
+// Getters
+std::unordered_map<Territory*, std::vector<Territory*>> Map::getAdjacencyList() const
+{
+    return adjacencyList_;
+}
+
+int Territory::getNumberOfMovableArmies()
+{
+    return numberOfArmies_ + pendingIncomingArmies_ - pendingOutgoingArmies_;
+}
+
+string Territory::getName() const
+{
+    return name_;
+}
+
+

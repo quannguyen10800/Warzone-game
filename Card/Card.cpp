@@ -1,8 +1,11 @@
-#include "../Card/Card.h"
+#include "Card.h"
 #include "../Orders/Orders.h"
+#include "../GameEngine/GameEngine.h"
 #include "iostream"
 #include <sstream>
 #include <ctime>
+#include <algorithm>
+#include <time.h>
 Card::Card()
 {
     //if no card type is specified in the constructor, a random int will be generated to determine the cards type
@@ -143,4 +146,11 @@ vector<Card> Deck::getVector() {
 Card Deck::getCard()
 {
     return Card();
+}
+
+
+// Get the number of cards in the hand.
+int Hand::size()
+{
+    return cards_.size();
 }
