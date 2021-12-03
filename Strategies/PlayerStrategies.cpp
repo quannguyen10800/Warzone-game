@@ -358,7 +358,26 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
     std::cout << "Issued: " << *order << std::endl << std::endl;
 }
 
+//***************** Benevolent PLayer *****************
+PlayerStrategy* BenevolentPlayerStrategy::clone() const
+{
+    return new BenevolentPlayerStrategy();
+}
 
+//*****************************************************
 
+//***************** Neutral PLayer *****************
+PlayerStrategy* NeutralPLayerStrategy::clone() const
+{
+    return new NeutralPLayerStrategy();
+}
+//*****************************************************
+
+//***************** Cheater PLayer *****************
+PlayerStrategy* CheaterPlayerStrategy::clone() const
+{
+    return new CheaterPlayerStrategy();
+}
+//*****************************************************
 
 

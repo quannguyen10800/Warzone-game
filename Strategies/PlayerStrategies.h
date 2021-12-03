@@ -64,8 +64,49 @@ private:
 
 
 
+// Tam Nhu Tran
+class BenevolentPlayerStrategy : public PlayerStrategy {
+public:
+    PlayerStrategy* clone() const;
+    std::vector<Territory*> toAttack(const Player* player) const;
+    std::vector<Territory*> toDefend(const Player* player) const;
+    void issueOrder(Player* player);
+
+protected:
+    std::ostream &print_(std::ostream &output) const;
+
+private:
+
+};
+
+class NeutralPLayerStrategy : public PlayerStrategy {
+public:
+    PlayerStrategy* clone() const;
+    std::vector<Territory*> toAttack(const Player* player) const;
+    std::vector<Territory*> toDefend(const Player* player) const;
+    void issueOrder(Player* player);
+
+protected:
+    std::ostream &print_(std::ostream &output) const;
+
+private:
+
+};
+
+class CheaterPlayerStrategy : public PlayerStrategy{
+public:
+    PlayerStrategy* clone() const;
+    std::vector<Territory*> toAttack(const Player* player) const;
+    std::vector<Territory*> toDefend(const Player* player) const;
+    void issueOrder(Player* player);
+
+protected:
+    std::ostream &print_(std::ostream &output) const;
 
 
+private:
+
+};
 
 
 
