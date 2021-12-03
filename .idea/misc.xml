@@ -10,6 +10,7 @@
       <file path="$PROJECT_DIR$/Map" />
       <file path="$PROJECT_DIR$/Orders" />
       <file path="$PROJECT_DIR$/Player" />
+      <file path="$PROJECT_DIR$/Strategies" />
     </sourceRoots>
   </component>
 </project>
