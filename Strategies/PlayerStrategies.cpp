@@ -361,6 +361,11 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
     std::cout << "Issued: " << *order << std::endl << std::endl;
 }
 
+//***************** Benevolent PLayer *****************
+PlayerStrategy* BenevolentPlayerStrategy::clone() const
+{
+    return new BenevolentPlayerStrategy();
+}
 
 // Deploy player's reinforcements to specified territory
 void HumanPlayerStrategy::deployReinforcements_(Player* player, std::vector<Territory*> territoriesToDefend) {
@@ -436,6 +441,20 @@ void HumanPlayerStrategy::playCard_(Player* player, std::vector<Territory*> terr
         deployReinforcements_(player, territoriesToDefend);
     }
 }
+//*****************************************************
 
+//***************** Neutral PLayer *****************
+PlayerStrategy* NeutralPLayerStrategy::clone() const
+{
+    return new NeutralPLayerStrategy();
+}
+//*****************************************************
+
+//***************** Cheater PLayer *****************
+PlayerStrategy* CheaterPlayerStrategy::clone() const
+{
+    return new CheaterPlayerStrategy();
+}
+//*****************************************************
 
 
