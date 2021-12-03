@@ -3,16 +3,13 @@
 //
 
 #pragma once
-
 #include "../map/Map.h"
 #include "../Player/Player.h"
 #include <iostream>
 #include <vector>
-
 class Player;
 
 class PlayerStrategy {
-
 public:
     virtual std::vector<Territory*> toAttack(const Player* player) const = 0;
     virtual std::vector<Territory*> toDefend(const Player* player) const = 0;
@@ -26,8 +23,7 @@ protected:
 
 //Quan Nguyen
 
-class AggressivePlayerStrategy : public PlayerStrategy
-{
+class AggressivePlayerStrategy : public PlayerStrategy {
 public:
     PlayerStrategy* clone() const;
     std::vector<Territory*> toAttack(const Player* player) const;
@@ -45,8 +41,7 @@ private:
 };
 
 
-class HumanPlayerStrategy : public PlayerStrategy
-{
+class HumanPlayerStrategy : public PlayerStrategy {
 public:
     PlayerStrategy* clone() const;
     std::vector<Territory*> toAttack(const Player* player) const;
