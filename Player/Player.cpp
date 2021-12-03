@@ -7,6 +7,9 @@
 #include "../Orders/Orders.h"
 #include "../Card/Card.h"
 #include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <sstream>
 #include "string"
 #include "list"
 //initializing  the number to zerp
@@ -260,4 +263,17 @@ std::vector<Territory*> Player::getOwnTerritoriesWithMovableArmies() const
     }
 
     return territories;
+}
+
+// Check if the player has already issued an advance order from `source` to `destination`
+bool Player::advancePairingExists_(Territory* source, Territory* destination)
+{
+    auto issuedIterator = issuedDeploymentsAndAdvancements_.find(source);
+    if (issuedIterator != issuedDeploymentsAndAdvancements_.end())
+    {
+        std::vector<Territory*> pastAdvancements = issuedIterator->second;
+        return find(pastAdvancements.begin(), pastAdvancements.end(), destination) != pastAdvancements.end();
+    }
+
+    return false;
 }

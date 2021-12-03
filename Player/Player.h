@@ -11,6 +11,7 @@ class OrdersList;
 class Hand;
 #include "list"
 #include  <vector>
+#include <unordered_map>
 
 using namespace std;
 
@@ -52,6 +53,9 @@ private:
     bool neutral = false;
 
     Hand* hand_;
+
+    std::unordered_map<Territory*, std::vector<Territory*>> issuedDeploymentsAndAdvancements_;
+    bool advancePairingExists_(Territory* source, Territory* destination);
 
 
 
