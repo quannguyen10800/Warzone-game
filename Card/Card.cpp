@@ -143,14 +143,38 @@ vector<Card> Deck::getVector() {
     return this->deck;
 }
 
-Card Deck::getCard()
+// Getter and setter
+std::vector<Card*> Hand::getCards() const
 {
-    return Card();
+    return cards_;
 }
 
 
 // Get the number of cards in the hand.
-int Hand::size()
+int Hand::size() const
 {
     return cards_.size();
 }
+
+// Remove and return a card from the player's hand indicated by `position`.
+Card* Hand::removeCard(int position)
+{
+    auto cardPosition = cards_.begin() + position;
+    Card* card = *cardPosition;
+    cards_.erase(cardPosition);
+
+    return card;
+}
+
+
+void Card::setOwner(Player* owner)
+{
+    owner_ = owner;
+}
+
+//// Add a card to the deck.
+//void Deck::addCard(Card* card)
+//{
+//    cards_.push_back(card);
+//}
+

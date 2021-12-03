@@ -12,12 +12,6 @@
 #include "Orders.h"
 
 
-// ---------------------------------------
-// Implementations for Assignment 2 Part 5
-// ---------------------------------------
-// The saveEffect() method is called each time any subclass of order is executed in its inherited execute_().
-// It saves the effect of their execution in a static string member of Order class.
-// This makes the effects of the execute_() in any child class available to the base class.
 
 
 Player* Order::getPlayer() const
@@ -367,7 +361,7 @@ void DeployOrder::execute_()
     destination_->addArmies(numberOfArmies_);
     destination_->setPendingIncomingArmies(0);
     std::cout << "Deployed " << numberOfArmies_ << " armies to " << destination_->getName() << "." << std::endl;
-    saveEffect("Deployed " << numberOfArmies_ << " armies to " << destination_->getName() << ".");
+    saveEffect("Deployed "  numberOfArmies_ << " armies to " << destination_->getName() << ".");
 }
 
 // Reverse the pre-orders-execution game state back to before the order was created.

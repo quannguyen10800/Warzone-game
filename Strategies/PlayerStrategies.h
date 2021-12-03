@@ -6,6 +6,7 @@
 
 #include "../map/Map.h"
 #include "../Player/Player.h"
+#include "../Card/Card.h"
 #include <iostream>
 #include <vector>
 

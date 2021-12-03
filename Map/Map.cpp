@@ -532,4 +532,16 @@ string Territory::getName() const
     return name_;
 }
 
+int Territory::getNumberOfArmies() const
+{
+    return numberOfArmies_;
+}
+
+int Territory::getPendingIncomingArmies() const
+{
+    return pendingIncomingArmies_;
+}
+
+
+
 

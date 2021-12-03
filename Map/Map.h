@@ -7,32 +7,7 @@
 
 using namespace std;
 class Player;
-class Territory;
-
-class Continent{
-private:
-    int army_bonus;
-    string name;
-    vector<Territory*> territories;
-
-public:
-    Continent(string name, int army_bonus);
-    Continent(Continent &obj);
-    Continent();
-    ~Continent();
-
-    string get_name();
-    int get_army_bonus();
-    vector<Territory*> get_territories();
-
-    void add_territory(Territory* territory);
-
-    Continent& operator=(const Continent &c);
-    friend ostream& operator<<(ostream&, const Continent&);
-    void addPendingIncomingArmies(int armies);
-    void addPendingOutgoingArmies(int armies);
-};
-
+class Continent;
 class Territory{
 private:
     int id, continent_id, armies;
@@ -70,7 +45,7 @@ public:
     void addArmies(int armies);
     friend ostream& operator<<(ostream&, const Territory&);
     int getNumberOfMovableArmies();
-//    int getNumbersOfArmies() const;
+    int getNumberOfArmies() const;
 
 
 
@@ -78,9 +53,35 @@ public:
     void addPendingIncomingArmies(int armies);
 
     void addPendingOutgoingArmies(int armies);
-
+    int getPendingIncomingArmies() const;
     std::string getName() const;
 };
+
+class Continent{
+private:
+    int army_bonus;
+    string name;
+    vector<Territory*> territories;
+
+public:
+    Continent(string name, int army_bonus);
+    Continent(Continent &obj);
+    Continent();
+    ~Continent();
+
+    string get_name();
+    int get_army_bonus();
+    vector<Territory*> get_territories();
+
+    void add_territory(Territory* territory);
+
+    Continent& operator=(const Continent &c);
+    friend ostream& operator<<(ostream&, const Continent&);
+    void addPendingIncomingArmies(int armies);
+    void addPendingOutgoingArmies(int armies);
+};
+
+
 
 class Map{
 public:

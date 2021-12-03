@@ -4,8 +4,8 @@
 
 #include "PlayerStrategies.h"
 #include "../GameEngine/GameEngine.h"
-//#include "../Map/Map.h"
 #include "../Orders/Orders.h"
+#include "../Map/Map.h"
 #include <algorithm>
 #include <math.h>
 #include <time.h>
@@ -135,6 +135,9 @@ void AggressivePlayerStrategy::issueOrder(Player* player)
 
     }
 }
+
+
+
 
 
 
@@ -285,14 +288,14 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
     }
 
     int i = 0;
-    std::cout << "\nWhich territory would you like to advance to?" << std::endl;
+    std::cout << "\nTo which territory do you want to advance:" << std::endl;
     if (!defendable.empty())
     {
         std::cout << "~~~ To Defend ~~~" << std::endl;
         for (; i < defendable.size(); i++)
         {
             Territory* territory = defendable.at(i);
-            std::cout << "[" << i+1 << "] " << territory->getName() << " (" << territory->get_armies() << " armies present)" << std::endl;
+            std::cout << "[" << i+1 << "] " << territory->getName() << " (" << territory->get_armies() << " armies)" << std::endl;
         }
         std::cout << std::endl;
     }
@@ -303,12 +306,12 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
         {
             int idx = i - defendable.size();
             Territory* territory = attackable.at(idx);
-            std::cout << "[" << i+1 << "] " << territory->getName() << " (" << territory->get_armies() << " armies present)" << std::endl;
+            std::cout << "[" << i+1 << "] " << territory->getName() << " (" << territory->get_armies() << " armies)" << std::endl;
         }
     }
 
     Territory* destination = nullptr;
-    std::cout << "\nEnter the territory to advance to: ";
+    std::cout << "\nEnter the territory to advance: ";
     while (destination == nullptr)
     {
         int selection;
@@ -316,7 +319,7 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
 
         if (std::cin.fail() || selection - 1 < 0 || selection - 1 >= defendable.size() + attackable.size())
         {
-            std::cout << "That was not a valid option. Please try again:" << std::endl;
+            std::cout << "Invalid option. Try Again" << std::endl;
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
@@ -334,7 +337,7 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
 
     int armiesToMove = 0;
     int movableArmies = source->getNumberOfMovableArmies();
-    std::cout << "How many armies do you want to move? ";
+    std::cout << "Number of armies to move:";
     while (armiesToMove == 0)
     {
         int selection;
@@ -359,6 +362,80 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
 }
 
 
+// Deploy player's reinforcements to specified territory
+void HumanPlayerStrategy::deployReinforcements_(Player* player, std::vector<Territory*> territoriesToDefend) {
+    std::cout << "You have " << player->reinforcements_ << " reinforcements left." << std::endl;
+    std::cout << "\nWhere would you like to deploy to?" << std::endl;
+    for (int i = 0; i < territoriesToDefend.size(); i++) {
+        Territory *territory = territoriesToDefend.at(i);
+        std::cout << "[" << i + 1 << "] " << territory->getName() << " (" << territory->getNumberOfArmies()
+                  << " present, " << territory->getPendingIncomingArmies() << " pending)" << std::endl;
+    }
+
+    Territory *deployTarget = nullptr;
+    std::cout << "\nEnter the territory to deploy to: ";
+    while (deployTarget == nullptr) {
+        int selection;
+        std::cin >> selection;
+
+        if (std::cin.fail() || selection - 1 < 0 || selection - 1 >= territoriesToDefend.size()) {
+            std::cout << "That was not a valid option. Please try again:" << std::endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
+
+        deployTarget = territoriesToDefend.at(selection - 1);
+    }
+}
+
+
+// Play a card from the player's hand
+void HumanPlayerStrategy::playCard_(Player* player, std::vector<Territory*> territoriesToDefend)
+{
+    Hand* playerHand = player->hand_;
+
+    std::cout << "\nWhich card would you like to play?" << std::endl;
+    for (int i = 0; i < playerHand->size(); i++)
+    {
+        Card* card = playerHand->getCards().at(i);
+        std::cout << "[" << i+1 << "] " << *card << std::endl;
+    }
+
+    Card* card = nullptr;
+    std::cout << "\nEnter the card to play: ";
+    while (card == nullptr)
+    {
+        int selection;
+        std::cin >> selection;
+
+        if (std::cin.fail() || selection - 1 < 0 || selection - 1 >= playerHand->size())
+        {
+            std::cout << "That was not a valid option. Please try again:" << std::endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
+
+        card = playerHand->removeCard(selection - 1);
+    }
+
+    Order* order = card->play();
+
+    // Return the played card back to the deck
+    card->setOwner(nullptr);
+    GameEngine::getDeck()->addCard(card);
+
+    if (order != nullptr)
+    {
+        player->addOrder(order);
+        std::cout << "Issued: " << *order << std::endl << std::endl;
+    }
+    else if (player->reinforcements_ > 0)
+    {
+        deployReinforcements_(player, territoriesToDefend);
+    }
+}
 
 
 

@@ -4,6 +4,8 @@
 #include <vector>
 #include "../Orders/Orders.h"
 #include "../Map/Map.h"
+#include <iostream>
+#include "../Player/Player.h"
 class Deck;
 class Hand;
 using namespace std;
@@ -28,6 +30,14 @@ public:
 
     //setter
     void setType(int type);
+    virtual Order* play() const = 0;
+    Card* removeCard(int position);
+
+    void setOwner(Player *owner);
+
+protected:
+    Player* owner_;
+
 };
 
 class Deck {
@@ -45,6 +55,11 @@ public:
     //getters
     vector<Card> getVector();
     Card getCard();
+
+    int size() const;
+    std::vector<Card*> getCards() const;
+
+    void addCard(Card *pCard);
 };
 
 class Hand {
@@ -63,5 +78,8 @@ public:
     vector<Card> getVector();
     Card getCard();
     Hand(const vector<Card*> &cards);
-    int size() ;
+    int size() const;
+    std::vector<Card*> getCards() const;
+
+    Card *removeCard(int position);
 };

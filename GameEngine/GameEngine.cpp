@@ -405,3 +405,12 @@ Player* GameEngine::getOwnerOf(Territory* territory)
 
     return nullptr;
 }
+
+
+Deck* GameEngine::deck_ = new Deck();
+
+// Static getters
+Deck* GameEngine::getDeck()
+{
+    return deck_;
+}

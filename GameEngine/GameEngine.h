@@ -7,6 +7,7 @@ class Territory;
 
 #include "../Map/Map.h"
 #include "../Player/Player.h"
+#include "../Card/Card.h"
 #include <vector>
 #include <string>
 #include <iostream>
@@ -74,9 +75,12 @@ public:
     static Map *getMap();
     static Player* getOwnerOf(Territory* territory);
 
+    static Deck *getDeck();
+
 private:
 
     static Map* map_;
+    static Deck* deck_;
 
 };
 

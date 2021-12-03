@@ -11,11 +11,20 @@ class OrdersList;
 class Hand;
 #include "list"
 #include  <vector>
+
 using namespace std;
 
+// Quan
+class AggressivePlayerStrategy;
+class HumanPlayerStrategy;
 
 
 class Player{
+
+    // Quan
+    friend class AggressivePlayerStrategy;
+    friend class HumanPlayerStrategy;
+
 private:
     //a player own a collection of territories
     vector<Territory*> territories;
@@ -41,6 +50,8 @@ private:
 
     vector<Player*> diplomaticRelations_;
     bool neutral = false;
+
+    Hand* hand_;
 
 
 
@@ -103,6 +114,6 @@ public:
     std::vector<Territory*> ownedTerritories_;
     bool committed_;
     int reinforcements_;
-    Hand* hand_;
+
     std::vector<Territory*> getOwnTerritoriesWithMovableArmies() const;
 };
