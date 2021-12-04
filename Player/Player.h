@@ -15,9 +15,7 @@ class Hand;
 
 using namespace std;
 
-// Quan
-class AggressivePlayerStrategy;
-class HumanPlayerStrategy;
+
 
 
 class Player{

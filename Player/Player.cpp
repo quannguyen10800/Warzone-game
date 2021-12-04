@@ -250,7 +250,7 @@ void Player::setPlayerCards(Hand *&PlayerCards) {
 }
 
 
-// Get a list of territories with available armies for moving
+
 std::vector<Territory*> Player::getOwnTerritoriesWithMovableArmies() const
 {
     std::vector<Territory*> territories;
@@ -265,7 +265,7 @@ std::vector<Territory*> Player::getOwnTerritoriesWithMovableArmies() const
     return territories;
 }
 
-// Check if the player has already issued an advance order from `source` to `destination`
+
 bool Player::advancePairingExists_(Territory* source, Territory* destination)
 {
     auto issuedIterator = issuedDeploymentsAndAdvancements_.find(source);
