@@ -6,6 +6,7 @@
 #include "../Map/Map.h"
 #include "../Orders/Orders.h"
 #include "../Card/Card.h"
+#include "../Strategies/PlayerStrategies.h"
 #include <iostream>
 #include <algorithm>
 #include <math.h>
@@ -25,10 +26,18 @@ Player ::Player() {
     *number=*number+1;
     this->Pname="";
     //function
-
-
-
 }
+
+Player ::Player(PlayerStrategy *player_strategy) {
+
+    this->player_strategy = player_strategy;
+    this->territories = vector<Territory *>();
+    this->orders = new OrdersList();
+    this->handofcard = new Hand();
+    *number=*number+1;
+    this->Pname="";
+
+
 Player ::Player(string s) {
     this->territories = vector<Territory *>();
     this->orders = new OrdersList();
