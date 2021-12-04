@@ -6,6 +6,7 @@
 #include "../GameEngine/GameEngine.h"
 #include "../Orders/Orders.h"
 #include "../Map/Map.h"
+#include "../Player/Player.h"
 #include <algorithm>
 #include <math.h>
 #include <time.h>
