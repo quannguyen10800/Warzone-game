@@ -1,5 +1,5 @@
 //
-// Created by Quan Nguyen on 2021-12-01.
+// Created by Quan Nguyen on 2021-11-27.
 //
 
 #pragma once
@@ -35,8 +35,8 @@ protected:
     std::ostream &print_(std::ostream &output) const;
 
 private:
-    bool deployToTopTerritory_(Player* player, std::vector<Territory*> territoriesToDefend);
-    bool attackFromTopTerritory_(Player* player, Territory* attackFrom, std::vector<Territory*> territoriesToAttack);
+    bool deployToTT(Player* player, std::vector<Territory*> territoriesToDefend);
+    bool attackFromTT(Player* player, Territory* attackFrom, std::vector<Territory*> territoriesToAttack);
     bool advanceToRandomTerritory_(Player* player, std::vector<Territory*> territoriesToDefend);
     bool playCard_(Player* player, std::vector<Territory*> territoriesToDefend);
 };
