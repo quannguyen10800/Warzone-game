@@ -19,6 +19,8 @@ using namespace std;
 class AggressivePlayerStrategy;
 class HumanPlayerStrategy;
 
+class PlayerStrategy;
+
 
 class Player{
 
@@ -27,6 +29,8 @@ class Player{
     friend class HumanPlayerStrategy;
 
 private:
+
+    PlayerStrategy *player_strategy;
     //a player own a collection of territories
     vector<Territory*> territories;
     //i dont have the class now so im gonna comment it
