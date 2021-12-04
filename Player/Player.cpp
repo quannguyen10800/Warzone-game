@@ -28,8 +28,8 @@ Player ::Player() {
     //function
 }
 
-Player ::Player(PlayerStrategy *player_strategy) {
-
+Player ::Player(string s, PlayerStrategy *player_strategy) {
+    this->Pname=s
     this->player_strategy = player_strategy;
     this->territories = vector<Territory *>();
     this->orders = new OrdersList();

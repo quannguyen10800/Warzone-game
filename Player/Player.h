@@ -68,7 +68,7 @@ public:
 
     //defualt contructor
     Player();
-    Player(PlayerStrategy *player_strategy);
+    Player(string s, PlayerStrategy *player_strategy);
     Player(string s ,vector<Territory*> territories,Hand *handofcard,OrdersList *orders);
     //contructor with name
     Player(string n);

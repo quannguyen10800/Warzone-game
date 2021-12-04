@@ -328,14 +328,6 @@ void GameEngine::startupPhase() {
                     players_.at(i)->setTheNumberOFArmies(50);
 
                 }
-
-//        for (int i = 0; i <numOfPlayers ; i++) {
-//            for (int j = 0; j < 2; j++) {
-//              //  players_.at(i).draw();
-//
-//            }
-
-//        }
             }
         }
 
@@ -390,6 +382,10 @@ void GameEngine::startupPhase() {
     }
     void executeOrdersPhase() {
 
+    // Missing code from assignment 2!
+        turn++;
+        if (turn == maxnumberofturns)
+            state = "win";
     }
 
 Player* GameEngine::getOwnerOf(Territory* territory)
@@ -413,4 +409,168 @@ Deck* GameEngine::deck_ = new Deck();
 Deck* GameEngine::getDeck()
 {
     return deck_;
+}
+
+
+
+void GameEngine::startTournament() {
+
+    string t_command = "";
+    bool valid = true;
+    do {
+        cout << "Please enter the command in the following format to start a tournament:" << endl;
+        cout << "tournament -M <listofmapfiles> -P <listofplayerstrategies> -G <numberofgames> -D <maxnumberofturns>"
+             << endl;
+        string word = "";
+        bool inlistofmapfiles = false;
+        bool inlistofplayerstrategies = false;
+        vector <string> listofmapfiles;
+        vector <string> listofplayerstrategies;
+        int numberofgames = 0;
+        int maxnumberofturns = 0;
+        cin >> t_command;
+        istringstream iss(t_command, istringstream::in);
+
+        // Take the information from the command.
+        while (iss >> word) {
+            if (word.compare("-M"))
+                inlistofmapfiles = true;
+            if (word.compare("-P")) {
+                inlistofmapfiles = false;
+                inlistofplayerstrategies = true;
+            }
+            if (word.compare("-G"))
+                inlistofplayerstrategies = false;
+
+            if (inlistofmapfiles)
+                listofmapfiles.push_back(word);
+
+            if (inlistofplayerstrategies)
+                listofplayerstrategies.push_back(player_strategy);
+
+            if (word.compare("-G")) {
+                iss >> word;
+                numberofgames = stoi(word);
+                if (numberofgames > 5 || numberofgames < 1)
+                    valid = false;
+            }
+
+            if (word.compare("-D")) {
+                iss >> word
+                maxnumberofturns = stoi(word);
+                if (maxnumberofturns < 10 || maxnumberofturns > 50)
+                    valid = false;
+            }
+        }
+
+            // Further checking of inputs
+            int numberofmaps = 0;
+            for (string s : listofmapfiles)
+                numberofmaps++;
+            if (numberofmaps < 1 || numberofmaps > 5)
+                valid = false;
+
+            int numberofplayers = 0;
+            for (string s : listofplayerstrategies)
+                numberofplayers++;
+            if (numberofplayers < 2 || numberofplayers > 4)
+                valid = false;
+
+
+    } while (!valid);
+
+        // For each map, run the game for <numberofgames> times.
+        for (string map_name: listofmapfiles) {
+            for (int i = 0; i < numberofgames; i++) {
+                CommandProcessor *command = new CommandProcessor();
+                Map *map = new Map();
+
+
+                if (command->getCommand() == "loadmap") {
+                    map = MapLoader::parse(map_name, map);
+                    state = "map loaded";
+                    command->setEffect("map loaded");
+                }
+
+                if (command->getCommand() == "validatemap") {
+                    while (!Map::validate(map)) {
+                        cout << "the map is validated to be incorrect , please restart the game" << endl;
+                        command.setEffect("mapIsNotValidated");
+                    }
+                    else{
+                        state = "map validated";
+                        command.setEffect("mapIsValidated");
+                    }
+                }
+
+                if (state == "map validated ") {
+
+                    if (command->getCommand() == "addPlayer") {
+
+                        //For each player strategy, create a new player with the respective strategy.
+                        int numOfPlayers = 0;
+                        for (string strategy: listofplayerstrategies) {
+                            numOfPlayers++;
+                            PlayerStrategy *player_strategy;
+                            switch (strategy) {
+                                case Aggressive:
+                                    player_strategy = new AggressivePlayerStrategy();
+                                    break;
+
+                                case Neutral:
+                                    player_strategy = new NeutralPlayerStrategy();
+                                    break;
+
+                                case Benevolent:
+                                    player_strategy = new BenevolentPlayerStrategy();
+                                    break;
+
+                                case Cheater:
+                                    player_strategy = new CheaterPlayerStrategy();
+                                    break;
+                            }
+
+                            Player *player = new PLayer(strategy, player_strategy);
+                            addPlayersToList(p1);
+                        }
+
+                        state = "players added";
+                    }
+                }
+
+
+                if (state = "players added ") {
+                    if (command->getCommand() == "gameStart") {
+                        int numberofterritoris = map->territories.size();
+                        int helper = numberofterritoris / numOfPlayers;
+                        int helper3 = helper * 4;
+                        int helper2 = numberofterritoris - (helper3);
+
+                        for (int i = 0; i < players_.size(); i++) {
+                            for (int j = 0; j < helper; j++) {
+                                static int indexofterritories = 0;
+                                players_.at(i)->addTerritory(map->territories.at(indexofterritories));
+                                indexofterritories++;
+                            }
+                        }
+
+                        for (int i = 0; i < helper2; i++) {
+                            for (int j = 0; j < map->territories.size(); j++) {
+                                players_.at(i)->addTerritory(map->territories.at(helper3));
+                                helper3++;
+                            }
+                        }
+
+                        bool order;
+                        int turn;
+                        turn = getTheTurn(numOfPlayers);
+                        cout << "it is the turn for player number " << turn << endl;
+
+                        for (int i = 0; i < numOfPlayers; i++)
+                            players_.at(i)->setTheNumberOFArmies(50);
+                    }
+                    state = "play";
+                }
+            }
+        }
 }
