@@ -443,10 +443,6 @@ void GameEngine::startTournament() {
                 inlistofplayerstrategies = true;
                 break;
             }
-            if (word.compare("-G")) {
-                inlistofplayerstrategies = false;
-                break;
-            }
 
             if (inlistofmapfiles)
                 listofmapfiles.push_back(word);
@@ -455,6 +451,7 @@ void GameEngine::startTournament() {
                 listofplayerstrategies.push_back(player_strategy);
 
             if (word.compare("-G")) {
+                inlistofplayerstrategies = false;
                 iss >> word;
                 numberofgames = stoi(word);
                 if (numberofgames > 5 || numberofgames < 1)
