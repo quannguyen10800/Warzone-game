@@ -7,6 +7,7 @@
 #include "../Player/Player.h"
 #include "../Card/Card.h"
 #include "../Orders/Orders.h"
+#include "../Strategies/PlayerStrategies.h"
 #include <cstdlib>
 #include <ctime>
 #include <vector>
@@ -433,14 +434,19 @@ void GameEngine::startTournament() {
 
         // Take the information from the command.
         while (iss >> word) {
-            if (word.compare("-M"))
+            if (word.compare("-M")) {
                 inlistofmapfiles = true;
+                break;
+            }
             if (word.compare("-P")) {
                 inlistofmapfiles = false;
                 inlistofplayerstrategies = true;
+                break;
             }
-            if (word.compare("-G"))
+            if (word.compare("-G")) {
                 inlistofplayerstrategies = false;
+                break;
+            }
 
             if (inlistofmapfiles)
                 listofmapfiles.push_back(word);
@@ -513,25 +519,25 @@ void GameEngine::startTournament() {
                             numOfPlayers++;
                             PlayerStrategy *player_strategy;
                             switch (strategy) {
-                                case Aggressive:
+                                case "Aggressive":
                                     player_strategy = new AggressivePlayerStrategy();
                                     break;
 
-                                case Neutral:
+                                case "Neutral":
                                     player_strategy = new NeutralPlayerStrategy();
                                     break;
 
-                                case Benevolent:
+                                case "Benevolent":
                                     player_strategy = new BenevolentPlayerStrategy();
                                     break;
 
-                                case Cheater:
+                                case "Cheater":
                                     player_strategy = new CheaterPlayerStrategy();
                                     break;
                             }
 
-                            Player *player = new PLayer(strategy, player_strategy);
-                            addPlayersToList(p1);
+                            Player *player = new Player(strategy, player_strategy);
+                            addPlayersToList(*player);
                         }
 
                         state = "players added";

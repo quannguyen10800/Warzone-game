@@ -77,6 +77,8 @@ public:
 
     static Deck *getDeck();
 
+    void startTournament() {};
+
 private:
 
     static Map* map_;

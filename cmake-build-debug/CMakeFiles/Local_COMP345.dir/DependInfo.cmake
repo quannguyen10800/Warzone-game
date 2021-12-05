@@ -8,22 +8,22 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Card/Card.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Card/Card.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Card/CardsDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/CommandProcessor/CommandProcessor.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/CommandProcessor/CommandProcessorDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/GameEngine/GameEngine.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/LoggingObserver/LoggingDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingDriver.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/LoggingObserver/LoggingObserver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Map/Map.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Map/Map.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Map/MapDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Orders/Orders.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Orders/OrdersDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Player/Player.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Player/Player.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Player/PlayerDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Strategies/PlayerStrategies.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Strategies/PlayerStrategies.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/Strategies/PlayerStrategiesDriver.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Strategies/PlayerStrategiesDriver.cpp.obj"
-  "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/main.cpp" "C:/Users/quannguyen1/CLionProjects/COMP345_reorganize/cmake-build-debug/CMakeFiles/Local_COMP345.dir/main.cpp.obj"
+  "D:/CLion/comp345fall/Card/Card.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Card/Card.cpp.obj"
+  "D:/CLion/comp345fall/Card/CardsDriver.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Card/CardsDriver.cpp.obj"
+  "D:/CLion/comp345fall/CommandProcessor/CommandProcessor.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessor.cpp.obj"
+  "D:/CLion/comp345fall/CommandProcessor/CommandProcessorDriver.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/CommandProcessor/CommandProcessorDriver.cpp.obj"
+  "D:/CLion/comp345fall/GameEngine/GameEngine.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/GameEngine/GameEngine.cpp.obj"
+  "D:/CLion/comp345fall/LoggingObserver/LoggingDriver.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingDriver.cpp.obj"
+  "D:/CLion/comp345fall/LoggingObserver/LoggingObserver.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/LoggingObserver/LoggingObserver.cpp.obj"
+  "D:/CLion/comp345fall/Map/Map.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Map/Map.cpp.obj"
+  "D:/CLion/comp345fall/Map/MapDriver.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Map/MapDriver.cpp.obj"
+  "D:/CLion/comp345fall/Orders/Orders.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Orders/Orders.cpp.obj"
+  "D:/CLion/comp345fall/Orders/OrdersDriver.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Orders/OrdersDriver.cpp.obj"
+  "D:/CLion/comp345fall/Player/Player.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Player/Player.cpp.obj"
+  "D:/CLion/comp345fall/Player/PlayerDriver.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Player/PlayerDriver.cpp.obj"
+  "D:/CLion/comp345fall/Strategies/PlayerStrategies.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Strategies/PlayerStrategies.cpp.obj"
+  "D:/CLion/comp345fall/Strategies/PlayerStrategiesDriver.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/Strategies/PlayerStrategiesDriver.cpp.obj"
+  "D:/CLion/comp345fall/main.cpp" "D:/CLion/comp345fall/cmake-build-debug/CMakeFiles/Local_COMP345.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
