@@ -1,5 +1,5 @@
 //
-// Created by Quan Nguyen on 2021-12-01.
+// Created by Quan Nguyen on 2021-11-27.
 //
 
 #include "PlayerStrategies.h"
@@ -120,13 +120,13 @@ void AggressivePlayerStrategy::issueOrder(Player* player)
     std::vector<Territory*> territoriesToAttack = toAttack(player);
     std::vector<Territory*> territoriesToDefend = toDefend(player);
 
-    bool finishedDeploying = deployToTopTerritory_(player, territoriesToDefend);
+    bool finishedDeploying = deployToTT(player, territoriesToDefend);
     if (finishedDeploying)
     {
         bool finishedPlayingCards = playCard_(player, territoriesToDefend);
         if (finishedPlayingCards)
         {
-            bool finishedAttacking = attackFromTopTerritory_(player, territoriesToDefend.front(), territoriesToAttack);
+            bool finishedAttacking = attackFromTT(player, territoriesToDefend.front(), territoriesToAttack);
             if (finishedAttacking)
             {
                 bool finishedIssuingOrders = advanceToRandomTerritory_(player, territoriesToDefend);
@@ -141,7 +141,7 @@ void AggressivePlayerStrategy::issueOrder(Player* player)
 // Deploy all reinforcements to the strongest territory.
 // If the deployment is complete and no additional orders have been given, this method returns true.
 // If an order was issued, this method returns 'false.'
-bool AggressivePlayerStrategy::deployToTopTerritory_(Player* player, std::vector<Territory*> territoriesToDefend)
+bool AggressivePlayerStrategy::deployToTT(Player* player, std::vector<Territory*> territoriesToDefend)
 {
     if (player->reinforcements_ == 0)
     {
@@ -162,7 +162,7 @@ bool AggressivePlayerStrategy::deployToTopTerritory_(Player* player, std::vector
 // Advance all armies from strongest territory to an enemy territory.
 // If the deployment is complete and no additional orders have been given, this method returns true.
 // If an order was issued, this method returns 'false.'
-bool AggressivePlayerStrategy::attackFromTopTerritory_(Player* player, Territory* attackFrom, std::vector<Territory*> territoriesToAttack)
+bool AggressivePlayerStrategy::attackFromTT(Player* player, Territory* attackFrom, std::vector<Territory*> territoriesToAttack)
 {
     Map* map = GameEngine::getMap();
     int movableArmies = attackFrom->getNumberOfMovableArmies();
@@ -253,7 +253,7 @@ bool AggressivePlayerStrategy::playCard_(Player* player, std::vector<Territory*>
     else if (player->reinforcements_ > 0)
     {
         // Reinforcement card played: deploy the additional reinforcements
-        deployToTopTerritory_(player, territoriesToDefend);
+        deployToTT(player, territoriesToDefend);
     }
 
     return false;
@@ -369,7 +369,7 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
 {
     std::vector<Territory*> possibleSources = player->getOwnTerritoriesWithMovableArmies();
 
-    std::cout << "\nWhich territory would you like to advance from?" << std::endl;
+    std::cout << "\nFrom which territory do you wish to advance?" << std::endl;
     for (int i = 0; i < possibleSources.size(); i++)
     {
         Territory* territory = possibleSources.at(i);
@@ -385,7 +385,7 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
 
         if (std::cin.fail() || selection - 1 < 0 || selection - 1 >= possibleSources.size())
         {
-            std::cout << "That was not a valid option. Please try again:" << std::endl;
+            std::cout << "Invalid option. PLease try again!" << std::endl;
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
@@ -411,7 +411,7 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
     }
 
     int i = 0;
-    std::cout << "\nTo which territory do you want to advance:" << std::endl;
+    std::cout << "\nFrom which territory do you wish to advance?" << std::endl;
     if (!defendable.empty())
     {
         std::cout << "~~~ To Defend ~~~" << std::endl;
@@ -488,7 +488,7 @@ void HumanPlayerStrategy::issueAdvance_(Player* player, std::vector<Territory*> 
 // Deploy the reinforcements of the player to a certain area.
 void HumanPlayerStrategy::deployReinforcements_(Player* player, std::vector<Territory*> territoriesToDefend) {
     std::cout << "You have " << player->reinforcements_ << " reinforcements left." << std::endl;
-    std::cout << "\nWhere would you like to deploy to?" << std::endl;
+    std::cout << "\nDeploy to:" << std::endl;
     for (int i = 0; i < territoriesToDefend.size(); i++) {
         Territory *territory = territoriesToDefend.at(i);
         std::cout << "[" << i + 1 << "] " << territory->getName() << " (" << territory->getNumberOfArmies()
@@ -496,13 +496,13 @@ void HumanPlayerStrategy::deployReinforcements_(Player* player, std::vector<Terr
     }
 
     Territory *deployTarget = nullptr;
-    std::cout << "\nEnter the territory to deploy to: ";
+    std::cout << "\nEnter the territory you wish to deploy to: ";
     while (deployTarget == nullptr) {
         int selection;
         std::cin >> selection;
 
         if (std::cin.fail() || selection - 1 < 0 || selection - 1 >= territoriesToDefend.size()) {
-            std::cout << "That was not a valid option. Please try again:" << std::endl;
+            std::cout << "Invalid option. Try Again" << std::endl;
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
